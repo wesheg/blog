@@ -1,6 +1,12 @@
 :root {
   --background: #FAF9F5;
-  --foreground: #171717;
+  --foreground: #434343;
+  --blog-orange:#F15A24;
+  --blog-yellow: #FFE800;
+  --blog-pink: #DC1D88;
+  --blog-purple: #B779FF;
+  --blog-blue: #1FD7F0;
+  --blog-green: #5FC323;
 }
 
 html,
@@ -21,15 +27,4 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
