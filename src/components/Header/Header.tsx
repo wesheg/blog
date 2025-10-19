@@ -1,5 +1,4 @@
 import React from "react";
-import { JSX } from "react";
 import styles from "./header.module.css";
 import Image from "next/image";
 
