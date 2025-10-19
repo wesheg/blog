@@ -1,7 +1,7 @@
 :root {
   /** Colors **/
   --background: #FAF9F5;
-  --foreground: #434343;
+  --foreground: #222222;
   --blog-orange:#F15A24;
   --blog-yellow: #FFE800;
   --blog-pink: #DC1D88;
@@ -14,7 +14,15 @@
   --content-size: 800px;
 
   /** Font Sizes **/
-  --fontsize-h1: 2.125rem;
+  --fontsize-h1: 3.732rem;
+  --fontsize-h2: 3.11rem;
+  --fontsize-h3: 2.592rem;
+  --fontsize-h4: 2.16rem;
+  --fontsize-h5: 1.8rem;
+  --fontsize-h6: 1.5rem;
+  --fontsize-large: 1.5rem;
+  --fontsize-normal: 1.25rem;
+  --fontsize-small: 1.04rem;
 }
 
 html,
@@ -45,3 +53,31 @@ h2 {
   font-size: var(--fontsize-h2);
 }
 
+h3 {
+  font-size: var(--fontsize-h3);
+}
+
+h4 {
+  font-size: var(--fontsize-h4);
+}
+
+h5 {
+  font-size: var(--fontsize-h5);
+}
+
+h6 {
+  font-size: var(--fontsize-h6);
+}
+
+
+p {
+  font-size: var(--fontsize-normal);
+}
+
+.small-text {
+  font-size: var(--fontsize-small);
+}
+
+.large-text {
+  font-size: var(--fontsize-large);
+}
