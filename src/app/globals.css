@@ -8,6 +8,9 @@
   --blog-purple: #B779FF;
   --blog-blue: #1FD7F0;
   --blog-green: #5FC323;
+  --link-background: #e8e8e8;
+  --link-background-hover: #d5d5d5;
+  --link-text-hover: #111111;
 
   /** Screen Widths **/
   --desktop-width: 1500px;
@@ -69,9 +72,20 @@ h6 {
   font-size: var(--fontsize-h6);
 }
 
-
 p {
   font-size: var(--fontsize-normal);
+}
+
+a {
+  color: var(--foreground);
+  text-underline-offset: 0.125em;
+  background-color: var(--link-background);
+  padding: 0.125em;
+
+  &:hover {
+    background-color: var(--link-background-hover);
+    color: var(--link-text-hover);
+  }
 }
 
 .small-text {
