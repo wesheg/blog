@@ -1,7 +1,6 @@
 .blogHeader {
     margin: auto;
     max-width: var(--desktop-width);
-    border-bottom: 1px solid var(--foreground);
     padding: 5px 20px;
     display: flex;
     justify-content: space-between;
