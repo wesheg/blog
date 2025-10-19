@@ -7,4 +7,13 @@
     display: inline-block;
     margin: 0 0.5em;
     font-size: var(--fontsize-normal);
+
+    a {
+        text-decoration: none;
+        background-color: transparent;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
