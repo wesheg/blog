@@ -1,0 +1,30 @@
+.blogHeader {
+    /* height: 75px; */
+    margin: auto;
+    max-width: var(--desktop-width);
+    border-bottom: 1px solid var(--foreground);
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.headerTitle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.headerAvatar {
+    /* position: fixed;
+    top: 0; */
+}
+
+.headerNav {
+    li {
+        display: inline-block;
+        margin: 0 20px;
+        font-size: 1.5rem;
+    }
+}

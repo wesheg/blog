@@ -1,4 +1,5 @@
 :root {
+  /** Colors **/
   --background: #FAF9F5;
   --foreground: #434343;
   --blog-orange:#F15A24;
@@ -7,17 +8,24 @@
   --blog-purple: #B779FF;
   --blog-blue: #1FD7F0;
   --blog-green: #5FC323;
+
+  /** Screen Widths **/
+  --desktop-width: 1500px;
+  --content-size: 800px;
+
+  /** Font Sizes **/
+  --fontsize-h1: 2.125rem;
 }
 
 html,
 body {
-  max-width: 100vw;
   overflow-x: hidden;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  max-width: var(--desktop-width);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,3 +36,12 @@ body {
   padding: 0;
   margin: 0;
 }
+
+h1 {
+  font-size: var(--fontsize-h1);
+}
+
+h2 {
+  font-size: var(--fontsize-h2);
+}
+
