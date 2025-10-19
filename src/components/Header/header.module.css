@@ -15,23 +15,10 @@
 }
 
 .headerTitleText {
-    font-size: var(--fontsize-h3);
+    font-size: var(--fontsize-h4);
     font-weight: 700;
 }
 
 .headerTextDeemphasized {
     font-weight: 400;
-}
-
-.headerNav {
-    ul {
-        display: flex;
-        align-items: center;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0 0.5em;
-        font-size: var(--fontsize-large);
-    }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./header.module.css";
 import Image from "next/image";
+import { Navigation } from "./Navigation/Navigation";
 
 type HeaderProps = {
   /** If true, renders the site title as h1 tag. 
@@ -27,15 +28,7 @@ export const Header = ({ isHome = false }: HeaderProps) => {
         </div>
         <HeaderText><span className={styles.headerTextDeemphasized}>wesheg&apos;s</span> blog</HeaderText>
       </div>
-      <nav className={styles.headerNav}>
-        <ul>
-          <li>home</li>
-          <li>about me</li>
-          <li>blog</li>
-          <Image src="/social/linkedin.png" height={50} width={50} alt="LinkedIn Profile" />
-          <Image src="/social/bluesky.png" height={50} width={50} alt="LinkedIn Profile" />
-        </ul>
-      </nav>
+      <Navigation />
     </header>
   );
 }
