@@ -1,3 +1,11 @@
+.navigationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--fontsize-normal);
+    gap: 1em; 
+}
+
 .navigationList {
     display: flex;
     align-items: center;
@@ -6,7 +14,6 @@
 .navigationOption {
     display: inline-block;
     margin: 0 0.5em;
-    font-size: var(--fontsize-normal);
 
     a {
         text-decoration: none;
@@ -15,5 +22,15 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+.navigationSocial {
+    background-color: transparent;
+    padding: 0;
+
+    &:hover {
+        opacity: 0.8;
+        background-color: transparent;
     }
 }
