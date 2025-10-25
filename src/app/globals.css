@@ -1,4 +1,8 @@
 :root {
+  /** Screen Sizes **/
+  --wide-size: 1200px;
+  --content-size: 800px;
+
   /** Colors **/
   --background: #FAF9F5;
   --foreground: #222222;
