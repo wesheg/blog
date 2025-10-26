@@ -1,27 +1,31 @@
 .navButtonOuter {
-    --nav-button-height: 40px;
-    --nav-button-width: var(--nav-button-height);
-    height: var(--nav-button-height);
-    width: var(--nav-button-width);
+    --nav-button-size: 50px;
+    --nav-line-width: 62.5%;
+    --nav-line-x-offset: 12.5%;
+    --nav-line-y-offset: 30%;
+
+    height: var(--nav-button-size);
+    width: var(--nav-button-size);
     border: none;
     position: relative;
 }
 
 .line {
-    height: calc(var(--nav-button-height) * 0.05);
-    left: calc(var(--nav-button-width) * 0.125);
+    height: 2px;
+    width: var(--nav-line-width);
+    left: var(--nav-line-x-offset);
+    border-radius: 2px;
     position: absolute;
     background-color: var(--foreground);
-    width: calc(var(--nav-button-width) * 0.625);
     transition: all 0.15s;
 }
 
 .topLine {
-    top: 30%;
+    top: var(--nav-line-y-offset);
 }
 
 .topLineOpen {
-    transform: translateY(calc(var(--nav-button-height) * 0.2)) translateX(calc(var(--nav-button-width) * 0.0625)) rotate(45deg);
+    transform: translateY(calc(var(--nav-button-size) * 0.2)) translateX(calc(var(--nav-button-size) * 0.0625)) rotate(45deg);
 }
 
 .middleLine {
@@ -34,11 +38,11 @@
 }
 
 .bottomLine {
-    top: 70%;
-    width: calc(var(--nav-button-width) * 0.45);
+    top: calc(100% - var(--nav-line-y-offset));
+    width: calc(var(--nav-line-width) * 0.75);
 }
 
 .bottomLineOpen {
-    transform: translateY(calc(var(--nav-button-height) * -0.2)) translateX(calc(var(--nav-button-width) * 0.0625)) rotate(-45deg);
-    width: calc(var(--nav-button-width) * 0.625);
+    transform: translateY(calc(var(--nav-button-size) * -0.2)) translateX(calc(var(--nav-button-size) * 0.0625)) rotate(-45deg);
+    width: var(--nav-line-width);
 }

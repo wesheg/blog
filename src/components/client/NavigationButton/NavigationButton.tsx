@@ -5,7 +5,7 @@ import { useState } from "react";
 import style from "./navigationButton.module.css";
 
 export const NavigationButton = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <button className={style.navButtonOuter} onClick={() => setOpen((prev) => !prev)}>
       <div className={`${style.line} ${style.topLine} ${open ? style.topLineOpen : ""}`}/>
