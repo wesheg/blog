@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { Header } from "@ui/components";
+import { Header } from "@ui/components/server";
 
 export default function Home() {
   return (
