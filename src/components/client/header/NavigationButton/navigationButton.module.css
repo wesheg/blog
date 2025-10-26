@@ -8,6 +8,7 @@
     width: var(--nav-button-size);
     border: none;
     position: relative;
+    background-color: transparent;
 }
 
 .line {

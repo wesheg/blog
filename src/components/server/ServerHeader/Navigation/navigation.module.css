@@ -1,9 +1,16 @@
 .navigationContainer {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     font-size: var(--fontsize-normal);
     gap: 1em; 
+}
+
+.serverContainer {
+    display: flex;
+}
+
+.mobileButtonContainer {
+    display: none;
 }
 
 .navigationList {
@@ -32,5 +39,15 @@
     &:hover {
         opacity: 0.8;
         background-color: transparent;
+    }
+}
+
+@media (max-width: 1000px) {
+    .serverContainer {
+        display: none;
+    }
+
+    .mobileButtonContainer {
+        display: block;
     }
 }
