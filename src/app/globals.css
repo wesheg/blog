@@ -92,6 +92,11 @@ a {
   }
 }
 
+button {
+  border-radius: 10%;
+  cursor: pointer;
+}
+
 .small-text {
   font-size: var(--fontsize-small);
 }
