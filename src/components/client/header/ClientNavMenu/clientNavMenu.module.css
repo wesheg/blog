@@ -1,0 +1,12 @@
+.navContainer {
+    position: relative;
+    z-index: var(--modal-action-z-index);
+    display: flex;
+    flex-direction: column;
+}
+
+.navItem {
+    border-top: 1px solid red;
+    padding: 2em;
+}
+

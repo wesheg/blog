@@ -116,7 +116,7 @@ button.light {
 }
 
 .modal-overlay {
-  background-color: black;
+  background-color: var(--background);
   position: fixed;
   inset: 0;
   z-index: var(--modal-overlay-z-index);

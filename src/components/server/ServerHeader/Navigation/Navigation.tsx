@@ -1,9 +1,12 @@
 import styles from "./navigation.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { NavigationButton } from "@ui/components/client";
 
-export const Navigation = () => {
+type NavigationProps = {
+  mobileButton?: React.ReactNode;
+}
+
+export const Navigation = ({ mobileButton }: NavigationProps) => {
   return (
     <nav className={styles.navigationContainer}>
       <ul className={styles.navigationList}>
@@ -25,7 +28,7 @@ export const Navigation = () => {
           <Image className={styles.navigationOption} src="/social/bluesky.png" height={50} width={50} alt="LinkedIn Profile" />
         </Link>
       </div>
-      <NavigationButton />
+      {mobileButton}
     </nav>
   );
 }

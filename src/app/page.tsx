@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
-import { Header } from "@ui/components/server";
+import { ClientHeader } from "@ui/components/client";
 
 export default function Home() {
   return (
     <>
-      <Header isHome />
+      <ClientHeader isHome />
       <div className={styles.page}>
         <main className={styles.main}>
           <h1>h1 Heading</h1>

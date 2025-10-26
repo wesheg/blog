@@ -3,15 +3,15 @@ import styles from "./header.module.css";
 import Image from "next/image";
 import { Navigation } from "./Navigation/Navigation";
 
-type HeaderProps = {
+type ServerHeaderProps = {
   /** If true, renders the site title as h1 tag. 
    * Defaults to false. */
   isHome?: boolean;
+  mobileButton?: React.ReactNode;
 }
 
-export const Header = ({ isHome = false }: HeaderProps) => {
+export const ServerHeader = ({ isHome = false, mobileButton, }: ServerHeaderProps) => {
   const imgWidth = 65;
-  const imgHeight = imgWidth * 1.5;
 
   const HeaderText: React.FC<{children?: React.ReactNode}> = ({ children }) => {
     if (isHome) {
@@ -21,14 +21,14 @@ export const Header = ({ isHome = false }: HeaderProps) => {
   }
 
   return (
-    <header className={styles.blogHeader} style={{ marginBottom: imgHeight / 2}}>
+    <header className={styles.blogHeader}>
       <div className={styles.headerTitle}>
         <div style={{ width: imgWidth }}>
           <Image className={styles.headerAvatar} src="/avatars/header.svg" width={imgWidth} height={imgWidth * 1.5} alt="site logo"/>
         </div>
         <HeaderText><span className={styles.headerTextDeemphasized}>wesheg&apos;s</span> blog</HeaderText>
       </div>
-      <Navigation />
+      <Navigation mobileButton={mobileButton} />
     </header>
   );
 }
