@@ -1,6 +1,7 @@
 import styles from "./navigation.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { NavigationButton } from "@ui/components/client";
 
 export const Navigation = () => {
   return (
@@ -24,6 +25,7 @@ export const Navigation = () => {
           <Image className={styles.navigationOption} src="/social/bluesky.png" height={50} width={50} alt="LinkedIn Profile" />
         </Link>
       </div>
+      <NavigationButton />
     </nav>
   );
 }
