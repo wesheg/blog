@@ -30,6 +30,10 @@
   --fontsize-large: 1.5rem;
   --fontsize-normal: 1.25rem;
   --fontsize-small: 1.04rem;
+
+  /** Modals **/
+  --modal-overlay-z-index: 999;
+  --modal-action-z-index: 1000;
 }
 
 html,
@@ -109,4 +113,11 @@ button.light {
 
 .large-text {
   font-size: var(--fontsize-large);
+}
+
+.modal-overlay {
+  background-color: black;
+  position: fixed;
+  inset: 0;
+  z-index: var(--modal-overlay-z-index);
 }
