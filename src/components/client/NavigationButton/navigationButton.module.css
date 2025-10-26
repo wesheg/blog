@@ -1,0 +1,44 @@
+.navButtonOuter {
+    --nav-button-height: 40px;
+    --nav-button-width: var(--nav-button-height);
+    height: var(--nav-button-height);
+    width: var(--nav-button-width);
+    border: none;
+    position: relative;
+}
+
+.line {
+    height: calc(var(--nav-button-height) * 0.05);
+    left: calc(var(--nav-button-width) * 0.125);
+    position: absolute;
+    background-color: var(--foreground);
+    width: calc(var(--nav-button-width) * 0.625);
+    transition: all 0.15s;
+}
+
+.topLine {
+    top: 30%;
+}
+
+.topLineOpen {
+    transform: translateY(calc(var(--nav-button-height) * 0.2)) translateX(calc(var(--nav-button-width) * 0.0625)) rotate(45deg);
+}
+
+.middleLine {
+    top: 50%;
+    opacity: 1;
+}
+
+.middleLineOpen {
+    opacity: 0;
+}
+
+.bottomLine {
+    top: 70%;
+    width: calc(var(--nav-button-width) * 0.45);
+}
+
+.bottomLineOpen {
+    transform: translateY(calc(var(--nav-button-height) * -0.2)) translateX(calc(var(--nav-button-width) * 0.0625)) rotate(-45deg);
+    width: calc(var(--nav-button-width) * 0.625);
+}
