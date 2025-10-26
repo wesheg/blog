@@ -12,8 +12,8 @@
   --blog-purple: #B779FF;
   --blog-blue: #1FD7F0;
   --blog-green: #5FC323;
-  --link-background: #e8e8e8;
-  --link-background-hover: #d5d5d5;
+  --link-background: #ececec;
+  --link-background-hover: #dbdbdb;
   --link-text-hover: #111111;
 
   /** Screen Widths **/
@@ -84,7 +84,7 @@ a {
   color: var(--foreground);
   text-underline-offset: 0.125em;
   background-color: var(--link-background);
-  padding: 0.125em;
+  padding: 0.125em 0.25em;
 
   &:hover {
     background-color: var(--link-background-hover);
@@ -95,6 +95,12 @@ a {
 button {
   border-radius: 10%;
   cursor: pointer;
+}
+
+button.light {
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
 }
 
 .small-text {

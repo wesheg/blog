@@ -35,6 +35,7 @@ export default function Home() {
           <p className="large-text">
             Large Text
           </p>
+          <a href="/">Link Text</a>
           
         </main>
       </div>
