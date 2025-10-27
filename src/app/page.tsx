@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <>
       <Header isHome />
-      <div className={styles.page}>
         <main className={styles.main}>
           <h1>h1 Heading</h1>
           <h2>h2 Heading</h2>
@@ -39,7 +38,6 @@ export default function Home() {
           {/* <a href="/">Link Text</a> */}
           
         </main>
-      </div>
     </>
   );
 }
