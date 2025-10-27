@@ -10,7 +10,7 @@ type ClientHeaderWrapperProps = {
 }
 
 export const ClientHeader = ({ isHome }: ClientHeaderWrapperProps) => {
-  const [mobileNavOpen, setMobileNavOpen] = useState(true);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   return (
     <>
       { mobileNavOpen && <div className="modal-overlay" />}
