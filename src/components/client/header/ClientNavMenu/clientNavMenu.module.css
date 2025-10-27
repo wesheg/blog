@@ -5,10 +5,40 @@
     flex-direction: column;
 }
 
-.navItem {
+.navItemContainer {
     border-top: 1px solid var(--foreground);
-    padding: 2em;
 }
+
+.navLink {
+    text-decoration: none;
+    background-color: transparent;
+    font-size: var(--fontsize-h4);
+    padding: 1em;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.socialOuter {
+    padding: var(--fontsize-normal) var(--fontsize-h4);
+}
+
+.socialInner {
+    display: flex;
+    gap: 15px;
+}
+
+.navigationSocial {
+    background-color: transparent;
+    padding: 0;
+
+    &:hover {
+        opacity: 0.8;
+        background-color: transparent;
+    }
+}
+
 
 @media (min-width: 1000px) {
     .navContainer {
