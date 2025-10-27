@@ -1,10 +1,10 @@
 "use client"
 
-import styles from "./clientNavMenu.module.css";
+import styles from "./mobileNavMenu.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-export const ClientNavMenu = () => {
+export const MobileNavMenu = () => {
   return (
     <div className={styles.navContainer}>
       <Link href="/" className={`${styles.navItemContainer} ${styles.navLink}`}>home</Link>

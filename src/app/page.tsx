@@ -1,10 +1,11 @@
 import styles from "./page.module.css";
-import { ClientHeader } from "@ui/components/client";
+
+import { Header } from "@ui/components";
 
 export default function Home() {
   return (
     <>
-      <ClientHeader isHome />
+      <Header isHome />
       <div className={styles.page}>
         <main className={styles.main}>
           <h1>h1 Heading</h1>
@@ -35,7 +36,7 @@ export default function Home() {
           <p className="large-text">
             Large Text
           </p>
-          <a href="/">Link Text</a>
+          {/* <a href="/">Link Text</a> */}
           
         </main>
       </div>

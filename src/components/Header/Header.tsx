@@ -1,15 +1,15 @@
 "use client"
 
 import React, { useState } from "react";
-import { ClientNavMenu } from "./ClientNavMenu/ClientNavMenu";
-import { NavigationButton } from "./NavigationButton/NavigationButton";
-import { ServerHeader } from "@ui/components/server";
+import { MobileNavMenu } from "./MobileNavMenu";
+import { MobileNavButton } from "./MobileNavButton";
+import { ServerHeader } from "./ServerHeader";
 
 type ClientHeaderWrapperProps = {
   isHome?: boolean;
 }
 
-export const ClientHeader = ({ isHome }: ClientHeaderWrapperProps) => {
+export const Header = ({ isHome }: ClientHeaderWrapperProps) => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   return (
     <>
@@ -17,13 +17,13 @@ export const ClientHeader = ({ isHome }: ClientHeaderWrapperProps) => {
       <ServerHeader
         isHome={isHome}
         mobileButton={
-          <NavigationButton
+          <MobileNavButton
             open={mobileNavOpen}
             handleClick={() => setMobileNavOpen((prev) => !prev)}
             />
           }
         />
-        { mobileNavOpen && <ClientNavMenu /> }
+        { mobileNavOpen && <MobileNavMenu /> }
     </>
   );
 }

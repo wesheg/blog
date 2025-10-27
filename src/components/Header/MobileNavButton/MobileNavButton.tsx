@@ -1,13 +1,13 @@
 "use client"
 
-import style from "./navigationButton.module.css";
+import style from "./mobileNavButton.module.css";
 
 type NavigationButtonProps = {
   open?: boolean;
   handleClick: () => void;
 }
 
-export const NavigationButton = ({ open, handleClick }: NavigationButtonProps) => {
+export const MobileNavButton = ({ open, handleClick }: NavigationButtonProps) => {
   return (
     <button className={style.navButtonOuter} onClick={handleClick}>
       <div className={`${style.line} ${style.topLine} ${open ? style.topLineOpen : ""}`}/>
