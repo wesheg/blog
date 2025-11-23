@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 
-import { Header, FrontPageAnimation } from "@ui/components";
+import { Header, FrontPage } from "@ui/components";
 
 export default function Home() {
   return (
@@ -37,7 +37,7 @@ export default function Home() {
           </p>
           <a href="/">Link Text</a> */}
           
-          <FrontPageAnimation />
+          <FrontPage />
         </main>
     </>
   );
