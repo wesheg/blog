@@ -3,7 +3,7 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import chair from "@public/frontPage/chair.png";
-import staticLayerDesktop from "@public/frontPage/static-layer-transparent.png";
+import staticLayerDesktop from "@public/frontPage/static-layer-desktop.png";
 import staticLayerMobile from "@public/frontPage/static-layer-mobile.png";
 import { PersonCanvas } from "./PersonCanvas/PersonCanvas";
 import { LottieRef } from "lottie-react";

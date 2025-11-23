@@ -17,23 +17,23 @@
   width: auto;
   height: 40%;
   bottom: 0;
-  left: 17%;
+  left: 13.5%;
 }
 
 .lottieContainer {
   position: absolute;
   width: 35%;
-  height: 60%;
+  height: 58%;
   bottom: 3%;
-  left: 12%;
+  left: 7%;
 }
 
 .screenCanvas {
   position: absolute;
-  width: 29%;
+  width: 25%;
   height: 25%;
   bottom: 38%;
-  left: 17%;
+  left: 14%;
 }
 
 @media screen and (max-width: 820px) {
