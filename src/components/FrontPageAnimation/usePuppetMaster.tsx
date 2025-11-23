@@ -31,7 +31,7 @@ type AnimationSegment = [number, number];
  * @param lottieRef - Ref object holding a reference to a PersonCanvas component.
  */
 export const usePuppetMaster = (
-  codeScreenCanvasRef: React.RefObject<HTMLCanvasElement>,
+  codeScreenCanvasRef: React.RefObject<HTMLCanvasElement | null>,
   lottieRef: LottieRef,
 ) => {
   const [codeScreen, setCodeScreen] = useState<CodeScreen>();
