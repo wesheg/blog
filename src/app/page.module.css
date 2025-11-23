@@ -1,5 +1,4 @@
 .main {
     margin: auto;
-    max-width: var(--content-size);
-    padding: 20px;
+    max-width: var(--desktop-width);
 }
