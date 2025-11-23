@@ -64,7 +64,6 @@ export const FrontPageAnimation = () => {
           ref={staticRef}
           className={styles.frontPageBackground}
           src={
-            typeof window !== "undefined" &&
             window.innerWidth <= imageBreakPoint
               ? staticLayerMobile.src
               : staticLayerDesktop.src
