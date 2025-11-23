@@ -1,0 +1,7 @@
+.headlinesContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 1em;
+    width: 100%;
+}
