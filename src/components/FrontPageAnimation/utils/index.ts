@@ -1,0 +1,1 @@
+export { getRandomSelection } from "./getRandomSelection";

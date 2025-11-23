@@ -1,0 +1,27 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-custom-blocks-front-page-animation {
+	display: flex;
+	height: 70vh;
+
+	.front-page-img {
+		width: unset;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 820px) {
+	.wp-block-custom-blocks-front-page-animation {
+		height: unset;
+	}
+
+	.front-page-img {
+		width: 100%;
+		height: unset;
+	}
+}
