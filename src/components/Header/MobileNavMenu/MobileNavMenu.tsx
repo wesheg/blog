@@ -7,6 +7,7 @@ import Image from "next/image";
 export const MobileNavMenu = () => {
   return (
     <div className={styles.navContainer}>
+      {" "}
       <Link href="/" className={`${styles.navItemContainer} ${styles.navLink}`}>
         home
       </Link>
