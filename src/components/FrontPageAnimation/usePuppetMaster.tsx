@@ -172,22 +172,17 @@ export const usePuppetMaster = (
       mousePosition.current === "up" ? "Typing5sMouseUp" : "Typing5sMouseDown";
     const animationPromise = playAnimation(animation);
 
-    await codeScreen.addTimeDelay(150);
-    await codeScreen.stopCursorBlink();
-    await codeScreen.backspaceBlob();
-    await codeScreen.startCursorBlink();
-    await codeScreen.addTimeDelay(150);
-    await codeScreen.stopCursorBlink();
-    await codeScreen.typeNewBlob();
-    await codeScreen.startCursorBlink();
-    await codeScreen.addTimeDelay(150);
-    await codeScreen.stopCursorBlink();
-    await codeScreen.backspaceBlob();
-    await codeScreen.startCursorBlink();
-    await codeScreen.addTimeDelay(150);
-    await codeScreen.stopCursorBlink();
-    await codeScreen.typeNewBlob();
-    await codeScreen.startCursorBlink();
+    for (let i = 0; i < 2; i++) {
+      await codeScreen.addTimeDelay(150);
+      await codeScreen.stopCursorBlink();
+      await codeScreen.backspaceBlob();
+      await codeScreen.startCursorBlink();
+      await codeScreen.addTimeDelay(150);
+      await codeScreen.stopCursorBlink();
+      await codeScreen.typeNewBlob();
+      await codeScreen.startCursorBlink();
+    }
+
     await animationPromise;
   }, [codeScreen, playAnimation]);
 
