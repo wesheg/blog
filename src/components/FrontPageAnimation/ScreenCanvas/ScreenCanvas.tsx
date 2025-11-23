@@ -10,9 +10,8 @@ export const ScreenCanvas = forwardRef<HTMLCanvasElement, ScreenCanvasProps>(
 	({ scale, className }: ScreenCanvasProps, ref) => {
 		return (
 			<canvas
-				className={className}
 				ref={ref}
-				id="fpa-canvas-screen"
+				className={className}
 				width={Math.floor(canvasWidth * scale)}
 				height={Math.floor(canvasHeight * scale)}
 			></canvas>
