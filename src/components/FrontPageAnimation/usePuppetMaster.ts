@@ -1,3 +1,5 @@
+"use client"
+
 import React, {
   useCallback,
   useEffect,
@@ -27,24 +29,25 @@ type AnimationSegment = [number, number];
  * Hook for synchronizing animations between code blobs on the screen
  * and the character sitting at the desk.
  *
+ * @param scale - Ratio of physcial pixels to CSS pixels
  * @param codeScreenCanvasRef - Ref object holding a reference to a ScreenCanvas component.
  * @param lottieRef - Ref object holding a reference to a PersonCanvas component.
  */
 export const usePuppetMaster = (
+  scale: number,
   codeScreenCanvasRef: React.RefObject<HTMLCanvasElement | null>,
   lottieRef: LottieRef,
 ) => {
   const [codeScreen, setCodeScreen] = useState<CodeScreen>();
   const mousePosition = useRef<"up" | "down">("up");
   const firstRender = useRef(true);
-  const scale = window.devicePixelRatio;
 
   /** First Render Setup */
   useEffect(() => {
     if (!firstRender.current) return;
+    if (!lottieRef) return;
     const canvasContext = codeScreenCanvasRef.current?.getContext("2d");
     if (!canvasContext) return;
-    if (!lottieRef) return;
     canvasContext.scale(scale, scale);
     setCodeScreen(new CodeScreen(canvasContext));
     firstRender.current = false;
