@@ -19,7 +19,6 @@ export const FrontPageAnimation = () => {
   const lottieContainerRef = useRef<HTMLDivElement>(null);
   const imageBreakPoint = 820;
   const widthRef = useRef((typeof window !== "undefined") ? window.innerWidth : 0);
-  const mobileWidth = window.innerWidth < imageBreakPoint;
   const puppetMaster = usePuppetMaster(canvasRef, lottieRef as LottieRef);
 
   useEffect(() => {
@@ -28,10 +27,6 @@ export const FrontPageAnimation = () => {
 
   const resizeApp = useCallback(() => {
     if (!staticRef.current) return;
-    if (!chairRef.current) return;
-    if (!canvasRef.current) return;
-    if (!lottieRef.current) return;
-    if (!lottieContainerRef.current) return;
     const newWidth = window.innerWidth;
     const oldWidth = widthRef.current;
     const desktopToMobile =
@@ -40,33 +35,10 @@ export const FrontPageAnimation = () => {
       oldWidth < imageBreakPoint && newWidth >= imageBreakPoint;
     widthRef.current = newWidth;
     if (desktopToMobile) {
-      console.log("resizing down")
       staticRef.current.src = staticLayerMobile.src;
-      console.log(staticLayerMobile.src)
-      chairRef.current.style.bottom = "2%";
-      chairRef.current.style.left = "29%";
-      chairRef.current.style.height = "60%";
-      canvasRef.current.style.left = "28%";
-      canvasRef.current.style.bottom = "58%";
-      canvasRef.current.style.height = "30%";
-      canvasRef.current.style.width = "50%";
-      lottieContainerRef.current.style.height = "95%";
-      lottieContainerRef.current.style.width = "75%";
-      lottieContainerRef.current.style.left = "18%";
     }
     if (mobileToDesktop) {
       staticRef.current.src = staticLayerDesktop.src;
-      console.log(staticLayerDesktop.src)
-      chairRef.current.style.bottom = "0%";
-      chairRef.current.style.left = "17%";
-      chairRef.current.style.height = "40%";
-      canvasRef.current.style.left = "17%";
-      canvasRef.current.style.bottom = "38%";
-      canvasRef.current.style.height = "25%";
-      canvasRef.current.style.width = "29%";
-      lottieContainerRef.current.style.height = "60%";
-      lottieContainerRef.current.style.width = "35%";
-      lottieContainerRef.current.style.left = "12%";
     }
   }, []);
 
@@ -83,7 +55,7 @@ export const FrontPageAnimation = () => {
         <img
           alt=""
           ref={staticRef}
-          className={styles.frontPageImg}
+          className={styles.frontPageBackground}
           src={
             window.innerWidth <= imageBreakPoint
               ? staticLayerMobile.src
@@ -91,31 +63,19 @@ export const FrontPageAnimation = () => {
          }
         />
         <ScreenCanvas
-          mobile={mobileWidth}
-          scale={window.devicePixelRatio}
           ref={canvasRef}
+          scale={window.devicePixelRatio}
+          className={styles.screenCanvas}
         />
         <div
           ref={lottieContainerRef}
-          style={{
-            position: "absolute",
-            bottom: "4%",
-            height: mobileWidth ? "95%" : "60%",
-            width: mobileWidth ? "75%" : "35%",
-            left: mobileWidth ? "18%" : "12%",
-          }}
+          className={styles.lottieContainer}
         >
           <PersonCanvas ref={lottieRef} />
         </div>
         <img
           alt=""
-          style={{
-            position: "absolute",
-            bottom: mobileWidth ? "2%" : "0",
-            left: mobileWidth ? "29%" : "17%",
-            width: "auto",
-            height: mobileWidth ? "60%" : "40%",
-          }}
+          className={styles.frontPageChair}
           src={chair.src}
           ref={chairRef}
         />
