@@ -19,7 +19,7 @@
 	height: 100%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 820px) {
 	.frontPageOuter {
 		height: unset;
 	}

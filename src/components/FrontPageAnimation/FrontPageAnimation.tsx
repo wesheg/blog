@@ -1,14 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 
 import { useCallback, useEffect, useRef } from "react";
-import chair from "../../../public/frontPage/chair.png";
-import staticLayerDesktop from "../../../public/frontPage/static-layer.png";
-import staticLayerMobile from "../../../public/frontPage/static-layer-mobile.png";
+import chair from "@public/frontPage/chair.png";
+import staticLayerDesktop from "@public/frontPage/static-layer-transparent.png";
+import staticLayerMobile from "@public/frontPage/static-layer-mobile.png";
 import { PersonCanvas } from "./PersonCanvas/PersonCanvas";
 import { LottieRef } from "lottie-react";
 import { ScreenCanvas } from "./ScreenCanvas";
 import { usePuppetMaster } from "./usePuppetMaster";
-import Image from "next/image";
 import styles from "./frontPageAnimation.module.css";
 
 export const FrontPageAnimation = () => {
