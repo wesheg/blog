@@ -8,4 +8,4 @@ export const FrontPageHeadlines = () => {
       <p>Welcome to my website!</p>
     </div>
   );
-}
+};

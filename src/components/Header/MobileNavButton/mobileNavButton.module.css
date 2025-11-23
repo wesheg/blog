@@ -1,49 +1,51 @@
 .navButtonOuter {
-    --nav-button-size: 50px;
-    --nav-line-width: 62.5%;
-    --nav-line-x-offset: 12.5%;
-    --nav-line-y-offset: 30%;
+  --nav-button-size: 50px;
+  --nav-line-width: 62.5%;
+  --nav-line-x-offset: 12.5%;
+  --nav-line-y-offset: 30%;
 
-    height: var(--nav-button-size);
-    width: var(--nav-button-size);
-    border: none;
-    position: relative;
-    background-color: transparent;
+  height: var(--nav-button-size);
+  width: var(--nav-button-size);
+  border: none;
+  position: relative;
+  background-color: transparent;
 }
 
 .line {
-    height: 2px;
-    width: var(--nav-line-width);
-    left: var(--nav-line-x-offset);
-    border-radius: 2px;
-    position: absolute;
-    background-color: var(--foreground);
-    transition: all 0.15s;
+  height: 2px;
+  width: var(--nav-line-width);
+  left: var(--nav-line-x-offset);
+  border-radius: 2px;
+  position: absolute;
+  background-color: var(--foreground);
+  transition: all 0.15s;
 }
 
 .topLine {
-    top: var(--nav-line-y-offset);
+  top: var(--nav-line-y-offset);
 }
 
 .topLineOpen {
-    transform: translateY(calc(var(--nav-button-size) * 0.2)) translateX(calc(var(--nav-button-size) * 0.0625)) rotate(45deg);
+  transform: translateY(calc(var(--nav-button-size) * 0.2))
+    translateX(calc(var(--nav-button-size) * 0.0625)) rotate(45deg);
 }
 
 .middleLine {
-    top: 50%;
-    opacity: 1;
+  top: 50%;
+  opacity: 1;
 }
 
 .middleLineOpen {
-    opacity: 0;
+  opacity: 0;
 }
 
 .bottomLine {
-    top: calc(100% - var(--nav-line-y-offset));
-    width: calc(var(--nav-line-width) * 0.75);
+  top: calc(100% - var(--nav-line-y-offset));
+  width: calc(var(--nav-line-width) * 0.75);
 }
 
 .bottomLineOpen {
-    transform: translateY(calc(var(--nav-button-size) * -0.2)) translateX(calc(var(--nav-button-size) * 0.0625)) rotate(-45deg);
-    width: var(--nav-line-width);
+  transform: translateY(calc(var(--nav-button-size) * -0.2))
+    translateX(calc(var(--nav-button-size) * 0.0625)) rotate(-45deg);
+  width: var(--nav-line-width);
 }

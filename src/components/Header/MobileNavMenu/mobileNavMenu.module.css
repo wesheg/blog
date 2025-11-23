@@ -1,48 +1,46 @@
 .navContainer {
-    position: relative;
-    z-index: var(--modal-action-z-index);
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  z-index: var(--modal-action-z-index);
+  display: flex;
+  flex-direction: column;
 }
 
 .navItemContainer {
-    border-top: 1px solid var(--foreground);
+  border-top: 1px solid var(--foreground);
 }
 
 .navLink {
-    text-decoration: none;
-    background-color: transparent;
-    font-size: var(--fontsize-h4);
-    padding: 1em;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: var(--fontsize-h4);
+  padding: 1em;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .socialOuter {
-    padding: var(--fontsize-normal) var(--fontsize-h4);
+  padding: var(--fontsize-normal) var(--fontsize-h4);
 }
 
 .socialInner {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .navigationSocial {
+  background-color: transparent;
+  padding: 0;
+
+  &:hover {
+    opacity: 0.8;
     background-color: transparent;
-    padding: 0;
-
-    &:hover {
-        opacity: 0.8;
-        background-color: transparent;
-    }
+  }
 }
-
 
 @media (min-width: 1000px) {
-    .navContainer {
-        display: none;
-    }
+  .navContainer {
+    display: none;
+  }
 }
-

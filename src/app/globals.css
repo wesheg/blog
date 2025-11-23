@@ -4,14 +4,14 @@
   --content-size: 800px;
 
   /** Colors **/
-  --background: #FAF9F5;
+  --background: #faf9f5;
   --foreground: #222222;
-  --blog-orange:#F15A24;
-  --blog-yellow: #FFE800;
-  --blog-pink: #DC1D88;
-  --blog-purple: #B779FF;
-  --blog-blue: #1FD7F0;
-  --blog-green: #5FC323;
+  --blog-orange: #f15a24;
+  --blog-yellow: #ffe800;
+  --blog-pink: #dc1d88;
+  --blog-purple: #b779ff;
+  --blog-blue: #1fd7f0;
+  --blog-green: #5fc323;
   --link-background: #ececec;
   --link-background-hover: #dbdbdb;
   --link-text-hover: #111111;

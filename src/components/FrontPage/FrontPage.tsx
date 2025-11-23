@@ -1,5 +1,5 @@
 import styles from "./frontPage.module.css";
-import { FrontPageAnimation } from "./FrontPageAnimation"
+import { FrontPageAnimation } from "./FrontPageAnimation";
 import { FrontPageHeadlines } from "./FrontPageHeadlines/FrontPageHeadlines";
 
 export const FrontPage = () => {
@@ -9,4 +9,4 @@ export const FrontPage = () => {
       <FrontPageHeadlines />
     </div>
   );
-}
+};

@@ -1,53 +1,53 @@
 .navigationContainer {
-    display: flex;
-    justify-content: space-between;
-    font-size: var(--fontsize-normal);
-    gap: 1em; 
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fontsize-normal);
+  gap: 1em;
 }
 
 .serverContainer {
-    display: flex;
+  display: flex;
 }
 
 .mobileButtonContainer {
-    display: none;
+  display: none;
 }
 
 .navigationList {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navigationOption {
-    display: inline-block;
-    margin: 0 0.5em;
+  display: inline-block;
+  margin: 0 0.5em;
 
-    a {
-        text-decoration: none;
-        background-color: transparent;
+  a {
+    text-decoration: none;
+    background-color: transparent;
 
-        &:hover {
-            text-decoration: underline;
-        }
+    &:hover {
+      text-decoration: underline;
     }
+  }
 }
 
 .navigationSocial {
-    background-color: transparent;
-    padding: 0;
+  background-color: transparent;
+  padding: 0;
 
-    &:hover {
-        opacity: 0.8;
-        background-color: transparent;
-    }
+  &:hover {
+    opacity: 0.8;
+    background-color: transparent;
+  }
 }
 
 @media (max-width: 1000px) {
-    .serverContainer {
-        display: none;
-    }
+  .serverContainer {
+    display: none;
+  }
 
-    .mobileButtonContainer {
-        display: block;
-    }
+  .mobileButtonContainer {
+    display: block;
+  }
 }

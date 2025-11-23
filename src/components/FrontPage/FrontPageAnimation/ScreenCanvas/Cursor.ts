@@ -1,7 +1,7 @@
 import {
-	characterWidth,
-	convertLineNumberToPixel,
-	InvalidSetterMethod,
+  characterWidth,
+  convertLineNumberToPixel,
+  InvalidSetterMethod,
 } from "./screenCanvasUtils";
 
 /**
@@ -18,56 +18,56 @@ import {
  *    If the cursor is not currently blinking, this property is undefined.
  */
 export default class Cursor {
-	_line: number;
-	_xChar: number;
-	_xPixel: number;
-	_yPixel: number;
-	blinkInterval: number | undefined;
+  _line: number;
+  _xChar: number;
+  _xPixel: number;
+  _yPixel: number;
+  blinkInterval: number | undefined;
 
-	color = "#f15a24";
+  color = "#f15a24";
 
-	constructor(xChar: number, line: number) {
-		this._line = line;
-		this._yPixel = convertLineNumberToPixel(this._line);
-		this._xChar = xChar;
-		this._xPixel = this._xChar * characterWidth;
-	}
+  constructor(xChar: number, line: number) {
+    this._line = line;
+    this._yPixel = convertLineNumberToPixel(this._line);
+    this._xChar = xChar;
+    this._xPixel = this._xChar * characterWidth;
+  }
 
-	get xChar() {
-		return this._xChar;
-	}
+  get xChar() {
+    return this._xChar;
+  }
 
-	set xChar(newChar: number) {
-		this._xChar = newChar;
-		this._xPixel = this._xChar * characterWidth;
-	}
+  set xChar(newChar: number) {
+    this._xChar = newChar;
+    this._xPixel = this._xChar * characterWidth;
+  }
 
-	get xPixel() {
-		return this._xPixel;
-	}
+  get xPixel() {
+    return this._xPixel;
+  }
 
-	set xPixel(_newVal: number) {
-		throw new InvalidSetterMethod(
-			'The "xPixel" property of Cursor cannot be set directly.\nUse "xChar" instead.',
-		);
-	}
+  set xPixel(_newVal: number) {
+    throw new InvalidSetterMethod(
+      'The "xPixel" property of Cursor cannot be set directly.\nUse "xChar" instead.',
+    );
+  }
 
-	get line() {
-		return this._line;
-	}
+  get line() {
+    return this._line;
+  }
 
-	set line(newLine: number) {
-		this._line = newLine;
-		this._yPixel = convertLineNumberToPixel(this._line);
-	}
+  set line(newLine: number) {
+    this._line = newLine;
+    this._yPixel = convertLineNumberToPixel(this._line);
+  }
 
-	get yPixel() {
-		return this._yPixel;
-	}
+  get yPixel() {
+    return this._yPixel;
+  }
 
-	set yPixel(_newVal: number) {
-		throw new InvalidSetterMethod(
-			'The "yPixel" property of Cursor cannot be set directly.\nUse "line" instead.',
-		);
-	}
+  set yPixel(_newVal: number) {
+    throw new InvalidSetterMethod(
+      'The "yPixel" property of Cursor cannot be set directly.\nUse "line" instead.',
+    );
+  }
 }

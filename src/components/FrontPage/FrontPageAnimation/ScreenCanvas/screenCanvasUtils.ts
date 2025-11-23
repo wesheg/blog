@@ -23,12 +23,12 @@ export const canvasHeight = (lineHeight + lineSpacing * 2) * 10;
  * @returns {number} y-pixel coordinate for the top of the given line.
  */
 export function convertLineNumberToPixel(line: number) {
-	return line * (lineHeight + lineSpacing * 2);
+  return line * (lineHeight + lineSpacing * 2);
 }
 
 // custom error for invalid setters
 export class InvalidSetterMethod extends Error {
-	constructor(msg: string) {
-		super(msg);
-	}
+  constructor(msg: string) {
+    super(msg);
+  }
 }

@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-"use client"
+"use client";
 
 import { useCallback, useEffect, useRef } from "react";
 import chair from "@public/frontPage/chair.png";
@@ -19,8 +19,14 @@ export const FrontPageAnimation = () => {
   const lottieContainerRef = useRef<HTMLDivElement>(null);
   const imageBreakPoint = 820;
   const scale = typeof window !== "undefined" ? window.devicePixelRatio : 2;
-  const widthRef = useRef((typeof window !== "undefined") ? window.innerWidth : 0);
-  const puppetMaster = usePuppetMaster(scale, canvasRef, lottieRef as LottieRef);
+  const widthRef = useRef(
+    typeof window !== "undefined" ? window.innerWidth : 0,
+  );
+  const puppetMaster = usePuppetMaster(
+    scale,
+    canvasRef,
+    lottieRef as LottieRef,
+  );
 
   useEffect(() => {
     puppetMaster.start();
@@ -58,20 +64,18 @@ export const FrontPageAnimation = () => {
           ref={staticRef}
           className={styles.frontPageBackground}
           src={
-            typeof window !== "undefined" && window.innerWidth <= imageBreakPoint
+            typeof window !== "undefined" &&
+            window.innerWidth <= imageBreakPoint
               ? staticLayerMobile.src
               : staticLayerDesktop.src
-         }
+          }
         />
         <ScreenCanvas
           ref={canvasRef}
           scale={scale}
           className={styles.screenCanvas}
         />
-        <div
-          ref={lottieContainerRef}
-          className={styles.lottieContainer}
-        >
+        <div ref={lottieContainerRef} className={styles.lottieContainer}>
           <PersonCanvas ref={lottieRef} />
         </div>
         <img

@@ -1,26 +1,26 @@
 .blogHeader {
-    margin: auto;
-    max-width: var(--desktop-width);
-    padding: 5px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: var(--modal-action-z-index);
-    position: relative;
-    background-color: var(--background);
+  margin: auto;
+  max-width: var(--desktop-width);
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: var(--modal-action-z-index);
+  position: relative;
+  background-color: var(--background);
 }
 
 .headerTitle {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .headerTitleText {
-    font-size: var(--fontsize-h4);
-    font-weight: 700;
+  font-size: var(--fontsize-h4);
+  font-weight: 700;
 }
 
 .headerTextDeemphasized {
-    font-weight: 400;
+  font-weight: 400;
 }

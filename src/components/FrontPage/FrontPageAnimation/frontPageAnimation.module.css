@@ -1,67 +1,67 @@
 .frontPageOuter {
-	display: flex;
-	height: 70vh;
+  display: flex;
+  height: 70vh;
 }
 
 .frontPageInner {
-	position: relative;
+  position: relative;
 }
 
 .frontPageBackground {
-	width: unset;
-	height: 100%;
+  width: unset;
+  height: 100%;
 }
 
 .frontPageChair {
-	position: absolute;
-	width: auto;
-	height: 40%;
-	bottom: 0;
-	left: 17%;
+  position: absolute;
+  width: auto;
+  height: 40%;
+  bottom: 0;
+  left: 17%;
 }
 
 .lottieContainer {
-	position: absolute;
-	width: 35%;
-	height: 60%;
-	bottom: 3%;
-	left: 12%;
+  position: absolute;
+  width: 35%;
+  height: 60%;
+  bottom: 3%;
+  left: 12%;
 }
 
 .screenCanvas {
-	position: absolute;
-	width: 29%;
-	height: 25%;
-	bottom: 38%;
-	left: 17%;
+  position: absolute;
+  width: 29%;
+  height: 25%;
+  bottom: 38%;
+  left: 17%;
 }
 
 @media screen and (max-width: 820px) {
-	.frontPageOuter {
-		height: unset;
-	}
+  .frontPageOuter {
+    height: unset;
+  }
 
-	.frontPageImg {
-		width: 100%;
-		height: unset;
-	}
+  .frontPageImg {
+    width: 100%;
+    height: unset;
+  }
 
-	.frontPageChair {
-		height: 60%;
-		bottom: 2%;
-		left: 29%;
-	}
+  .frontPageChair {
+    height: 60%;
+    bottom: 2%;
+    left: 29%;
+  }
 
-	.lottieContainer {
-		height: 95%;
-		width: 75%;
-		left: 18%;
-	}
+  .lottieContainer {
+    height: 95%;
+    width: 75%;
+    left: 18%;
+  }
 
-	.screenCanvas {
-		width: 50%;
-		height: 30%;
-		bottom: 58%;
-		left: 28%;
-	}
+  .screenCanvas {
+    width: 50%;
+    height: 30%;
+    bottom: 58%;
+    left: 28%;
+  }
 }
