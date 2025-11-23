@@ -1,0 +1,1 @@
+export { FrontPageAnimation } from "./FrontPageAnimation";

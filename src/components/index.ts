@@ -1,2 +1,2 @@
-export { FrontPageAnimation } from "./FrontPageAnimation/FrontPageAnimation";
+export { FrontPage } from "./FrontPage/FrontPage";
 export { Header } from "./Header/Header";
