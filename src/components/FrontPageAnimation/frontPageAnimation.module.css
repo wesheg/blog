@@ -5,22 +5,26 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-custom-blocks-front-page-animation {
+.frontPageOuter {
 	display: flex;
 	height: 70vh;
-
-	.front-page-img {
-		width: unset;
-		height: 100%;
-	}
 }
 
-@media screen and (max-width: 820px) {
-	.wp-block-custom-blocks-front-page-animation {
+.frontPageInner {
+	position: relative;
+}
+
+.frontPageImg {
+	width: unset;
+	height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+	.frontPageOuter {
 		height: unset;
 	}
 
-	.front-page-img {
+	.frontPageImg {
 		width: 100%;
 		height: unset;
 	}

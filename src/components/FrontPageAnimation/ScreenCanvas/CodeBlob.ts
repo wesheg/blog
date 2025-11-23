@@ -1,4 +1,4 @@
-import { getRandomSelection } from "@fpa/utils";
+import { getRandomSelection } from "@ui/components/FrontPageAnimation/utils";
 import {
 	characterWidth,
 	convertLineNumberToPixel,

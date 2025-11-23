@@ -1,13 +1,13 @@
 import styles from "./page.module.css";
 
-import { Header } from "@ui/components";
+import { Header, FrontPageAnimation } from "@ui/components";
 
 export default function Home() {
   return (
     <>
       <Header isHome />
         <main className={styles.main}>
-          <h1>h1 Heading</h1>
+          {/* <h1>h1 Heading</h1>
           <h2>h2 Heading</h2>
           <h3>h3 Heading</h3>
           <h4>h4 Heading</h4>
@@ -35,8 +35,9 @@ export default function Home() {
           <p className="large-text">
             Large Text
           </p>
-          {/* <a href="/">Link Text</a> */}
+          <a href="/">Link Text</a> */}
           
+          <FrontPageAnimation />
         </main>
     </>
   );

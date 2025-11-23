@@ -5,8 +5,8 @@ import React, {
   useRef,
   useState,
 } from "react";
-import CodeScreen from "./ScreenCanvas/CodeScreen";
-import { getRandomSelection } from "@fpa/utils";
+import CodeScreen from "@ui/components/FrontPageAnimation/ScreenCanvas/CodeScreen";
+import { getRandomSelection } from "@ui/components/FrontPageAnimation/utils";
 import { LottieRef } from "lottie-react";
 
 /** Arbitrary names given to segments of the full Lottie animation */

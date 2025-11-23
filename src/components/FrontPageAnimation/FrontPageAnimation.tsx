@@ -1,11 +1,15 @@
+"use client"
+
 import { useCallback, useEffect, useRef } from "react";
-import chair from "@fpa/public/chair.png";
-import staticLayerDesktop from "@fpa/public/static-layer.png";
-import staticLayerMobile from "@fpa/public/static-layer-mobile.png";
+import chair from "../../../public/frontPage/chair.png";
+import staticLayerDesktop from "../../../public/frontPage/static-layer.png";
+import staticLayerMobile from "../../../public/frontPage/static-layer-mobile.png";
 import { PersonCanvas } from "./PersonCanvas/PersonCanvas";
 import { LottieRef } from "lottie-react";
 import { ScreenCanvas } from "./ScreenCanvas";
 import { usePuppetMaster } from "./usePuppetMaster";
+import Image from "next/image";
+import styles from "./frontPageAnimation.module.css";
 
 export const FrontPageAnimation = () => {
   const lottieRef = useRef<LottieRef>(null);
@@ -14,7 +18,7 @@ export const FrontPageAnimation = () => {
   const chairRef = useRef<HTMLImageElement>(null);
   const lottieContainerRef = useRef<HTMLDivElement>(null);
   const imageBreakPoint = 820;
-  const widthRef = useRef(window.innerWidth);
+  const widthRef = useRef((typeof window !== "undefined") ? window.innerWidth : 0);
   const mobileWidth = window.innerWidth < imageBreakPoint;
   const puppetMaster = usePuppetMaster(canvasRef, lottieRef as LottieRef);
 
@@ -36,7 +40,9 @@ export const FrontPageAnimation = () => {
       oldWidth < imageBreakPoint && newWidth >= imageBreakPoint;
     widthRef.current = newWidth;
     if (desktopToMobile) {
-      staticRef.current.src = staticLayerMobile;
+      console.log("resizing down")
+      staticRef.current.src = staticLayerMobile.src;
+      console.log(staticLayerMobile.src)
       chairRef.current.style.bottom = "2%";
       chairRef.current.style.left = "29%";
       chairRef.current.style.height = "60%";
@@ -49,7 +55,8 @@ export const FrontPageAnimation = () => {
       lottieContainerRef.current.style.left = "18%";
     }
     if (mobileToDesktop) {
-      staticRef.current.src = staticLayerDesktop;
+      staticRef.current.src = staticLayerDesktop.src;
+      console.log(staticLayerDesktop.src)
       chairRef.current.style.bottom = "0%";
       chairRef.current.style.left = "17%";
       chairRef.current.style.height = "40%";
@@ -71,44 +78,48 @@ export const FrontPageAnimation = () => {
   }, [resizeApp]);
 
   return (
-    <div style={{ position: "relative" }}>
-      <img
-        ref={staticRef}
-        className="front-page-img"
-        src={
-          window.innerWidth <= imageBreakPoint
-            ? staticLayerMobile
-            : staticLayerDesktop
-        }
-      />
-      <ScreenCanvas
-        mobile={mobileWidth}
-        scale={window.devicePixelRatio}
-        ref={canvasRef}
-      />
-      <div
-        ref={lottieContainerRef}
-        style={{
-          position: "absolute",
-          bottom: "4%",
-          height: mobileWidth ? "95%" : "60%",
-          width: mobileWidth ? "75%" : "35%",
-          left: mobileWidth ? "18%" : "12%",
-        }}
-      >
-        <PersonCanvas ref={lottieRef} />
+    <div className={styles.frontPageOuter}>
+      <div className={styles.frontPageInner}>
+        <img
+          alt=""
+          ref={staticRef}
+          className={styles.frontPageImg}
+          src={
+            window.innerWidth <= imageBreakPoint
+              ? staticLayerMobile.src
+              : staticLayerDesktop.src
+         }
+        />
+        <ScreenCanvas
+          mobile={mobileWidth}
+          scale={window.devicePixelRatio}
+          ref={canvasRef}
+        />
+        <div
+          ref={lottieContainerRef}
+          style={{
+            position: "absolute",
+            bottom: "4%",
+            height: mobileWidth ? "95%" : "60%",
+            width: mobileWidth ? "75%" : "35%",
+            left: mobileWidth ? "18%" : "12%",
+          }}
+        >
+          <PersonCanvas ref={lottieRef} />
+        </div>
+        <img
+          alt=""
+          style={{
+            position: "absolute",
+            bottom: mobileWidth ? "2%" : "0",
+            left: mobileWidth ? "29%" : "17%",
+            width: "auto",
+            height: mobileWidth ? "60%" : "40%",
+          }}
+          src={chair.src}
+          ref={chairRef}
+        />
       </div>
-      <img
-        style={{
-          position: "absolute",
-          bottom: mobileWidth ? "2%" : "0",
-          left: mobileWidth ? "29%" : "17%",
-          width: "auto",
-          height: mobileWidth ? "60%" : "40%",
-        }}
-        src={chair}
-        ref={chairRef}
-      />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import CodeBlob, { BezierControlPoints } from "./CodeBlob";
 import Cursor from "./Cursor";
-import { getRandomSelection } from "@fpa/utils";
+import { getRandomSelection } from "@ui/components/FrontPageAnimation/utils";
 import {
 	canvasHeight,
 	canvasWidth,

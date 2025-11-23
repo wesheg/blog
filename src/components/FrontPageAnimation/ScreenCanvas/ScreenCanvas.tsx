@@ -26,3 +26,5 @@ export const ScreenCanvas = forwardRef<HTMLCanvasElement, ScreenCanvasProps>(
 		);
 	},
 );
+
+ScreenCanvas.displayName = "ScreenCanvas";

@@ -13,3 +13,5 @@ export const PersonCanvas = forwardRef<LottieRef | undefined>((_, ref) => {
 		/>
 	);
 });
+
+PersonCanvas.displayName = "PersonCanvas";
