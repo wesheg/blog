@@ -280,12 +280,12 @@ export const usePuppetMaster = (
 
       return new Promise((res) => {
         if (randomMovement === "addNewLines") {
-          const randomLines = getRandomInteger();
+          const randomLines = getRandomInteger(false, 5);
           movements[randomMovement](randomLines).then(() =>
             res(randomMovement),
           );
         } else if (randomMovement === "deleteLines") {
-          const randomLines = getRandomInteger(false, 3);
+          const randomLines = getRandomInteger(false, 2);
           movements[randomMovement](randomLines).then(() =>
             res(randomMovement),
           );
