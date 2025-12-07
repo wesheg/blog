@@ -12,7 +12,7 @@ export const MobileNavButton = ({
   handleClick,
 }: NavigationButtonProps) => {
   return (
-    <button className={style.navButtonOuter} onClick={handleClick}>
+    <div className={style.navButtonOuter} onClick={handleClick}>
       <div
         className={`${style.line} ${style.topLine} ${open ? style.topLineOpen : ""}`}
       />
@@ -22,6 +22,6 @@ export const MobileNavButton = ({
       <div
         className={`${style.line} ${style.bottomLine} ${open ? style.bottomLineOpen : ""}`}
       />
-    </button>
+    </div>
   );
 };

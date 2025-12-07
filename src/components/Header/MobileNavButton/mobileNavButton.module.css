@@ -9,6 +9,7 @@
   border: none;
   position: relative;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .line {
