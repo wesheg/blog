@@ -8,7 +8,7 @@ const FrontPageHeadlines: FC<{ className?: string }> = ({ className }) => {
       <h2>Hi, I&apos;m Wes</h2>
       <p>I&apos;m a software engineer & investment analyst</p>
       <p>Welcome to my website!</p>
-      <button>Read the blog</button>
+      <button className={styles.headlinesButton}>Read the blog</button>
     </div>
   );
 };
