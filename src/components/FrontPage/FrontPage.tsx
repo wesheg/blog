@@ -1,16 +1,15 @@
 "use client";
 import dynamic from "next/dynamic";
 import styles from "./frontPage.module.css";
-import type { FC } from "react";
 
 const DynamicFrontPageAnimation = dynamic(
   () => import("./FrontPageAnimation"),
   { ssr: false },
 );
 
-const FrontPageHeadlines: FC<{ className?: string }> = ({ className }) => {
+const FrontPageHeadlines = () => {
   return (
-    <div className={`${styles.headlinesContainer} ${className ?? ""}`}>
+    <div className={styles.headlinesContainer}>
       <h2>Hi, I&apos;m Wes</h2>
       <p>I&apos;m a software engineer & investment analyst</p>
       <p>Welcome to my website!</p>
@@ -22,9 +21,8 @@ const FrontPageHeadlines: FC<{ className?: string }> = ({ className }) => {
 export const FrontPage = () => {
   return (
     <div className={styles.outerContainer}>
-      <FrontPageHeadlines className={styles.headlinesMobile} />
       <DynamicFrontPageAnimation />
-      <FrontPageHeadlines className={styles.headlinesDesktop} />
+      <FrontPageHeadlines />
     </div>
   );
 };
