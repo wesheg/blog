@@ -18,10 +18,8 @@ export const FrontPageAnimation = () => {
   const chairRef = useRef<HTMLImageElement>(null);
   const lottieContainerRef = useRef<HTMLDivElement>(null);
   const imageBreakPoint = 820;
-  const scale = typeof window !== "undefined" ? window.devicePixelRatio : 2;
-  const widthRef = useRef(
-    typeof window !== "undefined" ? window.innerWidth : 0,
-  );
+  const scale = window.devicePixelRatio;
+  const widthRef = useRef(window.innerWidth);
   const puppetMaster = usePuppetMaster(
     scale,
     canvasRef,
@@ -64,7 +62,6 @@ export const FrontPageAnimation = () => {
           ref={staticRef}
           className={styles.frontPageBackground}
           src={
-            typeof window !== "undefined" &&
             window.innerWidth <= imageBreakPoint
               ? staticLayerMobile.src
               : staticLayerDesktop.src

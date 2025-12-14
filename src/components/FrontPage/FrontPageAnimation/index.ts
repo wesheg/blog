@@ -1,1 +1,2 @@
-export { FrontPageAnimation } from "./FrontPageAnimation";
+import { FrontPageAnimation } from "./FrontPageAnimation";
+export default FrontPageAnimation;
