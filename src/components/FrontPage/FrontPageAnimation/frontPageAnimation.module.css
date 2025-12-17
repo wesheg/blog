@@ -42,6 +42,10 @@
     height: 60vh;
   }
 
+  .frontPageInner {
+    flex-shrink: 1;
+  }
+
   .frontPageImg {
     width: 100%;
     height: unset;
