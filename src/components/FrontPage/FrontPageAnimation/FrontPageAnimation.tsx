@@ -17,7 +17,7 @@ export const FrontPageAnimation = () => {
   const staticRef = useRef<HTMLImageElement>(null);
   const chairRef = useRef<HTMLImageElement>(null);
   const lottieContainerRef = useRef<HTMLDivElement>(null);
-  const imageBreakPoint = 820;
+  const imageBreakPoint = 1000;
   const scale = window.devicePixelRatio;
   const widthRef = useRef(window.innerWidth);
   const puppetMaster = usePuppetMaster(
