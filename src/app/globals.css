@@ -1,6 +1,6 @@
 :root {
-  /** Screen Sizes **/
-  --wide-size: 1200px;
+  /** Screen Widths **/
+  --desktop-width: 1500px;
   --content-size: 800px;
 
   /** Colors **/
@@ -18,10 +18,6 @@
   --button-background: var(--foreground);
   --button-foreground: var(--background);
   --button-background-hover: #3d3d3d;
-
-  /** Screen Widths **/
-  --desktop-width: 1500px;
-  --content-size: 800px;
 
   /** Font Sizes **/
   --fontsize-h1: 3.732rem;
