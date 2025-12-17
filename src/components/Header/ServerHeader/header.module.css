@@ -24,3 +24,7 @@
 .headerTextDeemphasized {
   font-weight: 400;
 }
+
+.headerAvatar {
+  height: clamp(65px, calc(100vh * 0.1), 95px);
+}

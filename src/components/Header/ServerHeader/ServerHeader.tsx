@@ -28,15 +28,13 @@ export const ServerHeader = ({
   return (
     <header className={styles.blogHeader}>
       <div className={styles.headerTitle}>
-        <div style={{ width: imgWidth }}>
-          <Image
-            className={styles.headerAvatar}
-            src="/avatars/header.svg"
-            width={imgWidth}
-            height={imgWidth * 1.5}
-            alt="site logo"
-          />
-        </div>
+        <Image
+          className={styles.headerAvatar}
+          src="/avatars/header.svg"
+          width={imgWidth}
+          height={imgWidth * 1.5}
+          alt="site logo"
+        />
         <HeaderText>
           <span className={styles.headerTextDeemphasized}>wesheg&apos;s</span>{" "}
           blog
