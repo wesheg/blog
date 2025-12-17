@@ -1,7 +1,8 @@
 :root {
   /** Screen Widths **/
   --desktop-width: 1500px;
-  --content-size: 800px;
+  --content-width: 800px;
+  --mobile-min-width: 320px;
 
   /** Colors **/
   --background: #faf9f5;
@@ -20,15 +21,64 @@
   --button-background-hover: #3d3d3d;
 
   /** Font Sizes **/
-  --fontsize-h1: 3.732rem;
-  --fontsize-h2: 3.11rem;
-  --fontsize-h3: 2.592rem;
-  --fontsize-h4: 2.16rem;
-  --fontsize-h5: 1.8rem;
-  --fontsize-h6: 1.5rem;
-  --fontsize-large: 1.5rem;
-  --fontsize-normal: 1.25rem;
-  --fontsize-small: 1.04rem;
+  --base-fontsize-h1: 3.732rem;
+  --base-fontsize-h2: 3.11rem;
+  --base-fontsize-h3: 2.592rem;
+  --base-fontsize-h4: 2.16rem;
+  --base-fontsize-h5: 1.8rem;
+  --base-fontsize-h6: 1.5rem;
+  --base-fontsize-large: 1.5rem;
+  --base-fontsize-normal: 1.25rem;
+  --base-fontsize-small: 1.04rem;
+
+  --font-scalar: calc(100vw / (var(--content-width) - var(--mobile-min-width)));
+  --min-font-scalar: 0.6;
+
+  --fontsize-h1: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-h1)),
+    calc(var(--font-scalar) * var(--base-fontsize-h1)),
+    var(--base-fontsize-h1)
+  );
+  --fontsize-h2: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-h2)),
+    calc(var(--font-scalar) * var(--base-fontsize-h2)),
+    var(--base-fontsize-h2)
+  );
+  --fontsize-h3: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-h3)),
+    calc(var(--font-scalar) * var(--base-fontsize-h3)),
+    var(--base-fontsize-h3)
+  );
+  --fontsize-h4: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-h4)),
+    calc(var(--font-scalar) * var(--base-fontsize-h4)),
+    var(--base-fontsize-h4)
+  );
+  --fontsize-h5: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-h5)),
+    calc(var(--font-scalar) * var(--base-fontsize-h5)),
+    var(--base-fontsize-h5)
+  );
+  --fontsize-h6: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-h6)),
+    calc(var(--font-scalar) * var(--base-fontsize-h6)),
+    var(--base-fontsize-h6)
+  );
+  --fontsize-large: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-large)),
+    calc(var(--font-scalar) * var(--base-fontsize-large)),
+    var(--base-fontsize-large)
+  );
+  --fontsize-normal: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-normal)),
+    calc(var(--font-scalar) * var(--base-fontsize-normal)),
+    var(--base-fontsize-normal)
+  );
+  --fontsize-small: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-small)),
+    calc(var(--font-scalar) * var(--base-fontsize-small)),
+    var(--base-fontsize-small)
+  );
 
   /** Modals **/
   --modal-overlay-z-index: 999;
