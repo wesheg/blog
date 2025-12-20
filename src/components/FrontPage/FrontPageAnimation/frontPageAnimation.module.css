@@ -13,20 +13,20 @@
   height: 100%;
 }
 
-.frontPageChair {
-  position: absolute;
-  width: auto;
-  height: 40%;
-  bottom: 0;
-  left: 13.5%;
-}
-
 .lottieContainer {
   position: absolute;
   width: 35%;
   height: 58%;
   bottom: 3%;
   left: 7%;
+}
+
+.chairContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .screenCanvas {
@@ -40,6 +40,7 @@
 @media screen and (max-width: 1000px) {
   .frontPageOuter {
     height: 60vh;
+    max-height: 400px;
   }
 
   .frontPageInner {
@@ -49,12 +50,6 @@
   .frontPageImg {
     width: 100%;
     height: unset;
-  }
-
-  .frontPageChair {
-    height: 60%;
-    bottom: 2%;
-    left: 29%;
   }
 
   .lottieContainer {

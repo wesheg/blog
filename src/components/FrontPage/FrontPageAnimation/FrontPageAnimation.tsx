@@ -15,7 +15,6 @@ export const FrontPageAnimation = () => {
   const lottieRef = useRef<LottieRef>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const staticRef = useRef<HTMLImageElement>(null);
-  const chairRef = useRef<HTMLImageElement>(null);
   const lottieContainerRef = useRef<HTMLDivElement>(null);
   const imageBreakPoint = 1000;
   const scale = window.devicePixelRatio;
@@ -74,13 +73,21 @@ export const FrontPageAnimation = () => {
         />
         <div ref={lottieContainerRef} className={styles.lottieContainer}>
           <PersonCanvas ref={lottieRef} />
+          <div className={styles.chairContainer}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 350 450"
+              width="350"
+              height="450"
+              style={{
+                height: "100%",
+                width: "100%",
+              }}
+            >
+              <image href={chair.src} height="67%" x="14%" y="36%" />
+            </svg>
+          </div>
         </div>
-        <img
-          alt=""
-          className={styles.frontPageChair}
-          src={chair.src}
-          ref={chairRef}
-        />
       </div>
     </div>
   );
