@@ -1,11 +1,10 @@
 import styles from "./page.module.css";
 
-import { Header, FrontPage } from "@ui/components";
+import { FrontPage } from "@ui/components";
 
 export default function Home() {
   return (
     <>
-      <Header isHome />
       <main className={styles.main}>
         {/* <h1>h1 Heading</h1>
           <h2>h2 Heading</h2>
