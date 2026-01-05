@@ -91,6 +91,9 @@ body {
 }
 
 body {
+  margin: auto;
+  max-width: var(--desktop-width);
+  padding: 5px clamp(5px, calc(var(--font-scalar) * 20px), 20px);
   color: var(--foreground);
   background: var(--background);
   font-family: var(--preferred-font), Arial, Helvetica, sans-serif;

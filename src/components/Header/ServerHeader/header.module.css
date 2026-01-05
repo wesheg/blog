@@ -1,7 +1,6 @@
 .blogHeader {
   margin: auto;
   max-width: var(--desktop-width);
-  padding: 5px clamp(5px, calc(var(--font-scalar) * 20px), 20px);
   display: flex;
   justify-content: space-between;
   align-items: center;
