@@ -10,7 +10,10 @@ export const MobileNavMenu = () => {
       <Link href="/" className={`${styles.navItemContainer} ${styles.navLink}`}>
         home
       </Link>
-      <Link href="/" className={`${styles.navItemContainer} ${styles.navLink}`}>
+      <Link
+        href="/about-me"
+        className={`${styles.navItemContainer} ${styles.navLink}`}
+      >
         about me
       </Link>
       <Link href="/" className={`${styles.navItemContainer} ${styles.navLink}`}>
