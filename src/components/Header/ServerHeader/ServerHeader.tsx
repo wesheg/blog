@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./header.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { Navigation } from "./Navigation/Navigation";
 
 type ServerHeaderProps = {
@@ -27,7 +28,7 @@ export const ServerHeader = ({
 
   return (
     <header className={styles.blogHeader}>
-      <div className={styles.headerTitle}>
+      <Link className={styles.headerTitle} href="/">
         <Image
           className={styles.headerAvatar}
           src="/avatars/header.svg"
@@ -39,7 +40,7 @@ export const ServerHeader = ({
           <span className={styles.headerTextDeemphasized}>wesheg&apos;s</span>{" "}
           blog
         </HeaderText>
-      </div>
+      </Link>
       <Navigation mobileButton={mobileButton} />
     </header>
   );
