@@ -12,7 +12,7 @@ export const Navigation = ({ mobileButton }: NavigationProps) => {
       <div className={styles.serverContainer}>
         <ul className={styles.navigationList}>
           <li className={styles.navigationOption}>
-            <Link href="/">about me</Link>
+            <Link href="/about-me">about me</Link>
           </li>
           <li className={styles.navigationOption}>
             <Link href="/">blog</Link>
