@@ -1,9 +1,12 @@
-import { FrontPage } from "@ui/components";
+import { FrontPage, Header } from "@ui/components";
 
 export default function Home() {
   return (
-    <main>
-      <FrontPage />
-    </main>
+    <>
+      <Header isHome />
+      <main>
+        <FrontPage />
+      </main>
+    </>
   );
 }
