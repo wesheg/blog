@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.className}>
+      <head>
+        <meta charSet="UTF-8" />
+      </head>
       <body>{children}</body>
     </html>
   );
