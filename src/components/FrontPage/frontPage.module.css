@@ -12,6 +12,11 @@
   /* Desktop Styling */
   margin-top: 7em;
   display: flex;
+
+  h2,
+  p {
+    margin: 0;
+  }
 }
 
 .headlinesButton {
