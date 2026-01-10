@@ -21,15 +21,15 @@
   --button-background-hover: #3d3d3d;
 
   /** Font Sizes **/
-  --base-fontsize-h1: 3.732rem;
-  --base-fontsize-h2: 3.11rem;
-  --base-fontsize-h3: 2.592rem;
-  --base-fontsize-h4: 2.16rem;
-  --base-fontsize-h5: 1.8rem;
-  --base-fontsize-h6: 1.5rem;
-  --base-fontsize-large: 1.5rem;
+  --base-fontsize-h1: 2.986rem;
+  --base-fontsize-h2: 2.488rem;
+  --base-fontsize-h3: 2.074rem;
+  --base-fontsize-h4: 1.728rem;
+  --base-fontsize-h5: 1.44rem;
+  --base-fontsize-h6: 1.44rem;
+  --base-fontsize-large: 1.25rem;
   --base-fontsize-normal: 1.25rem;
-  --base-fontsize-small: 1.04rem;
+  --base-fontsize-small: 1rem;
 
   --font-scalar: calc(100vw / (var(--content-width) - var(--mobile-min-width)));
   --min-font-scalar: 0.6;
