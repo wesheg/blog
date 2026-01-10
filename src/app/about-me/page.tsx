@@ -57,8 +57,8 @@ export default function AboutMe() {
           </span>
           , and I like to follow{" "}
           <span className={`${styles.finance} ${styles.emphasis}`}>
-            financial markets{" "}
-          </span>
+            financial markets
+          </span>{" "}
           when I can.
         </p>
         <p>
