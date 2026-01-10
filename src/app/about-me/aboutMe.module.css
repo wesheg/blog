@@ -2,3 +2,19 @@
   max-width: var(--content-width);
   margin: auto;
 }
+
+.emphasis {
+  font-weight: 900;
+}
+
+.software {
+  color: var(--blog-orange);
+}
+
+.finance {
+  color: var(--blog-green);
+}
+
+.life {
+  color: var(--blog-blue);
+}

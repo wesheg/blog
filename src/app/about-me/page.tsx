@@ -10,6 +10,7 @@ export default function AboutMe() {
         <div
           style={{
             height: "40vh",
+            minHeight: "300px",
             width: "100%",
             border: "1px solid var(--foreground)",
             display: "flex",
@@ -20,19 +21,57 @@ export default function AboutMe() {
           Placeholder
         </div>
         <h2>Hi, I&apos;m Wes</h2>
-        <p>I&apos;m a Software Engineer and former Stock Analyst</p>
         <p>
-          I used to work in asset management. Now I develop software for
-          financial firms.
+          I&apos;m a{" "}
+          <span className={`${styles.software} ${styles.emphasis}`}>
+            Software Engineer
+          </span>{" "}
+          and former{" "}
+          <span className={`${styles.finance} ${styles.emphasis}`}>
+            Stock Analyst
+          </span>
+          .
         </p>
-        <p>I&apos;m American, but I live in London now.</p>
         <p>
-          I&apos;m a CFA Charterholder, and I like to follow financial markets
+          I used to work in{" "}
+          <span className={`${styles.finance} ${styles.emphasis}`}>
+            asset management
+          </span>
+          . Now I develop{" "}
+          <span className={`${styles.software} ${styles.emphasis}`}>
+            software
+          </span>{" "}
+          for financial firms.
+        </p>
+        <p>
+          I&apos;m{" "}
+          <span className={`${styles.life} ${styles.emphasis}`}>American</span>,
+          but I live in{" "}
+          <span className={`${styles.life} ${styles.emphasis}`}>London</span>{" "}
+          now.
+        </p>
+        <p>
+          I&apos;m a{" "}
+          <span className={`${styles.finance} ${styles.emphasis}`}>
+            CFA Charterholder
+          </span>
+          , and I like to follow{" "}
+          <span className={`${styles.finance} ${styles.emphasis}`}>
+            financial markets{" "}
+          </span>
           when I can.
         </p>
         <p>
-          In my spare time, I enjoy hiking, riding motorcycles, and working on
-          an ever-growing list of side projects.
+          In my spare time, I enjoy{" "}
+          <span className={`${styles.life} ${styles.emphasis}`}>hiking</span>,{" "}
+          <span className={`${styles.life} ${styles.emphasis}`}>
+            riding motorcycles
+          </span>
+          , and working on an ever-growing list of{" "}
+          <span className={`${styles.software} ${styles.emphasis}`}>
+            side projects
+          </span>
+          .
         </p>
 
         <h2>Stuff I Can Do</h2>
