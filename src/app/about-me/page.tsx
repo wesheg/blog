@@ -45,9 +45,9 @@ export default function AboutMe() {
         </p>
         <p>
           I&apos;m{" "}
-          <span className={`${styles.life} ${styles.emphasis}`}>American</span>,
-          but I live in{" "}
-          <span className={`${styles.life} ${styles.emphasis}`}>London</span>{" "}
+          <span className={`${styles.life} ${styles.emphasis}`}>American</span>{" "}
+          🇺🇸, but I live in{" "}
+          <span className={`${styles.life} ${styles.emphasis}`}>London</span> 🇬🇧
           now.
         </p>
         <p>
@@ -59,19 +59,20 @@ export default function AboutMe() {
           <span className={`${styles.finance} ${styles.emphasis}`}>
             financial markets
           </span>{" "}
-          when I can.
+          📈 when I can.
         </p>
         <p>
           In my spare time, I enjoy{" "}
-          <span className={`${styles.life} ${styles.emphasis}`}>hiking</span>,{" "}
+          <span className={`${styles.life} ${styles.emphasis}`}>hiking</span>{" "}
+          🥾,{" "}
           <span className={`${styles.life} ${styles.emphasis}`}>
             riding motorcycles
-          </span>
-          , and working on an ever-growing list of{" "}
+          </span>{" "}
+          🏍️, and working on an ever-growing list of{" "}
           <span className={`${styles.software} ${styles.emphasis}`}>
             side projects
-          </span>
-          .
+          </span>{" "}
+          👨‍💻.
         </p>
 
         <h2>Stuff I Can Do</h2>
