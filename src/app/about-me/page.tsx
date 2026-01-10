@@ -1,11 +1,24 @@
+import styles from "./aboutMe.module.css";
 import { Header } from "@ui/components";
 
 export default function AboutMe() {
   return (
     <>
       <Header />
-      <main>
+      <main className={styles.aboutMeMain}>
         <h1>About Me</h1>
+        <div
+          style={{
+            height: "40vh",
+            width: "100%",
+            border: "1px solid var(--foreground)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Placeholder
+        </div>
         <h2>Hi, I&apos;m Wes</h2>
         <p>I&apos;m a Software Engineer and former Stock Analyst</p>
         <p>
