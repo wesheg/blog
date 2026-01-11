@@ -17,7 +17,7 @@ export default function AboutMe() {
             <Image
               alt=""
               src="/aboutMe/portrait.jpg"
-              width={990}
+              width={950}
               height={1192}
               className={styles.portrait}
             />
@@ -30,8 +30,8 @@ export default function AboutMe() {
             <Image
               alt=""
               src="/aboutMe/alamoSquare.jpg"
-              width={990}
-              height={1192}
+              width={6671}
+              height={4447}
             />
           </div>
           <div
@@ -42,8 +42,8 @@ export default function AboutMe() {
             <Image
               alt=""
               src="/aboutMe/giraffe.jpg"
-              width={990}
-              height={1192}
+              width={3024}
+              height={4032}
               className={styles.wide}
             />
           </div>
@@ -55,8 +55,8 @@ export default function AboutMe() {
             <Image
               alt=""
               src="/aboutMe/hawaii.jpg"
-              width={990}
-              height={1192}
+              width={3024}
+              height={4032}
               className={styles.wide}
             />
           </div>
