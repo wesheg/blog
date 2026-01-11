@@ -9,60 +9,21 @@ export default function AboutMe() {
       <Header />
       <main className={styles.aboutMeMain}>
         <h1>About Me</h1>
-        <div className={styles.gallery}>
-          <div
-            style={{
-              gridArea: "portrait",
-            }}
-          >
-            <Image
-              alt=""
-              src="/aboutMe/portrait.jpg"
-              width={950}
-              height={1192}
-              className={styles.portrait}
-            />
-          </div>
-          <div
-            style={{
-              gridArea: "wide",
-            }}
-          >
-            <Image
-              alt=""
-              src="/aboutMe/alamoSquare.jpg"
-              width={6671}
-              height={4447}
-            />
-          </div>
-          <div
-            style={{
-              gridArea: "single1",
-            }}
-          >
-            <Image
-              alt=""
-              src="/aboutMe/giraffe.jpg"
-              width={3024}
-              height={4032}
-              className={styles.wide}
-            />
-          </div>
-          <div
-            style={{
-              gridArea: "single2",
-            }}
-          >
-            <Image
-              alt=""
-              src="/aboutMe/hawaii.jpg"
-              width={3024}
-              height={4032}
-              className={styles.wide}
-            />
-          </div>
-        </div>
-        <h2>Hi, I&apos;m Wes</h2>
+        <Image
+          alt=""
+          src="/aboutMe/portrait.jpg"
+          width={950}
+          height={1192}
+          style={{
+            maxHeight: "265px",
+            float: "left",
+            objectFit: "contain",
+            borderRadius: "1em",
+            width: "auto",
+            marginRight: "1em",
+          }}
+        />
+        <h2 style={{ margin: 0 }}>Hi, I&apos;m Wes</h2>
         <p>
           I&apos;m a developer, CFA Charterholder, and former investment analyst
           who&apos;s been writing code for over a decade now. In my time working
@@ -95,6 +56,20 @@ export default function AboutMe() {
             Bloomberg Professional Mobile App.
           </Link>
         </p>
+        <Image
+          alt=""
+          src="/aboutMe/TechExpo.jpg"
+          width={950}
+          height={1192}
+          style={{
+            maxHeight: "250px",
+            float: "right",
+            objectFit: "contain",
+            borderRadius: "1em",
+            width: "auto",
+            marginLeft: "1em",
+          }}
+        />
         <p>
           This blog is where I write about financial markets, software
           engineering, and the things I&apos;ve learned building complex
@@ -102,7 +77,9 @@ export default function AboutMe() {
           how I work.
         </p>
 
-        <h2>Skills</h2>
+        <section style={{ clear: "right" }}>
+          <h2>Skills</h2>
+        </section>
         <h2>Career History</h2>
       </main>
     </>
