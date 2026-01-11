@@ -1,5 +1,6 @@
 import styles from "./aboutMe.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { Header } from "@ui/components";
 
 export default function AboutMe() {
@@ -63,57 +64,42 @@ export default function AboutMe() {
         </div>
         <h2>Hi, I&apos;m Wes</h2>
         <p>
-          I&apos;m a{" "}
-          <span className={`${styles.software} ${styles.emphasis}`}>
-            Software Engineer
-          </span>{" "}
-          and former{" "}
-          <span className={`${styles.finance} ${styles.emphasis}`}>
-            Stock Analyst
-          </span>
-          .
+          I&apos;m a developer, CFA Charterholder, and former investment analyst
+          who&apos;s been writing code for over a decade now. In my time working
+          in asset management and corporate finance, I built tools to support
+          and guide investment decisions. Back then, writing software was a
+          means to an end, but it gradually led to a career shift into full-time
+          engineering.
         </p>
         <p>
-          I used to work in{" "}
-          <span className={`${styles.finance} ${styles.emphasis}`}>
-            asset management
-          </span>
-          . Now I develop{" "}
-          <span className={`${styles.software} ${styles.emphasis}`}>
-            software
-          </span>{" "}
-          for financial firms.
+          Since 2020, I&apos;ve been with Bloomberg working on projects
+          including{" "}
+          <Link
+            href="https://www.bloomberg.com/professional/products/bloomberg-terminal/research/bquant"
+            target="_blank"
+          >
+            BQuant
+          </Link>
+          , data pipelines for{" "}
+          <Link
+            href="https://www.bloomberg.com/professional/products/indices/fixed-income/"
+            target="_blank"
+          >
+            bond market indices
+          </Link>
+          , and the{" "}
+          <Link
+            href="https://apps.apple.com/us/app/bloomberg-professional/id407761767"
+            target="_blank"
+          >
+            Bloomberg Professional Mobile App.
+          </Link>
         </p>
         <p>
-          I&apos;m{" "}
-          <span className={`${styles.life} ${styles.emphasis}`}>American</span>{" "}
-          🇺🇸, but I live in{" "}
-          <span className={`${styles.life} ${styles.emphasis}`}>London</span> 🇬🇧
-          now.
-        </p>
-        <p>
-          I&apos;m a{" "}
-          <span className={`${styles.finance} ${styles.emphasis}`}>
-            CFA Charterholder
-          </span>
-          , and I like to follow{" "}
-          <span className={`${styles.finance} ${styles.emphasis}`}>
-            financial markets
-          </span>{" "}
-          📈 when I can.
-        </p>
-        <p>
-          In my spare time, I enjoy{" "}
-          <span className={`${styles.life} ${styles.emphasis}`}>hiking</span>{" "}
-          🥾,{" "}
-          <span className={`${styles.life} ${styles.emphasis}`}>
-            riding motorcycles
-          </span>{" "}
-          🏍️, and working on an ever-growing list of{" "}
-          <span className={`${styles.software} ${styles.emphasis}`}>
-            side projects
-          </span>{" "}
-          👨‍💻.
+          This blog is where I write about financial markets, software
+          engineering, and the things I&apos;ve learned building complex
+          systems. Every post here represents something that meaningfully shaped
+          how I work.
         </p>
 
         <h2>Skills</h2>

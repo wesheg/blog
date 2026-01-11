@@ -136,6 +136,7 @@ main {
 
 p {
   font-size: var(--fontsize-normal);
+  line-height: 1.75em;
 }
 
 a {
