@@ -116,7 +116,7 @@ export default function AboutMe() {
           👨‍💻.
         </p>
 
-        <h2>Stuff I Can Do</h2>
+        <h2>Skills</h2>
         <h2>Career History</h2>
       </main>
     </>
