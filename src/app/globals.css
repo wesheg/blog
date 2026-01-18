@@ -173,6 +173,16 @@ button.light {
   border: 1px solid var(--foreground);
 }
 
+figure > img {
+  margin-bottom: 2px; /* extra space between img and figcaption */
+}
+
+figcaption {
+  font-size: var(--fontsize-small);
+  font-weight: 500;
+  font-style: italic;
+}
+
 .small-text {
   font-size: var(--fontsize-small);
 }

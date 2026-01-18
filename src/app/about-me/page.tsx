@@ -11,7 +11,7 @@ export default function AboutMe() {
         <h1 className={styles.aboutMeHeading}>About Me</h1>
         <div className={styles.imgContainer}>
           <Image
-            alt=""
+            alt="Headshot"
             src="/aboutMe/portrait.jpg"
             width={950}
             height={1192}
@@ -52,13 +52,18 @@ export default function AboutMe() {
           </Link>
         </p>
         <div className={styles.imgContainer}>
-          <Image
-            alt=""
-            src="/aboutMe/TechExpo.jpg"
-            width={950}
-            height={1192}
-            className={styles.conferenceImg}
-          />
+          <figure style={{ float: "right", marginLeft: "1em" }}>
+            <Image
+              alt="Presenting at the Bloomberg Tech Expo in London, 2025"
+              src="/aboutMe/TechExpo.jpg"
+              width={950}
+              height={1192}
+              className={styles.conferenceImg}
+            />
+            <figcaption className="img-caption">
+              Bloomberg Tech Expo, London 2025
+            </figcaption>
+          </figure>
         </div>
         <p>
           This blog is where I write about financial markets, software
