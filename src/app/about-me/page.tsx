@@ -9,8 +9,10 @@ export default function AboutMe() {
       <Header />
       <main className={styles.aboutMeMain}>
         <h1 className={styles.aboutMeHeading}>About Me</h1>
-        <div className={styles.imgContainer}>
-          <figure className={styles.aboutMeFigure}>
+        <div className={styles.introContainer}>
+          <figure
+            className={`${styles.aboutMeFigure} ${styles.portraitFigure}`}
+          >
             <Image
               alt="Headshot"
               src="/aboutMe/portrait.jpg"
@@ -19,16 +21,18 @@ export default function AboutMe() {
               className={styles.portraitImg}
             />
           </figure>
+          <div>
+            <h2 style={{ margin: 0 }}>Hi, I&apos;m Wes</h2>
+            <p>
+              I&apos;m a developer, CFA Charterholder, and former investment
+              analyst who&apos;s been writing code for over a decade now. In my
+              time working in asset management and corporate finance, I built
+              tools to support and guide investment decisions. Back then,
+              writing software was a means to an end, but it gradually led to a
+              career shift into full-time engineering.
+            </p>
+          </div>
         </div>
-        <h2 style={{ margin: 0 }}>Hi, I&apos;m Wes</h2>
-        <p>
-          I&apos;m a developer, CFA Charterholder, and former investment analyst
-          who&apos;s been writing code for over a decade now. In my time working
-          in asset management and corporate finance, I built tools to support
-          and guide investment decisions. Back then, writing software was a
-          means to an end, but it gradually led to a career shift into full-time
-          engineering.
-        </p>
         <p>
           Since 2020, I&apos;ve been with Bloomberg working on projects
           including{" "}
@@ -55,8 +59,7 @@ export default function AboutMe() {
         </p>
         <div className={styles.imgContainer}>
           <figure
-            className={styles.aboutMeFigure}
-            style={{ float: "right", marginLeft: "1em" }}
+            className={`${styles.aboutMeFigure} ${styles.conferenceFigure}`}
           >
             <Image
               alt="Presenting at the Bloomberg Tech Expo in London, 2025"
