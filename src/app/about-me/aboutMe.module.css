@@ -20,3 +20,28 @@
   width: auto;
   margin-left: 1em;
 }
+
+@media screen and (max-width: 1000px) {
+  .aboutMeHeading {
+    text-align: center;
+  }
+
+  .portraitImg {
+    float: none;
+    margin-right: 0px;
+  }
+
+  .conferenceImg {
+    float: none;
+    margin-left: 0px;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+  }
+
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+  }
+}

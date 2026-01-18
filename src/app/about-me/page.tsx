@@ -8,14 +8,16 @@ export default function AboutMe() {
     <>
       <Header />
       <main className={styles.aboutMeMain}>
-        <h1>About Me</h1>
-        <Image
-          alt=""
-          src="/aboutMe/portrait.jpg"
-          width={950}
-          height={1192}
-          className={styles.portraitImg}
-        />
+        <h1 className={styles.aboutMeHeading}>About Me</h1>
+        <div className={styles.imgContainer}>
+          <Image
+            alt=""
+            src="/aboutMe/portrait.jpg"
+            width={950}
+            height={1192}
+            className={styles.portraitImg}
+          />
+        </div>
         <h2 style={{ margin: 0 }}>Hi, I&apos;m Wes</h2>
         <p>
           I&apos;m a developer, CFA Charterholder, and former investment analyst
@@ -49,13 +51,15 @@ export default function AboutMe() {
             Bloomberg Professional Mobile App.
           </Link>
         </p>
-        <Image
-          alt=""
-          src="/aboutMe/TechExpo.jpg"
-          width={950}
-          height={1192}
-          className={styles.conferenceImg}
-        />
+        <div className={styles.imgContainer}>
+          <Image
+            alt=""
+            src="/aboutMe/TechExpo.jpg"
+            width={950}
+            height={1192}
+            className={styles.conferenceImg}
+          />
+        </div>
         <p>
           This blog is where I write about financial markets, software
           engineering, and the things I&apos;ve learned building complex
