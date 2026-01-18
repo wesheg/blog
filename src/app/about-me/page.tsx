@@ -14,14 +14,7 @@ export default function AboutMe() {
           src="/aboutMe/portrait.jpg"
           width={950}
           height={1192}
-          style={{
-            maxHeight: "265px",
-            float: "left",
-            objectFit: "contain",
-            borderRadius: "1em",
-            width: "auto",
-            marginRight: "1em",
-          }}
+          className={styles.portraitImg}
         />
         <h2 style={{ margin: 0 }}>Hi, I&apos;m Wes</h2>
         <p>
@@ -61,14 +54,7 @@ export default function AboutMe() {
           src="/aboutMe/TechExpo.jpg"
           width={950}
           height={1192}
-          style={{
-            maxHeight: "250px",
-            float: "right",
-            objectFit: "contain",
-            borderRadius: "1em",
-            width: "auto",
-            marginLeft: "1em",
-          }}
+          className={styles.conferenceImg}
         />
         <p>
           This blog is where I write about financial markets, software

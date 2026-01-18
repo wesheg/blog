@@ -2,3 +2,21 @@
   max-width: var(--content-width);
   margin: auto;
 }
+
+.portraitImg {
+  max-height: 265px;
+  float: left;
+  object-fit: contain;
+  border-radius: 1em;
+  width: auto;
+  margin-right: 1em;
+}
+
+.conferenceImg {
+  max-height: 250px;
+  float: right;
+  object-fit: contain;
+  border-radius: 1em;
+  width: auto;
+  margin-left: 1em;
+}
