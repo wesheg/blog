@@ -4,7 +4,7 @@
 }
 
 .portraitImg {
-  max-height: 265px;
+  max-height: 250px;
   float: left;
   object-fit: contain;
   border-radius: 1em;
@@ -20,13 +20,23 @@
   width: auto;
 }
 
+.aboutMeFigure {
+  margin: 0;
+}
+
 @media screen and (max-width: 1000px) {
   .aboutMeHeading {
     text-align: center;
+    margin: 0;
+  }
+
+  .aboutMeFigure {
+    margin: 1em 0;
   }
 
   .portraitImg {
     float: none;
+    max-height: 300px;
     margin-right: 0px;
   }
 
@@ -41,6 +51,5 @@
   .imgContainer {
     display: flex;
     justify-content: center;
-    margin: 2em 0;
   }
 }

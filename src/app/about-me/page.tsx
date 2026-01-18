@@ -10,13 +10,15 @@ export default function AboutMe() {
       <main className={styles.aboutMeMain}>
         <h1 className={styles.aboutMeHeading}>About Me</h1>
         <div className={styles.imgContainer}>
-          <Image
-            alt="Headshot"
-            src="/aboutMe/portrait.jpg"
-            width={950}
-            height={1192}
-            className={styles.portraitImg}
-          />
+          <figure className={styles.aboutMeFigure}>
+            <Image
+              alt="Headshot"
+              src="/aboutMe/portrait.jpg"
+              width={950}
+              height={1192}
+              className={styles.portraitImg}
+            />
+          </figure>
         </div>
         <h2 style={{ margin: 0 }}>Hi, I&apos;m Wes</h2>
         <p>
@@ -52,7 +54,10 @@ export default function AboutMe() {
           </Link>
         </p>
         <div className={styles.imgContainer}>
-          <figure style={{ float: "right", marginLeft: "1em" }}>
+          <figure
+            className={styles.aboutMeFigure}
+            style={{ float: "right", marginLeft: "1em" }}
+          >
             <Image
               alt="Presenting at the Bloomberg Tech Expo in London, 2025"
               src="/aboutMe/TechExpo.jpg"
