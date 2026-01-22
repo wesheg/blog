@@ -23,6 +23,11 @@ export const Skills = () => {
           imgAlt="Excel Logo"
         />
         <SkillBadge label="Figma" imgSrc="/skills/Figma.png" />
+        <SkillBadge
+          label="SQL Databases"
+          imgSrc="/skills/SQL.png"
+          imgAlt="Logos of PostgreSQL, MySQL, and Microsoft SQL Server"
+        />
       </div>
     </section>
   );
