@@ -12,8 +12,16 @@ export const Skills = () => {
         <SkillBadge label="C++" imgSrc="/skills/Cpp.png" />
         <SkillBadge label="Docker" imgSrc="/skills/Docker.png" />
         <SkillBadge label="Amazon Web Services" imgSrc="/skills/AWS.png" />
-        <SkillBadge label="CFA Charterholder" imgSrc="/skills/CFA.png" />
-        <SkillBadge label="Advanced Excel" imgSrc="/skills/Excel.png" />
+        <SkillBadge
+          label="CFA Charterholder"
+          imgSrc="/skills/CFA.png"
+          imgAlt="CFA Institute Logo"
+        />
+        <SkillBadge
+          label="Advanced Excel"
+          imgSrc="/skills/Excel.png"
+          imgAlt="Excel Logo"
+        />
         <SkillBadge label="Figma" imgSrc="/skills/Figma.png" />
       </div>
     </section>
