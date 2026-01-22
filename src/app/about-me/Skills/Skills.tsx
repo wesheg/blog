@@ -11,11 +11,7 @@ export const Skills = () => {
         <SkillBadge label="React" imgSrc="/skills/React.png" />
         <SkillBadge label="C++" imgSrc="/skills/Cpp.png" />
         <SkillBadge label="Docker" imgSrc="/skills/Docker.png" />
-        <SkillBadge
-          label="Amazon Web Services"
-          imgSrc="/skills/AWS.png"
-          imgAlt="Amazon Web Services Logo"
-        />
+        <SkillBadge label="Amazon Web Services" imgSrc="/skills/AWS.png" />
         <SkillBadge label="CFA Charterholder" imgSrc="/skills/CFA.png" />
         <SkillBadge label="Advanced Excel" imgSrc="/skills/Excel.png" />
         <SkillBadge label="Figma" imgSrc="/skills/Figma.png" />
