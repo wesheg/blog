@@ -1,3 +1,8 @@
 .skillsSection {
   clear: right;
 }
+
+.badgeGallery {
+  display: flex;
+  flex-wrap: wrap;
+}
