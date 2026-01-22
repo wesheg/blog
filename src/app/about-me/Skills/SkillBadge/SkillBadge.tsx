@@ -1,5 +1,5 @@
 import Image from "next/image";
-// import styles from "./skillBadge.module.css";
+import styles from "./skillBadge.module.css";
 
 type SkillBadgeProps = {
   label: string;
@@ -9,9 +9,14 @@ type SkillBadgeProps = {
 
 export const SkillBadge = ({ label, imgSrc, imgAlt }: SkillBadgeProps) => {
   return (
-    <figure>
-      <Image alt={imgAlt ?? `${label} Logo`} src={imgSrc} />
-      <figcaption>{label}</figcaption>
+    <figure className={styles.skillFigure}>
+      <Image
+        alt={imgAlt ?? `${label} Logo`}
+        src={imgSrc}
+        width={90}
+        height={90}
+      />
+      <figcaption className={styles.skillFigCaption}>{label}</figcaption>
     </figure>
   );
 };

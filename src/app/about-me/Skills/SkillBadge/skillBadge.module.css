@@ -1,0 +1,16 @@
+.skillFigure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.skillFigCaption {
+  font-style: normal;
+  font-weight: 400;
+}
