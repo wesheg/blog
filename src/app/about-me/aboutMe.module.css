@@ -1,6 +1,10 @@
 .aboutMeMain {
   max-width: var(--content-width);
   margin: auto;
+
+  section > h2 {
+    border-bottom: 1px solid var(--foreground);
+  }
 }
 
 .portraitImg {
