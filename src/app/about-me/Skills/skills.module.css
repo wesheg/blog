@@ -6,3 +6,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 1000px) {
+  .badgeGallery {
+    justify-content: center;
+  }
+}
