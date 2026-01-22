@@ -1,6 +1,7 @@
 import styles from "./aboutMe.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { CareerHistory } from "./CareerHistory";
 import { Header } from "@ui/components";
 import { Skills } from "./Skills";
 
@@ -82,7 +83,7 @@ export default function AboutMe() {
         </p>
 
         <Skills />
-        <h2>Career History</h2>
+        <CareerHistory />
       </main>
     </>
   );
