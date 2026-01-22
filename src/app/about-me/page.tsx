@@ -2,6 +2,7 @@ import styles from "./aboutMe.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@ui/components";
+import { Skills } from "./Skills";
 
 export default function AboutMe() {
   return (
@@ -80,9 +81,7 @@ export default function AboutMe() {
           how I work.
         </p>
 
-        <section style={{ clear: "right" }}>
-          <h2>Skills</h2>
-        </section>
+        <Skills />
         <h2>Career History</h2>
       </main>
     </>
