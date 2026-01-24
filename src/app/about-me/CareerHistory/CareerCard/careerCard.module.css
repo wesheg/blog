@@ -15,7 +15,7 @@
   width: 70px;
   align-items: center;
   justify-content: center;
-  border: 5px solid red;
+  border: 5px solid var(--foreground);
   border-radius: 50%;
 }
 
@@ -26,9 +26,27 @@
 
 .titleContainer {
   grid-area: title;
+
+  p {
+    margin: 0.25em 0;
+    line-height: var(--fontsize-normal);
+    font-size: var(--fontsize-small);
+    font-style: italic;
+  }
+
+  p.companyName {
+    margin-top: 0.25em;
+    font-weight: 500;
+    font-style: normal;
+    font-size: var(--fontsize-normal);
+  }
 }
 
 .title {
-  margin: calc(45px - 1em) 0 0.5em 0;
+  margin: 0;
   font-size: var(--fontsize-h5);
+}
+
+.jobDescription {
+  grid-area: description;
 }

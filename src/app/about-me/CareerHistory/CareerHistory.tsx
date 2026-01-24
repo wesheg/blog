@@ -9,7 +9,13 @@ export const CareerHistory = () => {
         imgSrc="/companies/Bloomberg.png"
         imgAlt="Bloomberg LP Logo"
         jobTitle="Senior Software Engineer - Mobile"
-      />
+        companyName="Bloomberg L.P."
+        location="London, U.K."
+        startDate="Jan 2026"
+        endDate="Present"
+      >
+        <p>Test</p>
+      </CareerCard>
     </section>
   );
 };

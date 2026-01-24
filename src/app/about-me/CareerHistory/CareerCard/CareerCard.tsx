@@ -5,11 +5,25 @@ type CareerCardProps = {
   imgSrc: string;
   imgAlt: string;
   jobTitle: string;
+  companyName: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  children: React.ReactNode;
 };
 
-export const CareerCard = ({ imgSrc, imgAlt, jobTitle }: CareerCardProps) => {
+export const CareerCard = ({
+  imgSrc,
+  imgAlt,
+  jobTitle,
+  companyName,
+  location,
+  startDate,
+  endDate,
+  children,
+}: CareerCardProps) => {
   return (
-    <div className={styles.outerGrid}>
+    <section className={styles.outerGrid}>
       <div className={styles.logoContainer}>
         <Image
           className={styles.logoImg}
@@ -21,7 +35,11 @@ export const CareerCard = ({ imgSrc, imgAlt, jobTitle }: CareerCardProps) => {
       </div>
       <div className={styles.titleContainer}>
         <h3 className={styles.title}>{jobTitle}</h3>
+        <p className={styles.companyName}>{companyName}</p>
+        <p>{location}</p>
+        <p>{`${startDate} - ${endDate}`}</p>
       </div>
-    </div>
+      <div className={styles.jobDescription}>{children}</div>
+    </section>
   );
 };
