@@ -28,29 +28,27 @@ export const CareerHistory = () => {
       >
         <p>
           BISL is a regulated subsidiary of Bloomberg that builds broad-market
-          and bespoke financial indices. My team&apos;s job was to build tools
-          to ensure data quality and reduce time-to-market for the construction
-          of new indices.
+          and bespoke financial indices. My team built tools to ensure data
+          quality and reduce time-to-market for the construction of new indices.
         </p>
         <p>
           I was the <strong>lead full-stack engineer</strong> and{" "}
           <strong>lead user experience designer</strong> for two internal web
-          applications used by our Compliance and Product departments.
+          applications used by Compliance and Product.
         </p>
         <ol>
           <li>
-            <strong>Index Quality Controller (iQC)</strong> &mdash; Allows
-            Compliance to monitor an automated system of quality checks on large
-            datasets before they are used in downstream index calculation. iQC
-            empowers users to onboard new datasets, resolve data quality issues,
-            and control the use of data in index construction.
+            <strong>Index Quality Controller (iQC)</strong> &mdash; Enables
+            Compliance to monitor and intervene in an automated system of
+            quality checks on large datasets before downstream index
+            calculation. iQC empowers users to onboard new datasets, resolve
+            quality issues, and control the use of data in index construction.
           </li>
           <li>
-            <strong>Index Data Catalog</strong> &mdash; A searchable
-            encyclopedia of all datasets and fields used in the creation of
-            equity and fixed income indices. The Index Data Catalog is used by
-            Product Managers for idea generation and deeper insight into data
-            provided for index construction.
+            <strong>Index Data Catalog</strong> &mdash; A searchable, canonical
+            reference for all datasets and fields used in equity and fixed
+            income indices. Used by Product Managers for idea generation, data
+            discovery, and deeper insight into index construction.
           </li>
         </ol>
       </CareerCard>
