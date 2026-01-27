@@ -23,7 +23,7 @@ export const CareerCard = ({
   children,
 }: CareerCardProps) => {
   return (
-    <section className={styles.outerGrid}>
+    <div className={styles.outerGrid}>
       <div className={styles.logoContainer}>
         <Image
           className={styles.logoImg}
@@ -40,6 +40,6 @@ export const CareerCard = ({
         <p>{`${startDate} - ${endDate}`}</p>
       </div>
       <div className={styles.jobDescription}>{children}</div>
-    </section>
+    </div>
   );
 };

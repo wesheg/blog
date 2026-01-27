@@ -6,6 +6,7 @@
     "logo title"
     ". description"
     ". tech";
+  margin-bottom: 3rem;
 }
 
 .logoContainer {
@@ -49,4 +50,8 @@
 
 .jobDescription {
   grid-area: description;
+
+  li::marker {
+    font-weight: 500;
+  }
 }

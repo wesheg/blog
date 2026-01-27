@@ -1,9 +1,10 @@
-// import styles from "./careerHistory.module.css";
+import styles from "./careerHistory.module.css";
 import { CareerCard } from "./CareerCard/CareerCard";
 
 export const CareerHistory = () => {
   return (
     <section>
+      {/* <div className={styles.background} /> */}
       <h2>Career History</h2>
       <CareerCard
         imgSrc="/companies/Bloomberg.png"
@@ -20,12 +21,38 @@ export const CareerHistory = () => {
         imgSrc="/companies/Bloomberg.png"
         imgAlt="Bloomberg LP Logo"
         jobTitle="Senior Software Engineer - Bloomberg Indices"
-        companyName="Bloomberg Index Securities Limited"
+        companyName="Bloomberg Index Securities Limited (BISL)"
         location="London, U.K."
         startDate="Feb 2024"
         endDate="Jan 2026"
       >
-        <p>Test</p>
+        <p>
+          BISL is a regulated subsidiary of Bloomberg that builds broad-market
+          and bespoke financial indices. My team&apos;s job was to build tools
+          to ensure data quality and reduce time-to-market for the construction
+          of new indices.
+        </p>
+        <p>
+          I was the <strong>lead full-stack engineer</strong> and{" "}
+          <strong>lead user experience designer</strong> for two internal web
+          applications used by our Compliance and Product departments.
+        </p>
+        <ol>
+          <li>
+            <strong>Index Quality Controller (iQC)</strong> &mdash; Allows
+            Compliance to monitor an automated system of quality checks on large
+            datasets before they are used in downstream index calculation. iQC
+            empowers users to onboard new datasets, resolve data quality issues,
+            and control the use of data in index construction.
+          </li>
+          <li>
+            <strong>Index Data Catalog</strong> &mdash; A searchable
+            encyclopedia of all datasets and fields used in the creation of
+            equity and fixed income indices. The Index Data Catalog is used by
+            Product Managers for idea generation and deeper insight into data
+            provided for index construction.
+          </li>
+        </ol>
       </CareerCard>
       <CareerCard
         imgSrc="/companies/Bloomberg.png"

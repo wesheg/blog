@@ -134,9 +134,14 @@ main {
   padding: 0 clamp(5px, calc(var(--font-scalar) * 15px), 15px);
 }
 
-p {
+p,
+li {
   font-size: var(--fontsize-normal);
   line-height: 1.75em;
+}
+
+li {
+  margin: 1em 0;
 }
 
 a {
