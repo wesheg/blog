@@ -29,7 +29,7 @@ export const CareerHistory = () => {
         <p>
           BISL is a regulated subsidiary of Bloomberg that builds broad-market
           and bespoke financial indices. My team built tools to ensure data
-          quality and reduce time-to-market for the construction of new indices.
+          quality and reduce time-to-market for new index launches.
         </p>
         <p>
           I was the <strong>lead full-stack engineer</strong> and{" "}
