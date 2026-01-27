@@ -6,7 +6,7 @@ export const BbgIndex = () => (
     imgAlt="Bloomberg LP Logo"
     jobTitle="Senior Software Engineer - Bloomberg Indices"
     companyName="Bloomberg Index Securities Limited (BISL)"
-    location="London, U.K."
+    location="London, UK"
     startDate="Feb 2024"
     endDate="Jan 2026"
   >

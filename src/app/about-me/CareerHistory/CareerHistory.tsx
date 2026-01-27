@@ -12,7 +12,7 @@ export const CareerHistory = () => {
         imgAlt="Bloomberg LP Logo"
         jobTitle="Senior Software Engineer - Mobile"
         companyName="Bloomberg L.P."
-        location="London, U.K."
+        location="London, UK"
         startDate="Jan 2026"
         endDate="Present"
       >
