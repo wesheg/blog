@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CareerCard } from "../CareerCard/CareerCard";
 
 export const BbgIndex = () => (
@@ -11,7 +12,13 @@ export const BbgIndex = () => (
     endDate="Jan 2026"
   >
     <p>
-      BISL is a regulated subsidiary of Bloomberg that builds broad-market and
+      <Link
+        href="https://www.bloomberg.com/professional/products/indices/"
+        target="_blank"
+      >
+        BISL
+      </Link>{" "}
+      is a regulated subsidiary of Bloomberg that builds broad-market and
       bespoke financial indices. My team built tools to ensure data quality and
       reduce time-to-market for new index launches.
     </p>

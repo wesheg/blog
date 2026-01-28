@@ -22,6 +22,17 @@ export const CareerHistory = () => {
       <BbgBquant />
       <BbgDevAdv />
       <CareerCard
+        imgSrc="/companies/EscapeGame.png"
+        imgAlt="The Escape Game, LLC Logo"
+        jobTitle="Corporate Financial Analyst"
+        companyName="The Escape Game, LLC"
+        location="Nashville, Tennessee, USA"
+        startDate="Feb 2018"
+        endDate="Aug 2020"
+      >
+        <p>Test</p>
+      </CareerCard>
+      <CareerCard
         imgSrc="/companies/CypressCapital.png"
         imgAlt="Cypress Capital, LLC Logo"
         jobTitle="Investment Research Analyst"

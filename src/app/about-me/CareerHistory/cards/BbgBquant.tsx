@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CareerCard } from "../CareerCard/CareerCard";
 
 export const BbgBquant = () => (
@@ -11,7 +12,13 @@ export const BbgBquant = () => (
     endDate="Feb 2024"
   >
     <p>
-      BQuant is Bloomberg&apos;s financial data science platform. It provides
+      <Link
+        href="https://www.bloomberg.com/professional/products/bloomberg-terminal/research/bquant"
+        target="_blank"
+      >
+        BQuant
+      </Link>{" "}
+      is Bloomberg&apos;s financial data science platform. It provides
       programmatic access to data in a notebook environment, with cloud
       computing resources for complex analytical workloads.
     </p>
