@@ -1,6 +1,6 @@
 import styles from "./careerHistory.module.css";
 import { CareerCard } from "./CareerCard/CareerCard";
-import { BbgIndex, BbgBquant } from "./cards";
+import { BbgIndex, BbgBquant, BbgDevAdv } from "./cards";
 
 export const CareerHistory = () => {
   return (
@@ -20,28 +20,7 @@ export const CareerHistory = () => {
       </CareerCard>
       <BbgIndex />
       <BbgBquant />
-      <CareerCard
-        imgSrc="/companies/Bloomberg.png"
-        imgAlt="Bloomberg LP Logo"
-        jobTitle="Developer Advocate - BQuant"
-        companyName="Bloomberg L.P."
-        location="San Francisco, Callifornia, USA"
-        startDate="Aug 2020"
-        endDate="Jan 2023"
-      >
-        <p>Test</p>
-      </CareerCard>
-      <CareerCard
-        imgSrc="/companies/EscapeGame.png"
-        imgAlt="The Escape Game, LLC Logo"
-        jobTitle="Corporate Financial Analyst"
-        companyName="The Escape Game, LLC"
-        location="Nashville, Tennessee, USA"
-        startDate="Feb 2018"
-        endDate="Aug 2020"
-      >
-        <p>Test</p>
-      </CareerCard>
+      <BbgDevAdv />
       <CareerCard
         imgSrc="/companies/CypressCapital.png"
         imgAlt="Cypress Capital, LLC Logo"
