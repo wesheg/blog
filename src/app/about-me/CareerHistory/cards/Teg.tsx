@@ -1,4 +1,5 @@
 import { CareerCard } from "../CareerCard/CareerCard";
+import Link from "next/link";
 
 export const Teg = () => {
   return (
@@ -11,7 +12,15 @@ export const Teg = () => {
       startDate="Feb 2018"
       endDate="Aug 2020"
     >
-      <p>Test</p>
+      <p>
+        <Link href="https://theescapegame.com/" target="_blank">
+          The Escape Game, LLC
+        </Link>{" "}
+        designs, manufactures, and operates live puzzle-based experiences at
+        over 45 retail locations across the United States. Teams of players work
+        together to solve a series of challenges, hoping to escape from a themed
+        environment within a set time limit.
+      </p>
     </CareerCard>
   );
 };
