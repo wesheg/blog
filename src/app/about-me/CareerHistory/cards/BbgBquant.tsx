@@ -23,10 +23,9 @@ export const BbgBquant = () => (
       computing resources for robust analytical workloads.
     </p>
     <p>
-      I was a <strong>full-stack engineer</strong> and{" "}
-      <strong>lead frontend engineer</strong> for the BQuant Help Center, a
-      web-based content portal featuring example projects and API references for
-      an audience of financial professionals.
+      I was a full-stack engineer and lead frontend engineer for the BQuant Help
+      Center, a web-based content portal featuring example projects and API
+      references for an audience of financial professionals.
     </p>
     <p>
       I also built an automated content-delivery pipeline, which allowed our

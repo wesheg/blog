@@ -23,24 +23,23 @@ export const BbgIndex = () => (
       reduce time-to-market for new index launches.
     </p>
     <p>
-      I was the <strong>lead full-stack engineer</strong> and{" "}
-      <strong>lead user experience designer</strong> for two internal web
+      I was the lead engineer and user experience designer for two internal web
       applications used by Compliance and Product.
     </p>
-    <ol>
+    <ul>
       <li>
-        <strong>Index Quality Controller (iQC)</strong> &mdash; Enables
-        Compliance to monitor and intervene in an automated system of quality
-        checks on large datasets before downstream index calculation. iQC
-        empowers users to onboard new datasets, resolve quality issues, and
-        control the use of data in index construction.
+        <strong>Index Quality Controller (iQC)</strong> &mdash; Provides
+        Compliance with visibility into a complex network of automated quality
+        checks on large datasets. iQC empowers users to onboard new datasets,
+        resolve quality issues, and control the use of data in downstream index
+        calculation processes.
       </li>
       <li>
         <strong>Index Data Catalog</strong> &mdash; A searchable, canonical
-        reference for all datasets and fields used in equity and fixed income
-        indices. Used by Product Managers for idea generation, data discovery,
-        and deeper insight into index construction.
+        reference for all datasets and fields involved in the construction of
+        indices. Product Managers relied on the Catalog for idea generation,
+        data discovery, and deeper insight into index construction.
       </li>
-    </ol>
+    </ul>
   </CareerCard>
 );

@@ -32,7 +32,8 @@ export const BbgDevAdv = () => (
       As a Developer Advocate, I was a communication bridge between engineers
       and users. Clients enjoyed a deeper understanding of BQuant&apos;s tools
       and how they were designed to be used. Engineers appreciated the feedback
-      from external users and acted on those suggestions to improve the product.
+      from external users and acted upon those suggestions to improve the
+      product.
     </p>
   </CareerCard>
 );
