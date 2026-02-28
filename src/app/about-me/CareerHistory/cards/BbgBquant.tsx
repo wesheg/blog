@@ -20,7 +20,7 @@ export const BbgBquant = () => (
       </Link>{" "}
       is Bloomberg&apos;s financial data science platform. It provides
       programmatic access to data in a notebook environment, with cloud
-      computing resources for complex analytical workloads.
+      computing resources for robust analytical workloads.
     </p>
     <p>
       I was a <strong>full-stack engineer</strong> and{" "}
