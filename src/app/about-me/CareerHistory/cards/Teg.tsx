@@ -23,9 +23,9 @@ export const Teg = () => {
       </p>
       <p>
         My primary role at The Escape Game was financial planning and analysis.
-        I administered the annual budgeting process, maintained the cash flow
-        forecasts for the company, and served as an advisor to our executive
-        team and venture capital partners.
+        I administered the annual budgeting process, maintained company cash
+        flow forecasts, and advised the executive team and venture capital
+        partners.
       </p>
       <p>
         I also developed internal software that integrated the customer booking

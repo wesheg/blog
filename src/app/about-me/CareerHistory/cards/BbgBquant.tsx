@@ -18,20 +18,18 @@ export const BbgBquant = () => (
       >
         BQuant
       </Link>{" "}
-      is Bloomberg&apos;s financial data science platform. It provides
-      programmatic access to data in a notebook environment, with cloud
-      computing resources for robust analytical workloads.
+      is Bloomberg&apos;s financial data science platform, providing
+      programmatic access to data within a cloud-based notebook environment.
     </p>
     <p>
       I was a full-stack engineer and lead frontend engineer for the BQuant Help
       Center, a web-based content portal featuring example projects and API
-      references for an audience of financial professionals.
+      references for financial professionals.
     </p>
     <p>
-      I also built an automated content-delivery pipeline, which allowed our
-      Technical Writers to quickly publish new documents and easily incorporate
-      them into the site&apos;s information architecture, reducing dependency on
-      engineers.
+      I also built an automated content-delivery pipeline that enabled Technical
+      Writers to publish documentation independently and integrate it into the
+      site&apos;s information architecture, reducing engineering dependency.
     </p>
   </CareerCard>
 );

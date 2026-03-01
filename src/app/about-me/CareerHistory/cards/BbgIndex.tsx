@@ -28,17 +28,16 @@ export const BbgIndex = () => (
     </p>
     <ul>
       <li>
-        <strong>Index Quality Controller (iQC)</strong> &mdash; Provides
-        Compliance with visibility into a complex network of automated quality
-        checks on large datasets. iQC empowers users to onboard new datasets,
-        resolve quality issues, and control the use of data in downstream index
-        calculation processes.
+        <strong>Index Quality Controller (iQC)</strong> &mdash; Provided
+        Compliance with visibility into a network of automated quality checks on
+        large datasets. Users could onboard new datasets, resolve quality
+        issues, and manage data usage in downstream index calculation processes.
       </li>
       <li>
         <strong>Index Data Catalog</strong> &mdash; A searchable, canonical
-        reference for all datasets and fields involved in the construction of
-        indices. Product Managers relied on the Catalog for idea generation,
-        data discovery, and deeper insight into index construction.
+        reference for datasets and fields used in index construction. Product
+        Managers relied on the Catalog for data discovery, research, and index
+        development.
       </li>
     </ul>
   </CareerCard>
