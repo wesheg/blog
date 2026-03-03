@@ -1,6 +1,6 @@
 import styles from "./careerHistory.module.css";
 import { CareerCard } from "./CareerCard/CareerCard";
-import { BbgIndex, BbgBquant, BbgDevAdv, Teg } from "./cards";
+import { BbgIndex, BbgBquant, BbgDevAdv, Cypress, Teg } from "./cards";
 
 export const CareerHistory = () => {
   return (
@@ -22,17 +22,7 @@ export const CareerHistory = () => {
       <BbgBquant />
       <BbgDevAdv />
       <Teg />
-      <CareerCard
-        imgSrc="/companies/CypressCapital.png"
-        imgAlt="Cypress Capital, LLC Logo"
-        jobTitle="Investment Research Analyst"
-        companyName="Cypress Capital, LLC"
-        location="Franklin, Tennessee, USA"
-        startDate="Jan 2015"
-        endDate="Feb 2018"
-      >
-        <p>Test</p>
-      </CareerCard>
+      <Cypress />
     </section>
   );
 };
