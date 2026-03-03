@@ -6,7 +6,7 @@ export const Teg = () => {
     <CareerCard
       imgSrc="/companies/EscapeGame.png"
       imgAlt="The Escape Game, LLC Logo"
-      jobTitle="Corporate Financial Analyst"
+      jobTitle="Financial Analyst & Software Developer"
       companyName="The Escape Game, LLC"
       location="Nashville, Tennessee, USA"
       startDate="Feb 2018"

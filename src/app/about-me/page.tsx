@@ -27,11 +27,11 @@ export default function AboutMe() {
             <h2 style={{ margin: 0 }}>Hi, I&apos;m Wes</h2>
             <p>
               I&apos;m a developer, CFA Charterholder, and former investment
-              analyst who&apos;s been writing code for over a decade now. In my
-              time working in asset management and corporate finance, I built
-              tools to support and guide investment decisions. Back then,
-              writing software was a means to an end, but it gradually led to a
-              career shift into full-time engineering.
+              analyst who&apos;s been writing code for over a decade. In my time
+              working in asset management and corporate finance, I built tools
+              to support and guide investment decisions. Back then, writing
+              software was a means to an end, but it gradually led to a career
+              shift into full-time engineering.
             </p>
           </div>
         </div>
