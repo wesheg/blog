@@ -75,13 +75,6 @@ export default function AboutMe() {
             </figcaption>
           </figure>
         </div>
-        <p>
-          This blog is where I write about financial markets, software
-          engineering, and the things I&apos;ve learned building complex
-          systems. Every post here represents something that meaningfully shaped
-          how I work.
-        </p>
-
         <Skills />
         <CareerHistory />
       </main>

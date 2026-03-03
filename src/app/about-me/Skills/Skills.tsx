@@ -4,7 +4,7 @@ import { SkillBadge } from "./SkillBadge/SkillBadge";
 export const Skills = () => {
   return (
     <section className={styles.skillsSection}>
-      <h2>Skills</h2>
+      <h2>I&apos;ve Worked In</h2>
       <div className={styles.badgeGallery}>
         <SkillBadge label="Python" imgSrc="/skills/Python.png" />
         <SkillBadge label="TypeScript" imgSrc="/skills/TypeScript.png" />
@@ -21,12 +21,7 @@ export const Skills = () => {
         <SkillBadge label="Figma" imgSrc="/skills/Figma.png" />
         <SkillBadge label="Amazon Web Services" imgSrc="/skills/AWS.png" />
         <SkillBadge
-          label="CFA Charterholder"
-          imgSrc="/skills/CFA.png"
-          imgAlt="CFA Institute Logo"
-        />
-        <SkillBadge
-          label="Advanced Excel"
+          label="Financial Modeling"
           imgSrc="/skills/Excel.png"
           imgAlt="Excel Logo"
         />
