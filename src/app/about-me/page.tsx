@@ -35,31 +35,31 @@ export default function AboutMe() {
             </p>
           </div>
         </div>
-        <p>
-          Since 2020, I&apos;ve been with Bloomberg working on projects
-          including{" "}
-          <Link
-            href="https://www.bloomberg.com/professional/products/bloomberg-terminal/research/bquant"
-            target="_blank"
-          >
-            BQuant
-          </Link>
-          , data pipelines for{" "}
-          <Link
-            href="https://www.bloomberg.com/professional/products/indices/fixed-income/"
-            target="_blank"
-          >
-            bond market indices
-          </Link>
-          , and the{" "}
-          <Link
-            href="https://apps.apple.com/us/app/bloomberg-professional/id407761767"
-            target="_blank"
-          >
-            Bloomberg Professional Mobile App.
-          </Link>
-        </p>
-        <div className={styles.imgContainer}>
+        <div className={styles.conferenceContainer}>
+          <p className={styles.conferenceParagraph}>
+            Since 2020, I&apos;ve been with Bloomberg working on projects
+            including{" "}
+            <Link
+              href="https://www.bloomberg.com/professional/products/bloomberg-terminal/research/bquant"
+              target="_blank"
+            >
+              BQuant
+            </Link>
+            , data pipelines for{" "}
+            <Link
+              href="https://www.bloomberg.com/professional/products/indices/fixed-income/"
+              target="_blank"
+            >
+              bond market indices
+            </Link>
+            , and the{" "}
+            <Link
+              href="https://apps.apple.com/us/app/bloomberg-professional/id407761767"
+              target="_blank"
+            >
+              Bloomberg Professional Mobile App.
+            </Link>
+          </p>
           <figure
             className={`${styles.aboutMeFigure} ${styles.conferenceFigure}`}
           >

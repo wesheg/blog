@@ -6,6 +6,7 @@
     border-bottom: 1px solid var(--foreground);
     padding-bottom: 5px;
     background: var(--background);
+    margin-top: 1.5em;
   }
 }
 
@@ -23,6 +24,7 @@
 
 .introContainer {
   display: flex;
+  gap: 1em;
 }
 
 .conferenceImg {
@@ -40,6 +42,16 @@
 
 .aboutMeFigure {
   margin: 0;
+}
+
+.conferenceContainer {
+  display: flex;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.conferenceParagraph {
+  margin-top: 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -80,11 +92,15 @@
 
   .conferenceFigure {
     float: none;
-    margin-left: 0px;
+    margin: auto;
+    justify-self: center;
+  }
+
+  .conferenceContainer {
+    display: block;
   }
 
   .imgContainer {
     display: flex;
-    justify-content: center;
   }
 }
