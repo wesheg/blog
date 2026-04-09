@@ -22,9 +22,12 @@ export const BbgBquant = () => (
       programmatic access to data within a cloud-based notebook environment.
     </p>
     <p>
-      I was a full-stack engineer and lead frontend engineer for the BQuant Help
-      Center, a web-based content portal featuring example projects and API
-      references for financial professionals.
+      I was a full-stack engineer and lead frontend engineer for the{" "}
+      <Link href="https://help.bquant.blpprofessional.com" target="_blank">
+        BQuant Help Center
+      </Link>
+      , a web-based content portal featuring example projects and API references
+      for financial professionals.
     </p>
     <p>
       I also built an automated content-delivery pipeline that enabled Technical
