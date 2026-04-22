@@ -1,0 +1,6 @@
+.headerOuter {
+  z-index: var(--modal-header-z-index);
+  position: sticky;
+  top: 0;
+  background-color: var(--background);
+}

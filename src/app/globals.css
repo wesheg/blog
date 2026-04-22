@@ -81,13 +81,14 @@
   );
 
   /** Modals **/
-  --modal-overlay-z-index: 999;
-  --modal-action-z-index: 1000;
+  --modal-overlay-z-index: 998;
+  --modal-action-z-index: 999;
+  --modal-header-z-index: 1000;
 }
 
 body {
-  margin: auto;
-  max-width: var(--desktop-width);
+  /* margin: auto; */
+  margin: 0;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--preferred-font), Arial, Helvetica, sans-serif;
@@ -126,6 +127,7 @@ h6 {
 }
 
 main {
+  max-width: var(--desktop-width);
   padding: 0 clamp(5px, calc(var(--font-scalar) * 15px), 15px);
   margin: auto;
 }

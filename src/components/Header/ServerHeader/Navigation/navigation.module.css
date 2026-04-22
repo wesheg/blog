@@ -32,6 +32,11 @@
   }
 }
 
+.socialContainer {
+  display: flex;
+  align-items: center;
+}
+
 .navigationSocial {
   background-color: transparent;
   padding: 0;

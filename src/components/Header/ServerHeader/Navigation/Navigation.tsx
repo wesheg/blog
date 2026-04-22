@@ -21,7 +21,7 @@ export const Navigation = ({ mobileButton }: NavigationProps) => {
             <Link href="/">projects</Link>
           </li>
         </ul>
-        <div>
+        <div className={styles.socialContainer}>
           <Link
             href="https://www.linkedin.com/in/wes-heginbotham-cfa"
             className={styles.navigationSocial}

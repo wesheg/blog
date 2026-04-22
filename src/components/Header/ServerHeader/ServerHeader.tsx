@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./header.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { HeaderContainer } from "../HeaderContainer/HeaderContainer";
 import { Navigation } from "./Navigation/Navigation";
 
 type ServerHeaderProps = {
@@ -27,21 +28,23 @@ export const ServerHeader = ({
   };
 
   return (
-    <header className={styles.blogHeader}>
-      <Link className={styles.headerTitle} href="/">
-        <Image
-          className={styles.headerAvatar}
-          src="/avatars/header.svg"
-          width={imgWidth}
-          height={imgWidth * 1.5}
-          alt="site logo"
-        />
-        <HeaderText>
-          <span className={styles.headerTextDeemphasized}>wesheg&apos;s</span>{" "}
-          blog
-        </HeaderText>
-      </Link>
-      <Navigation mobileButton={mobileButton} />
-    </header>
+    <HeaderContainer>
+      <header className={styles.headerInner}>
+        <Link className={styles.headerTitle} href="/">
+          <Image
+            className={styles.headerAvatar}
+            src="/avatars/header.svg"
+            width={imgWidth}
+            height={imgWidth * 1.5}
+            alt="site logo"
+          />
+          <HeaderText>
+            <span className={styles.headerTextDeemphasized}>wesheg&apos;s</span>{" "}
+            blog
+          </HeaderText>
+        </Link>
+        <Navigation mobileButton={mobileButton} />
+      </header>
+    </HeaderContainer>
   );
 };

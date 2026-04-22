@@ -1,14 +1,10 @@
-.blogHeader {
+.headerInner {
   margin: auto;
   max-width: var(--desktop-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: var(--modal-action-z-index);
-  position: sticky;
-  top: 0;
-  background-color: var(--background);
-  margin-bottom: 1rem;
+  padding: 5px;
 }
 
 .headerTitle {
