@@ -127,6 +127,7 @@ h6 {
 
 main {
   padding: 0 clamp(5px, calc(var(--font-scalar) * 15px), 15px);
+  margin: auto;
 }
 
 p,
