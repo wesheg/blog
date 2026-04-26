@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { MobileNavMenu } from "./MobileNavMenu";
 import { MobileNavButton } from "./MobileNavButton";
 import { ServerHeader } from "./ServerHeader";
@@ -11,6 +11,10 @@ type ClientHeaderWrapperProps = {
 
 export const Header = ({ isHome }: ClientHeaderWrapperProps) => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileNavOpen ? "hidden" : "auto";
+  }, [mobileNavOpen]);
 
   /**
    * Remove the open state when changing screen sizes.
@@ -28,9 +32,20 @@ export const Header = ({ isHome }: ClientHeaderWrapperProps) => {
     };
   }, []);
 
+  const Wrapper = useCallback(
+    (props: { open: boolean; children: React.ReactNode }) => {
+      const { open, children } = props;
+      return open ? (
+        <div className="modal-overlay">{children}</div>
+      ) : (
+        <>{children}</>
+      );
+    },
+    [],
+  );
+
   return (
-    <>
-      {mobileNavOpen && <div className="modal-overlay" />}
+    <Wrapper open={mobileNavOpen}>
       <ServerHeader
         isHome={isHome}
         mobileButton={
@@ -41,6 +56,6 @@ export const Header = ({ isHome }: ClientHeaderWrapperProps) => {
         }
       />
       {mobileNavOpen && <MobileNavMenu />}
-    </>
+    </Wrapper>
   );
 };

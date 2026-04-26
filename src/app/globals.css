@@ -201,4 +201,5 @@ figcaption {
   position: fixed;
   inset: 0;
   z-index: var(--modal-overlay-z-index);
+  overflow-y: auto;
 }
