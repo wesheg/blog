@@ -1,0 +1,15 @@
+.linkButton {
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  font-size: var(--fontsize-normal);
+  text-decoration: none;
+  font-weight: 500;
+  background-color: var(--background);
+  border: 2px solid var(--foreground);
+  box-shadow: 3px 3px var(--foreground);
+}
+
+.pressed {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
