@@ -29,14 +29,19 @@
   gap: 15px;
 }
 
-.navigationSocial {
-  background-color: transparent;
-  padding: 0;
+.socialButton {
+  box-shadow: 3px 3px var(--foreground);
+  border-radius: 10px;
+  cursor: pointer;
 
   &:hover {
-    opacity: 0.8;
-    background-color: transparent;
+    opacity: 0.9;
   }
+}
+
+.socialButtonPressed {
+  transform: translate(3px, 3px);
+  box-shadow: none;
 }
 
 @media (min-width: 1000px) {

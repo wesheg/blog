@@ -1,7 +1,8 @@
 :root {
   /** Screen Widths **/
-  --desktop-width: 1500px;
+  --desktop-width: 1200px;
   --content-width: 800px;
+  --mobile-breakpoint: 1000px;
   --mobile-min-width: 320px;
 
   /** Colors **/

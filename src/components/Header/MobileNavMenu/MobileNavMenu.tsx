@@ -19,36 +19,27 @@ export const MobileNavMenu = () => {
       <Link href="/" className={`${styles.navItemContainer} ${styles.navLink}`}>
         blog
       </Link>
-      <Link href="/" className={`${styles.navItemContainer} ${styles.navLink}`}>
-        projects
-      </Link>
       <div className={`${styles.navItemContainer} ${styles.socialOuter}`}>
         <div className={styles.socialInner}>
-          <Link
-            href="https://www.linkedin.com/in/wes-heginbotham-cfa"
-            className={styles.navigationSocial}
-            target="_blank"
-          >
-            <Image
-              src="/social/linkedin.png"
-              height={75}
-              width={75}
-              alt="LinkedIn Profile"
-            />
-          </Link>
-          <Link
-            href="https://bsky.app/profile/wesheg.bsky.social"
-            className={styles.navigationSocial}
-            target="_blank"
-          >
-            <Image
-              className={styles.navigationOption}
-              src="/social/bluesky.png"
-              height={75}
-              width={75}
-              alt="LinkedIn Profile"
-            />
-          </Link>
+          <Image
+            className={styles.socialButton}
+            src="/social/linkedin.png"
+            height={60}
+            width={60}
+            alt="LinkedIn Profile"
+            onClick={() =>
+              window.open("https://www.linkedin.com/in/wes-heginbotham-cfa")
+            }
+            onMouseDown={(e) =>
+              (e.target as Element).classList.add(styles.socialButtonPressed)
+            }
+            onMouseUp={(e) =>
+              (e.target as Element).classList.remove(styles.socialButtonPressed)
+            }
+            onMouseLeave={(e) =>
+              (e.target as Element).classList.remove(styles.socialButtonPressed)
+            }
+          />
         </div>
       </div>
     </div>

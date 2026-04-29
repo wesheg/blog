@@ -1,12 +1,23 @@
 import styles from "./navigation.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import type { MouseEvent } from "react";
 
 type NavigationProps = {
   mobileButton?: React.ReactNode;
 };
 
 export const Navigation = ({ mobileButton }: NavigationProps) => {
+  const toggleSocialButton = (e: MouseEvent, toggle: "down" | "up") => {
+    const target = e.target as Element;
+    if (toggle === "up") {
+      target.classList.remove(styles.socialButtonPressed);
+    } else {
+      console.log("test");
+      target.classList.add(styles.socialButtonPressed);
+    }
+  };
+
   return (
     <nav className={styles.navigationContainer}>
       <div className={styles.serverContainer}>
@@ -17,36 +28,27 @@ export const Navigation = ({ mobileButton }: NavigationProps) => {
           <li className={styles.navigationOption}>
             <Link href="/">blog</Link>
           </li>
-          <li className={styles.navigationOption}>
-            <Link href="/">projects</Link>
-          </li>
         </ul>
         <div className={styles.socialContainer}>
-          <Link
-            href="https://www.linkedin.com/in/wes-heginbotham-cfa"
-            className={styles.navigationSocial}
-            target="_blank"
-          >
-            <Image
-              src="/social/linkedin.png"
-              height={50}
-              width={50}
-              alt="LinkedIn Profile"
-            />
-          </Link>
-          <Link
-            href="https://bsky.app/profile/wesheg.bsky.social"
-            className={styles.navigationSocial}
-            target="_blank"
-          >
-            <Image
-              className={styles.navigationOption}
-              src="/social/bluesky.png"
-              height={50}
-              width={50}
-              alt="LinkedIn Profile"
-            />
-          </Link>
+          <Image
+            className={styles.socialButton}
+            src="/social/linkedin.png"
+            height={50}
+            width={50}
+            alt="LinkedIn Profile"
+            onClick={() =>
+              window.open("https://www.linkedin.com/in/wes-heginbotham-cfa")
+            }
+            onMouseDown={(e) =>
+              (e.target as Element).classList.add(styles.socialButtonPressed)
+            }
+            onMouseUp={(e) =>
+              (e.target as Element).classList.remove(styles.socialButtonPressed)
+            }
+            onMouseLeave={(e) =>
+              (e.target as Element).classList.remove(styles.socialButtonPressed)
+            }
+          />
         </div>
       </div>
       <div className={styles.mobileButtonContainer}>{mobileButton}</div>
