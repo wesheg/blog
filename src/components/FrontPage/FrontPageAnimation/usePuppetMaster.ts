@@ -316,8 +316,11 @@ export const usePuppetMaster = (
     await loopAnimation("drinkCoffee");
   }, [drinkCoffee, codeScreen, randomizer]);
 
+  const kill = useCallback(() => {}, []);
+
   /** Hook values */
   return {
     start,
+    kill,
   };
 };

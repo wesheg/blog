@@ -27,6 +27,11 @@ export const FrontPageAnimation = () => {
 
   useEffect(() => {
     puppetMaster.start();
+
+    return () => {
+      console.log("cleanup");
+      puppetMaster.kill();
+    };
   }, [puppetMaster]);
 
   const resizeApp = useCallback(() => {
