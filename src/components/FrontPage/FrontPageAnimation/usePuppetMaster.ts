@@ -41,6 +41,8 @@ export const usePuppetMaster = (
   const [codeScreen, setCodeScreen] = useState<CodeScreen>();
   const mousePosition = useRef<"up" | "down">("up");
   const firstRender = useRef(true);
+  const inFlight = useRef<Promise<unknown> | null>(null);
+  const killed = useRef(false);
 
   /** First Render Setup */
   useEffect(() => {
@@ -305,18 +307,27 @@ export const usePuppetMaster = (
    */
   const start = useCallback(async () => {
     if (!codeScreen) return;
+    if (inFlight.current) await inFlight.current;
+    killed.current = false;
 
     /** recursive function to chain random animations together, playing one after another */
     const loopAnimation = async (lastMovement: keyof typeof movements) => {
-      const nextMovement = await randomizer(lastMovement);
+      if (killed.current) return;
+      const animationPromise = randomizer(lastMovement);
+      inFlight.current = animationPromise;
+      const nextMovement = await animationPromise;
       await loopAnimation(nextMovement);
     };
 
-    await drinkCoffee();
+    const firstAnimation = drinkCoffee();
+    inFlight.current = firstAnimation;
+    await firstAnimation;
     await loopAnimation("drinkCoffee");
   }, [drinkCoffee, codeScreen, randomizer]);
 
-  const kill = useCallback(() => {}, []);
+  const kill = useCallback(() => {
+    killed.current = true;
+  }, []);
 
   /** Hook values */
   return {
