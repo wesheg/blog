@@ -29,7 +29,6 @@ export const FrontPageAnimation = () => {
     puppetMaster.start();
 
     return () => {
-      console.log("cleanup");
       puppetMaster.kill();
     };
   }, [puppetMaster]);
