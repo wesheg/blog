@@ -10,15 +10,13 @@ type HeaderProviderValues = {
 const HeaderContext = createContext({} as HeaderProviderValues);
 export const useHeaderContext = () => useContext(HeaderContext);
 
-type HeaderProviderProps = {
-  children: React.ReactNode;
-};
-
 /**
  * Context Provider for exposing nav menu state to several
  * sub-components of the <Header />.
  */
-export const HeaderProvider = ({ children }: HeaderProviderProps) => {
+export const HeaderProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (

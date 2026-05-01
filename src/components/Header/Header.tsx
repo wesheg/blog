@@ -7,17 +7,20 @@ import { HeaderDomWrapper } from "./HeaderDomWrapper/HeaderDomWrapper";
 import { ServerHeader } from "./ServerHeader";
 
 type ClientHeaderWrapperProps = {
-  isHome?: boolean;
+  /** For SEO. If true, will wrap the site title in <h1> tag.
+   * Set to `true` for the home page only
+   * Defaults to false */
+  useH1?: boolean;
 };
 
-export const Header = ({ isHome }: ClientHeaderWrapperProps) => {
+export const Header = ({ useH1 }: ClientHeaderWrapperProps) => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
     <HeaderProvider>
       <HeaderDomWrapper>
         <ServerHeader
-          isHome={isHome}
+          useH1={useH1}
           mobileButton={
             <MobileNavButton
               open={mobileNavOpen}
