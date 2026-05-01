@@ -1,7 +1,8 @@
+"use client";
+
 import React, { createContext, useContext, useState } from "react";
 
 type HeaderProviderValues = {
-  isHome: boolean;
   mobileNavOpen: boolean;
   setMobileNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
@@ -23,7 +24,6 @@ export const HeaderProvider = ({ children }: HeaderProviderProps) => {
   return (
     <HeaderContext.Provider
       value={{
-        isHome: false, // TODO
         mobileNavOpen,
         setMobileNavOpen,
       }}
