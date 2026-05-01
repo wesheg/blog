@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-import { MobileNavMenu } from "./MobileNavMenu";
-import { MobileNavButton } from "./MobileNavButton";
+import { MobileNavButton, MobileNavMenu } from "./mobile";
 import { ServerHeader } from "./ServerHeader";
 
 type ClientHeaderWrapperProps = {
