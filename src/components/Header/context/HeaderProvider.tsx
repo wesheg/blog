@@ -16,37 +16,9 @@ type HeaderProviderProps = {
 /**
  * Context Provider for exposing nav menu state to several
  * sub-components of the <Header />.
- * Also handles some basic styling & DOM manipulation based on the
- * open state.
  */
 export const HeaderProvider = ({ children }: HeaderProviderProps) => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
-  /**
-   * Prevents a long-scrolling modal
-   */
-  useEffect(() => {
-    document.body.style.overflow = mobileNavOpen ? "hidden" : "auto";
-  }, [mobileNavOpen]);
-
-  /**
-   * Close the mobile nav menu if the screen crosses the desktop threshold
-   */
-  useEffect(() => {
-    const mobileBreakpoint = 1000;
-
-    const handleResize = () => {
-      if (window.innerWidth > mobileBreakpoint) {
-        setMobileNavOpen(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <HeaderContext.Provider
@@ -56,11 +28,7 @@ export const HeaderProvider = ({ children }: HeaderProviderProps) => {
         setMobileNavOpen,
       }}
     >
-      {mobileNavOpen ? (
-        <div className="modal-overlay">{children}</div>
-      ) : (
-        children
-      )}
+      {children}
     </HeaderContext.Provider>
   );
 };
