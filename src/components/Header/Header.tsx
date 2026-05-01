@@ -20,10 +20,10 @@ export const Header = ({ isHome }: ClientHeaderWrapperProps) => {
    * Remove the open state when changing screen sizes.
    */
   useEffect(() => {
-    const breakpointPxWidth = 1000;
+    const mobileBreakpoint = 1000;
 
     const cb = () => {
-      if (window.innerWidth <= breakpointPxWidth) return;
+      if (window.innerWidth <= mobileBreakpoint) return;
       setMobileNavOpen(false);
     };
     window.addEventListener("resize", cb);
