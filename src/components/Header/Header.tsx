@@ -4,7 +4,7 @@ import { useState } from "react";
 import { MobileNavButton, MobileNavMenu } from "./mobile";
 import { HeaderProvider } from "./context";
 import { HeaderDomWrapper } from "./HeaderDomWrapper/HeaderDomWrapper";
-import { ServerHeader } from "./ServerHeader";
+import { HeaderServerComponent } from "./HeaderServerComponent";
 
 type ClientHeaderWrapperProps = {
   /** For SEO. If true, will wrap the site title in <h1> tag.
@@ -19,7 +19,7 @@ export const Header = ({ useH1 }: ClientHeaderWrapperProps) => {
   return (
     <HeaderProvider>
       <HeaderDomWrapper>
-        <ServerHeader
+        <HeaderServerComponent
           useH1={useH1}
           mobileButton={
             <MobileNavButton

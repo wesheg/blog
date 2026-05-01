@@ -5,7 +5,7 @@ import Link from "next/link";
 import { HeaderContainer } from "../HeaderContainer/HeaderContainer";
 import { Navigation } from "./Navigation/Navigation";
 
-type ServerHeaderProps = {
+type HeaderServerComponentProps = {
   /** For SEO. If true, will wrap the site title in <h1> tag.
    * Set to `true` for the home page only
    * Defaults to false */
@@ -13,10 +13,10 @@ type ServerHeaderProps = {
   mobileButton?: React.ReactNode;
 };
 
-export const ServerHeader = ({
+export const HeaderServerComponent = ({
   useH1 = false,
   mobileButton,
-}: ServerHeaderProps) => {
+}: HeaderServerComponentProps) => {
   const imgWidth = 65;
 
   const HeaderText: React.FC<{ children?: React.ReactNode }> = ({
