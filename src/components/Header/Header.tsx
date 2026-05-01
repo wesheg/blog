@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-import { MobileNavButton, MobileNavMenu } from "./mobile";
+import { MobileNavButton, MobileNavMenu, MobileNavProvider } from "./mobile";
 import { ServerHeader } from "./ServerHeader";
 
 type ClientHeaderWrapperProps = {
@@ -44,17 +44,19 @@ export const Header = ({ isHome }: ClientHeaderWrapperProps) => {
   );
 
   return (
-    <Wrapper open={mobileNavOpen}>
-      <ServerHeader
-        isHome={isHome}
-        mobileButton={
-          <MobileNavButton
-            open={mobileNavOpen}
-            handleClick={() => setMobileNavOpen((prev) => !prev)}
-          />
-        }
-      />
-      {mobileNavOpen && <MobileNavMenu />}
-    </Wrapper>
+    <MobileNavProvider>
+      <Wrapper open={mobileNavOpen}>
+        <ServerHeader
+          isHome={isHome}
+          mobileButton={
+            <MobileNavButton
+              open={mobileNavOpen}
+              handleClick={() => setMobileNavOpen((prev) => !prev)}
+            />
+          }
+        />
+        {mobileNavOpen && <MobileNavMenu />}
+      </Wrapper>
+    </MobileNavProvider>
   );
 };
