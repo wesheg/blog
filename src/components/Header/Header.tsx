@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { MobileNavButton, MobileNavMenu } from "./mobile";
 import { HeaderProvider } from "./context";
-import { HeaderDomWrapper } from "./HeaderDomWrapper/HeaderDomWrapper";
+import { HeaderClientWrapper } from "./HeaderClientWrapper/HeaderClientWrapper";
 import { HeaderServerComponent } from "./HeaderServerComponent";
 
 type ClientHeaderWrapperProps = {
@@ -18,7 +18,7 @@ export const Header = ({ useH1 }: ClientHeaderWrapperProps) => {
 
   return (
     <HeaderProvider>
-      <HeaderDomWrapper>
+      <HeaderClientWrapper>
         <HeaderServerComponent
           useH1={useH1}
           mobileButton={
@@ -29,7 +29,7 @@ export const Header = ({ useH1 }: ClientHeaderWrapperProps) => {
           }
         />
         {mobileNavOpen && <MobileNavMenu />}
-      </HeaderDomWrapper>
+      </HeaderClientWrapper>
     </HeaderProvider>
   );
 };

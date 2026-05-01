@@ -3,15 +3,13 @@
 import { useEffect } from "react";
 import { useHeaderContext } from "@ui/components/Header/context";
 
-type HeaderDomWrapperProps = {
-  children: React.ReactNode;
-};
-
 /**
  * Handles some basic styling & DOM manipulation based on the
  * `mobileNavOpen` state
  */
-export const HeaderDomWrapper = ({ children }: HeaderDomWrapperProps) => {
+export const HeaderClientWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const { mobileNavOpen, setMobileNavOpen } = useHeaderContext();
 
   /**
