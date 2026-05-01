@@ -1,23 +1,12 @@
 import styles from "./navigation.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import type { MouseEvent } from "react";
 
 type NavigationProps = {
   mobileButton?: React.ReactNode;
 };
 
 export const Navigation = ({ mobileButton }: NavigationProps) => {
-  const toggleSocialButton = (e: MouseEvent, toggle: "down" | "up") => {
-    const target = e.target as Element;
-    if (toggle === "up") {
-      target.classList.remove(styles.socialButtonPressed);
-    } else {
-      console.log("test");
-      target.classList.add(styles.socialButtonPressed);
-    }
-  };
-
   return (
     <nav className={styles.navigationContainer}>
       <div className={styles.serverContainer}>
