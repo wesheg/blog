@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { MobileNavMenu } from "@ui/components/Header/mobile";
 import { useHeaderContext } from "@ui/components/Header/context";
 
 /**
@@ -13,24 +14,15 @@ export const HeaderClientWrapper: React.FC<{ children: React.ReactNode }> = ({
   const { mobileNavOpen, setMobileNavOpen } = useHeaderContext();
 
   /**
-   * Prevents a long-scrolling modal
-   */
-  useEffect(() => {
-    document.body.style.overflow = mobileNavOpen ? "hidden" : "auto";
-  }, [mobileNavOpen]);
-
-  /**
    * Close the mobile nav menu if the screen crosses the desktop threshold
    */
   useEffect(() => {
     const mobileBreakpoint = 1000;
-
     const handleResize = () => {
       if (window.innerWidth > mobileBreakpoint) {
         setMobileNavOpen(false);
       }
     };
-
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -38,8 +30,20 @@ export const HeaderClientWrapper: React.FC<{ children: React.ReactNode }> = ({
     };
   }, [setMobileNavOpen]);
 
+  /**
+   * Prevents a long-scrolling modal
+   */
+  useEffect(() => {
+    document.body.style.overflow = mobileNavOpen ? "hidden" : "auto";
+  }, [mobileNavOpen]);
+
   if (mobileNavOpen) {
-    return <div className="modal-overlay">{children}</div>;
+    return (
+      <div className="modal-overlay">
+        {children}
+        <MobileNavMenu />
+      </div>
+    );
   }
 
   return <>{children}</>;

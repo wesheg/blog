@@ -14,21 +14,19 @@ type ClientHeaderWrapperProps = {
 };
 
 export const Header = ({ useH1 }: ClientHeaderWrapperProps) => {
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
   return (
     <HeaderProvider>
       <HeaderClientWrapper>
         <HeaderServerComponent
           useH1={useH1}
-          mobileButton={
-            <MobileNavButton
-              open={mobileNavOpen}
-              handleClick={() => setMobileNavOpen((prev) => !prev)}
-            />
-          }
+          // mobileButton={
+          //   <MobileNavButton
+          //     open={mobileNavOpen}
+          //     handleClick={() => setMobileNavOpen((prev) => !prev)}
+          //   />
+          // }
         />
-        {mobileNavOpen && <MobileNavMenu />}
+        {/* {mobileNavOpen && <MobileNavMenu />} */}
       </HeaderClientWrapper>
     </HeaderProvider>
   );

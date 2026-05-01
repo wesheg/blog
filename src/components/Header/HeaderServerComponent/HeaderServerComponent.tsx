@@ -10,12 +10,10 @@ type HeaderServerComponentProps = {
    * Set to `true` for the home page only
    * Defaults to false */
   useH1?: boolean;
-  mobileButton?: React.ReactNode;
 };
 
 export const HeaderServerComponent = ({
   useH1 = false,
-  mobileButton,
 }: HeaderServerComponentProps) => {
   const imgWidth = 65;
 
@@ -44,7 +42,7 @@ export const HeaderServerComponent = ({
             blog
           </HeaderText>
         </Link>
-        <Navigation mobileButton={mobileButton} />
+        <Navigation />
       </header>
     </HeaderContainer>
   );
