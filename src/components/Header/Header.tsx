@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import { MobileNavButton, MobileNavMenu } from "./mobile";
-import { MobileNavProvider } from "./mobile/context";
+import { HeaderProvider } from "./context";
 import { ServerHeader } from "./ServerHeader";
 
 type ClientHeaderWrapperProps = {
@@ -45,7 +45,7 @@ export const Header = ({ isHome }: ClientHeaderWrapperProps) => {
   );
 
   return (
-    <MobileNavProvider>
+    <HeaderProvider>
       <Wrapper open={mobileNavOpen}>
         <ServerHeader
           isHome={isHome}
@@ -58,6 +58,6 @@ export const Header = ({ isHome }: ClientHeaderWrapperProps) => {
         />
         {mobileNavOpen && <MobileNavMenu />}
       </Wrapper>
-    </MobileNavProvider>
+    </HeaderProvider>
   );
 };

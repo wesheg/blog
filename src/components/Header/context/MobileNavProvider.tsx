@@ -1,14 +1,15 @@
 import React, { createContext, useContext, useState } from "react";
 
-type MobileNavProviderValues = {
+type HeaderProviderValues = {
+  isHome: boolean;
   mobileNavOpen: boolean;
   setMobileNavOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const MobileNavContext = createContext({} as MobileNavProviderValues);
-export const useMobileNavContext = () => useContext(MobileNavContext);
+const HeaderContext = createContext({} as HeaderProviderValues);
+export const useHeaderContext = () => useContext(HeaderContext);
 
-type MobileNavProviderProps = {
+type HeaderProviderProps = {
   children: React.ReactNode;
 };
 
@@ -16,17 +17,18 @@ type MobileNavProviderProps = {
  * Context Provider for exposing nav menu state to several
  * sub-components of the <Header />
  */
-export const MobileNavProvider = ({ children }: MobileNavProviderProps) => {
+export const HeaderProvider = ({ children }: HeaderProviderProps) => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <MobileNavContext.Provider
+    <HeaderContext.Provider
       value={{
+        isHome: false, // TODO
         mobileNavOpen,
         setMobileNavOpen,
       }}
     >
       {children}
-    </MobileNavContext.Provider>
+    </HeaderContext.Provider>
   );
 };
