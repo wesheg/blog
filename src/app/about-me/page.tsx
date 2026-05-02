@@ -4,6 +4,12 @@ import Link from "next/link";
 import { CareerHistory } from "./CareerHistory";
 import { Header } from "@ui/components";
 import { Skills } from "./Skills";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Wes Heginbotham, CFA",
+  description: "Skills and Career Description",
+};
 
 export default function AboutMe() {
   return (

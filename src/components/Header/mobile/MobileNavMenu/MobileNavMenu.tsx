@@ -43,8 +43,8 @@ export const MobileNavMenu = () => {
           <Image
             className={`${styles.socialButton} ${styles.socialButtonRound}`}
             src="/social/github.png"
-            height={50}
-            width={50}
+            height={60}
+            width={60}
             alt="GitHub Profile"
             onClick={() => window.open("https://www.github.com/wesheg")}
             onMouseDown={(e) =>
