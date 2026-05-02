@@ -26,17 +26,22 @@
 
 .socialInner {
   display: flex;
-  gap: 15px;
+  gap: 25px;
 }
 
 .socialButton {
   box-shadow: 3px 3px var(--foreground);
+  border: 1px solid var(--foreground);
   border-radius: 10px;
   cursor: pointer;
 
   &:hover {
     opacity: 0.9;
   }
+}
+
+.socialButtonRound {
+  border-radius: 50%;
 }
 
 .socialButtonPressed {

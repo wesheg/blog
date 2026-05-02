@@ -40,7 +40,27 @@ export const MobileNavMenu = () => {
               (e.target as Element).classList.remove(styles.socialButtonPressed)
             }
           />
+          <Image
+            className={`${styles.socialButton} ${styles.socialButtonRound}`}
+            src="/social/github.png"
+            height={50}
+            width={50}
+            alt="GitHub Profile"
+            onClick={() => window.open("https://www.github.com/wesheg")}
+            onMouseDown={(e) =>
+              (e.target as Element).classList.add(styles.socialButtonPressed)
+            }
+            onMouseUp={(e) =>
+              (e.target as Element).classList.remove(styles.socialButtonPressed)
+            }
+            onMouseLeave={(e) =>
+              (e.target as Element).classList.remove(styles.socialButtonPressed)
+            }
+          />
         </div>
+      </div>
+      <div className={`${styles.navItemContainer} ${styles.socialOuter}`}>
+        <div className={styles.socialInner}></div>
       </div>
     </div>
   );

@@ -41,12 +41,17 @@
 
 .socialButton {
   box-shadow: 3px 3px var(--foreground);
-  border-radius: 10px;
+  border-radius: 7px;
+  border: 1px solid var(--foreground);
   cursor: pointer;
 
   &:hover {
     opacity: 0.9;
   }
+}
+
+.socialButtonRound {
+  border-radius: 50%;
 }
 
 .socialButtonPressed {
