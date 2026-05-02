@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { MobileNavButton, MobileNavMenu } from "./mobile";
 import { HeaderProvider } from "./context";
 import { HeaderClientWrapper } from "./HeaderClientWrapper/HeaderClientWrapper";
 import { HeaderServerComponent } from "./HeaderServerComponent";
@@ -17,16 +15,7 @@ export const Header = ({ useH1 }: ClientHeaderWrapperProps) => {
   return (
     <HeaderProvider>
       <HeaderClientWrapper>
-        <HeaderServerComponent
-          useH1={useH1}
-          // mobileButton={
-          //   <MobileNavButton
-          //     open={mobileNavOpen}
-          //     handleClick={() => setMobileNavOpen((prev) => !prev)}
-          //   />
-          // }
-        />
-        {/* {mobileNavOpen && <MobileNavMenu />} */}
+        <HeaderServerComponent useH1={useH1} />
       </HeaderClientWrapper>
     </HeaderProvider>
   );

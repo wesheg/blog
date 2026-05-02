@@ -1,12 +1,9 @@
 import styles from "./navigation.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { MobileNavButton } from "@ui/components/Header/mobile";
 
-type NavigationProps = {
-  mobileButton?: React.ReactNode;
-};
-
-export const Navigation = ({ mobileButton }: NavigationProps) => {
+export const Navigation = () => {
   return (
     <nav className={styles.navigationContainer}>
       <div className={styles.serverContainer}>
@@ -40,7 +37,9 @@ export const Navigation = ({ mobileButton }: NavigationProps) => {
           />
         </div>
       </div>
-      <div className={styles.mobileButtonContainer}>{mobileButton}</div>
+      <div className={styles.mobileButtonContainer}>
+        <MobileNavButton />
+      </div>
     </nav>
   );
 };
