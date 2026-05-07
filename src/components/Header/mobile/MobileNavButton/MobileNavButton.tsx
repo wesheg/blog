@@ -6,7 +6,7 @@ import { useHeaderContext } from "@ui/components/Header/context";
 
 export const MobileNavButton = () => {
   const { mobileNavOpen, setMobileNavOpen } = useHeaderContext();
-  const [prevMobileNavOpen, setPrevMobileNavOpen] = useState(!mobileNavOpen);
+  const [prevMobileNavOpen, setPrevMobileNavOpen] = useState(false);
   const topLine = useRef<HTMLDivElement>(null);
   const middleLine = useRef<HTMLDivElement>(null);
   const bottomLine = useRef<HTMLDivElement>(null);
