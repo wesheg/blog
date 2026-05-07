@@ -5,30 +5,35 @@ import Link from "next/link";
 import Image from "next/image";
 import { popUp, pressDown } from "@ui/utils";
 import { useHeaderContext } from "@ui/components/Header/context";
+import { usePathname } from "next/navigation";
 
 export const MobileNavMenu = () => {
   const { setMobileNavOpen } = useHeaderContext();
+  const pathname = usePathname();
+  const stayHere = (href: string) => {
+    if (href === pathname) setMobileNavOpen(false);
+  };
 
   return (
     <div className={styles.navContainer}>
       <Link
         href="/"
         className={`${styles.navItemContainer} ${styles.navLink}`}
-        onClick={() => setMobileNavOpen(false)}
+        onClick={() => stayHere("/")}
       >
         home
       </Link>
       <Link
         href="/about-me"
         className={`${styles.navItemContainer} ${styles.navLink}`}
-        onClick={() => setMobileNavOpen(false)}
+        onClick={() => stayHere("/about-me")}
       >
         about me
       </Link>
       <Link
         href="/"
         className={`${styles.navItemContainer} ${styles.navLink}`}
-        onClick={() => setMobileNavOpen(false)}
+        onClick={() => stayHere("/")} // TODO add articles page
       >
         blog
       </Link>
