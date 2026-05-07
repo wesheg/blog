@@ -13,3 +13,9 @@
   transform: translate(3px, 3px);
   box-shadow: none;
 }
+
+@media screen and (max-width: 1000px) {
+  .linkButton:hover {
+    background-color: inherit;
+  }
+}
