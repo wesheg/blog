@@ -27,7 +27,7 @@ export const HeaderServerComponent = ({
 
   return (
     <header className={styles.headerInner}>
-      <Link className={styles.headerTitle} href="/">
+      <Link id="site-logo" className={styles.headerTitle} href="/">
         <Image
           preload
           className={styles.headerAvatar}

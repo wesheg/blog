@@ -59,6 +59,16 @@ export const HeaderClientWrapper: React.FC<{ children: React.ReactNode }> = ({
     };
   }, []);
 
+  /** Hydrate the logo */
+  useEffect(() => {
+    const closeMenu = () => setMobileNavOpen(false);
+    const siteLogo = ref.current?.querySelector("#site-logo");
+    siteLogo?.addEventListener("click", closeMenu);
+    return () => {
+      siteLogo?.removeEventListener("click", closeMenu);
+    };
+  }, [setMobileNavOpen]);
+
   return (
     <div
       className={mobileNavOpen ? "modal-overlay" : styles.headerOuter}

@@ -14,7 +14,7 @@
   align-items: center;
 
   background-color: inherit;
-  padding: none;
+  padding: 0;
   text-decoration: none;
 
   &:hover {
@@ -37,4 +37,10 @@
 
 .headerAvatar {
   height: clamp(65px, calc(100vh * 0.1), 95px);
+}
+
+@media screen and (max-width: 1000px) {
+  .headerTitle:hover {
+    background-color: var(--background);
+  }
 }
