@@ -29,10 +29,7 @@ export const MobileNavMenu = () => {
             width={60}
             alt="LinkedIn Profile"
             onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/wes-heginbotham-cfa",
-                "_self",
-              )
+              window.open("https://www.linkedin.com/in/wes-heginbotham-cfa")
             }
             onMouseDown={(e) => pressDown(e, styles.socialButtonPressed)}
             onMouseUp={(e) => popUp(e, styles.socialButtonPressed)}
@@ -46,9 +43,7 @@ export const MobileNavMenu = () => {
             height={60}
             width={60}
             alt="GitHub Profile"
-            onClick={() =>
-              window.open("https://www.github.com/wesheg", "_self")
-            }
+            onClick={() => window.open("https://www.github.com/wesheg")}
             onMouseDown={(e) => pressDown(e, styles.socialButtonPressed)}
             onMouseUp={(e) => popUp(e, styles.socialButtonPressed)}
             onMouseLeave={(e) => popUp(e, styles.socialButtonPressed)}
