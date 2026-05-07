@@ -29,12 +29,12 @@ export const HeaderServerComponent = ({
     <header className={styles.headerInner}>
       <Link className={styles.headerTitle} href="/">
         <Image
+          preload
           className={styles.headerAvatar}
           src="/avatars/header.svg"
           width={imgWidth}
           height={imgWidth * 1.5}
           alt="site logo"
-          loading="eager"
         />
         <HeaderText>
           <span className={styles.headerTextDeemphasized}>wesheg&apos;s</span>{" "}

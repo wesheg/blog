@@ -23,6 +23,7 @@ export const MobileNavMenu = () => {
       <div className={`${styles.navItemContainer} ${styles.socialOuter}`}>
         <div className={styles.socialInner}>
           <Image
+            preload
             className={styles.socialButton}
             src="/social/linkedin.png"
             height={60}
@@ -38,6 +39,7 @@ export const MobileNavMenu = () => {
             onTouchEnd={(e) => popUp(e, styles.socialButtonPressed)}
           />
           <Image
+            preload
             className={`${styles.socialButton} ${styles.socialButtonRound}`}
             src="/social/github.png"
             height={60}

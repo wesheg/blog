@@ -18,11 +18,11 @@ export const Navigation = () => {
         </ul>
         <div className={styles.socialContainer}>
           <Image
+            preload
             className={styles.socialButton}
             src="/social/linkedin.png"
             height={50}
             width={50}
-            preload={true}
             alt="LinkedIn Profile"
             onClick={() =>
               window.open("https://www.linkedin.com/in/wes-heginbotham-cfa")
@@ -37,12 +37,12 @@ export const Navigation = () => {
         </div>
         <div className={styles.socialContainer}>
           <Image
+            preload
             className={`${styles.socialButton} ${styles.socialButtonRound}`}
             src="/social/github.png"
             height={50}
             width={50}
             alt="GitHub Profile"
-            preload={true}
             onClick={() => window.open("https://www.github.com/wesheg")}
             onMouseDown={(e) => pressDown(e, styles.socialButtonPressed)}
             onMouseUp={(e) => popUp(e, styles.socialButtonPressed)}
