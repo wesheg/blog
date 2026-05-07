@@ -1,12 +1,11 @@
 "use client";
 
 import styles from "./mobileNavButton.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useHeaderContext } from "@ui/components/Header/context";
 
 export const MobileNavButton = () => {
   const { mobileNavOpen, setMobileNavOpen } = useHeaderContext();
-  const [prevMobileNavOpen, setPrevMobileNavOpen] = useState(false);
   const topLine = useRef<HTMLDivElement>(null);
   const middleLine = useRef<HTMLDivElement>(null);
   const bottomLine = useRef<HTMLDivElement>(null);
@@ -24,31 +23,16 @@ export const MobileNavButton = () => {
         bottomLine.current?.classList.remove(styles.bottomLineOpen);
       }
     }, 0);
-    setPrevMobileNavOpen(!mobileNavOpen);
   }, [mobileNavOpen]);
-
-  /** Ensures correct behavior when logo is clicked to go home */
-  useEffect(() => {
-    setPrevMobileNavOpen(false);
-  }, []);
 
   return (
     <div
       className={styles.navButtonOuter}
       onClick={() => setMobileNavOpen((prev) => !prev)}
     >
-      <div
-        className={`${styles.line} ${styles.topLine} ${prevMobileNavOpen ? styles.topLineOpen : ""}`}
-        ref={topLine}
-      />
-      <div
-        className={`${styles.line} ${styles.middleLine} ${prevMobileNavOpen ? styles.middleLineOpen : ""}`}
-        ref={middleLine}
-      />
-      <div
-        className={`${styles.line} ${styles.bottomLine} ${prevMobileNavOpen ? styles.bottomLineOpen : ""}`}
-        ref={bottomLine}
-      />
+      <div className={`${styles.line} ${styles.topLine}`} ref={topLine} />
+      <div className={`${styles.line} ${styles.middleLine}`} ref={middleLine} />
+      <div className={`${styles.line} ${styles.bottomLine}`} ref={bottomLine} />
     </div>
   );
 };
