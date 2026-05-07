@@ -116,7 +116,7 @@ export const usePuppetMaster = (
           case "up":
             targetLine = currentLine - 1;
             break;
-          default:
+          case "down":
             targetLine = currentLine + 1;
             break;
         }
@@ -265,7 +265,9 @@ export const usePuppetMaster = (
    *    The name of the animation is used as the "lastMovement" argument for the next randomized function.
    */
   const randomizer = useCallback(
-    (lastMovement: keyof typeof movements): Promise<keyof typeof movements> => {
+    (
+      lastMovement: keyof typeof movements | null,
+    ): Promise<keyof typeof movements> => {
       if (!codeScreen)
         throw new Error(
           "Cannot select a new randomized animation. codeScreen is undefined",
@@ -319,11 +321,11 @@ export const usePuppetMaster = (
       await loopAnimation(nextMovement);
     };
 
-    const firstAnimation = drinkCoffee();
+    const firstAnimation = randomizer(null);
     inFlight.current = firstAnimation;
-    await firstAnimation;
-    await loopAnimation("drinkCoffee");
-  }, [drinkCoffee, codeScreen, randomizer]);
+    const firstAnimationName = await firstAnimation;
+    await loopAnimation(firstAnimationName);
+  }, [codeScreen, randomizer]);
 
   const stop = useCallback(() => {
     stopped.current = true;
