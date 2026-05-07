@@ -11,16 +11,25 @@ export const MobileNavMenu = () => {
 
   return (
     <div className={styles.navContainer}>
-      <Link href="/" className={`${styles.navItemContainer} ${styles.navLink}`}>
+      <Link
+        href="/"
+        className={`${styles.navItemContainer} ${styles.navLink}`}
+        onClick={() => setMobileNavOpen(false)}
+      >
         home
       </Link>
       <Link
         href="/about-me"
         className={`${styles.navItemContainer} ${styles.navLink}`}
+        onClick={() => setMobileNavOpen(false)}
       >
         about me
       </Link>
-      <Link href="/" className={`${styles.navItemContainer} ${styles.navLink}`}>
+      <Link
+        href="/"
+        className={`${styles.navItemContainer} ${styles.navLink}`}
+        onClick={() => setMobileNavOpen(false)}
+      >
         blog
       </Link>
       <div className={`${styles.navItemContainer} ${styles.socialOuter}`}>
