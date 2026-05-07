@@ -42,7 +42,7 @@ export const usePuppetMaster = (
   const mousePosition = useRef<"up" | "down">("up");
   const firstRender = useRef(true);
   const inFlight = useRef<Promise<unknown> | null>(null);
-  const killed = useRef(false);
+  const stopped = useRef(false);
 
   /** First Render Setup */
   useEffect(() => {
@@ -308,11 +308,11 @@ export const usePuppetMaster = (
   const start = useCallback(async () => {
     if (!codeScreen) return;
     if (inFlight.current) await inFlight.current;
-    killed.current = false;
+    stopped.current = false;
 
     /** recursive function to chain random animations together, playing one after another */
     const loopAnimation = async (lastMovement: keyof typeof movements) => {
-      if (killed.current) return;
+      if (stopped.current) return;
       const animationPromise = randomizer(lastMovement);
       inFlight.current = animationPromise;
       const nextMovement = await animationPromise;
@@ -325,13 +325,13 @@ export const usePuppetMaster = (
     await loopAnimation("drinkCoffee");
   }, [drinkCoffee, codeScreen, randomizer]);
 
-  const kill = useCallback(() => {
-    killed.current = true;
+  const stop = useCallback(() => {
+    stopped.current = true;
   }, []);
 
   /** Hook values */
   return {
     start,
-    kill,
+    stop,
   };
 };

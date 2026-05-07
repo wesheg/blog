@@ -27,9 +27,8 @@ export const FrontPageAnimation = () => {
 
   useEffect(() => {
     puppetMaster.start();
-
     return () => {
-      puppetMaster.kill();
+      puppetMaster.stop();
     };
   }, [puppetMaster]);
 
