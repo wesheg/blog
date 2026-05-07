@@ -4,6 +4,7 @@ import styles from "./headerClientWrapper.module.css";
 import { useEffect, useRef } from "react";
 import { MobileNavMenu } from "@ui/components/Header/mobile";
 import { useHeaderContext } from "@ui/components/Header/context";
+import { usePathname } from "next/navigation";
 
 /**
  * Handles some basic styling & DOM manipulation based on the
@@ -14,6 +15,7 @@ export const HeaderClientWrapper: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const { mobileNavOpen, setMobileNavOpen } = useHeaderContext();
   const ref = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   /**
    * Close the mobile nav menu if the screen crosses the desktop threshold
@@ -61,13 +63,15 @@ export const HeaderClientWrapper: React.FC<{ children: React.ReactNode }> = ({
 
   /** Hydrate the logo */
   useEffect(() => {
-    const closeMenu = () => setMobileNavOpen(false);
-    const siteLogo = ref.current?.querySelector("#site-logo");
+    const closeMenu = () => {
+      if (pathname === "/") setMobileNavOpen(false);
+    };
+    const siteLogo = document.querySelector("#site-logo");
     siteLogo?.addEventListener("click", closeMenu);
     return () => {
       siteLogo?.removeEventListener("click", closeMenu);
     };
-  }, [setMobileNavOpen]);
+  }, [setMobileNavOpen, pathname]);
 
   return (
     <div
