@@ -27,6 +27,11 @@ export const MobileNavButton = () => {
     setPrevMobileNavOpen(!mobileNavOpen);
   }, [mobileNavOpen]);
 
+  /** Ensures correct behavior when logo is clicked to go home */
+  useEffect(() => {
+    setPrevMobileNavOpen(false);
+  }, []);
+
   return (
     <div
       className={styles.navButtonOuter}
