@@ -72,8 +72,9 @@
     display: block;
   }
 
-  .portraitFigure {
-    justify-self: center;
+  .imgContainer {
+    display: flex;
+    justify-content: center;
   }
 
   .portraitImg {
