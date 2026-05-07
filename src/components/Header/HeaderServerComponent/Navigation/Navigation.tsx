@@ -21,6 +21,7 @@ export const Navigation = () => {
             src="/social/linkedin.png"
             height={50}
             width={50}
+            preload={true}
             alt="LinkedIn Profile"
             onClick={() =>
               window.open("https://www.linkedin.com/in/wes-heginbotham-cfa")
@@ -43,6 +44,7 @@ export const Navigation = () => {
             height={50}
             width={50}
             alt="GitHub Profile"
+            preload={true}
             onClick={() => window.open("https://www.github.com/wesheg")}
             onMouseDown={(e) =>
               (e.target as Element).classList.add(styles.socialButtonPressed)

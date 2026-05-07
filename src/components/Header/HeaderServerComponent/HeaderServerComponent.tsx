@@ -36,6 +36,7 @@ export const HeaderServerComponent = ({
             width={imgWidth}
             height={imgWidth * 1.5}
             alt="site logo"
+            preload={true}
           />
           <HeaderText>
             <span className={styles.headerTextDeemphasized}>wesheg&apos;s</span>{" "}
