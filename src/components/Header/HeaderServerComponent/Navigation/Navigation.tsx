@@ -2,6 +2,7 @@ import styles from "./navigation.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { MobileNavButton } from "@ui/components/Header/mobile";
+import { popUp, pressDown } from "@ui/utils";
 
 export const Navigation = () => {
   return (
@@ -26,15 +27,12 @@ export const Navigation = () => {
             onClick={() =>
               window.open("https://www.linkedin.com/in/wes-heginbotham-cfa")
             }
-            onMouseDown={(e) =>
-              (e.target as Element).classList.add(styles.socialButtonPressed)
-            }
-            onMouseUp={(e) =>
-              (e.target as Element).classList.remove(styles.socialButtonPressed)
-            }
-            onMouseLeave={(e) =>
-              (e.target as Element).classList.remove(styles.socialButtonPressed)
-            }
+            onMouseDown={(e) => pressDown(e, styles.socialButtonPressed)}
+            onMouseUp={(e) => popUp(e, styles.socialButtonPressed)}
+            onMouseLeave={(e) => popUp(e, styles.socialButtonPressed)}
+            onTouchStart={(e) => pressDown(e, styles.socialButtonPressed)}
+            onTouchEnd={(e) => popUp(e, styles.socialButtonPressed)}
+            onTouchCancel={(e) => popUp(e, styles.socialButtonPressed)}
           />
         </div>
         <div className={styles.socialContainer}>
@@ -46,15 +44,12 @@ export const Navigation = () => {
             alt="GitHub Profile"
             preload={true}
             onClick={() => window.open("https://www.github.com/wesheg")}
-            onMouseDown={(e) =>
-              (e.target as Element).classList.add(styles.socialButtonPressed)
-            }
-            onMouseUp={(e) =>
-              (e.target as Element).classList.remove(styles.socialButtonPressed)
-            }
-            onMouseLeave={(e) =>
-              (e.target as Element).classList.remove(styles.socialButtonPressed)
-            }
+            onMouseDown={(e) => pressDown(e, styles.socialButtonPressed)}
+            onMouseUp={(e) => popUp(e, styles.socialButtonPressed)}
+            onMouseLeave={(e) => popUp(e, styles.socialButtonPressed)}
+            onTouchStart={(e) => pressDown(e, styles.socialButtonPressed)}
+            onTouchEnd={(e) => popUp(e, styles.socialButtonPressed)}
+            onTouchCancel={(e) => popUp(e, styles.socialButtonPressed)}
           />
         </div>
       </div>

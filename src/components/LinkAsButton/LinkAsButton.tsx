@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./linkAsButton.module.css";
-import type { MouseEvent, TouchEvent } from "react";
+import { popUp, pressDown } from "@ui/utils";
 
 type LinkAsButtonProps = {
   href: string;
@@ -8,22 +8,14 @@ type LinkAsButtonProps = {
 };
 
 export const LinkAsButton = ({ href, label }: LinkAsButtonProps) => {
-  const pressDown = (e: MouseEvent | TouchEvent) => {
-    (e.target as Element).classList.add(styles.pressed);
-  };
-
-  const popUp = (e: MouseEvent | TouchEvent) => {
-    (e.target as Element).classList.remove(styles.pressed);
-  };
-
   return (
     <Link
-      onMouseDown={pressDown}
-      onMouseUp={popUp}
-      onMouseLeave={popUp}
-      onTouchStart={pressDown}
-      onTouchEnd={popUp}
-      onTouchCancel={popUp}
+      onMouseDown={(e) => pressDown(e, styles.pressed)}
+      onMouseUp={(e) => popUp(e, styles.pressed)}
+      onMouseLeave={(e) => popUp(e, styles.pressed)}
+      onTouchStart={(e) => pressDown(e, styles.pressed)}
+      onTouchEnd={(e) => popUp(e, styles.pressed)}
+      onTouchCancel={(e) => popUp(e, styles.pressed)}
       href={href}
       className={styles.linkButton}
     >
