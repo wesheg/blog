@@ -4,12 +4,18 @@
   --nav-line-x-offset: 12.5%;
   --nav-line-y-offset: 30%;
 
+  all: unset;
+  background-color: var(--background);
   height: var(--nav-button-size);
   width: var(--nav-button-size);
   border: none;
   position: relative;
   background-color: transparent;
   cursor: pointer;
+
+  &:hover {
+    background-color: var(--background);
+  }
 }
 
 .line {

@@ -33,7 +33,7 @@ export const MobileNavButton = () => {
   }, []);
 
   return (
-    <div
+    <button
       className={styles.navButtonOuter}
       onClick={() => setMobileNavOpen((prev) => !prev)}
     >
@@ -49,6 +49,6 @@ export const MobileNavButton = () => {
         className={`${styles.line} ${styles.bottomLine} ${prevMobileNavOpen ? styles.bottomLineOpen : ""}`}
         ref={bottomLine}
       />
-    </div>
+    </button>
   );
 };
