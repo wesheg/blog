@@ -37,14 +37,10 @@ export const HeaderClientWrapper: React.FC<{ children: React.ReactNode }> = ({
     document.body.style.overflow = mobileNavOpen ? "hidden" : "auto";
   }, [mobileNavOpen]);
 
-  if (mobileNavOpen) {
-    return (
-      <div className="modal-overlay">
-        {children}
-        <MobileNavMenu />
-      </div>
-    );
-  }
-
-  return <>{children}</>;
+  return (
+    <div className={mobileNavOpen ? "modal-overlay" : ""}>
+      {children}
+      {mobileNavOpen && <MobileNavMenu />}
+    </div>
+  );
 };
