@@ -1,45 +1,50 @@
 .articleOuter {
-  border: 1px solid red;
+  all: unset;
+  border: 1px solid var(--foreground);
+  cursor: pointer;
   border-radius: 10px;
   padding: 1em;
   display: flex;
+  transition: transform 0.1s ease-in-out;
+  background-color: var(--button-background);
+
+  &:hover {
+    background-color: var(--button-background);
+    box-shadow: 0px 0px 10px 5px var(--button-background-hover);
+    transform: scale(1.025);
+
+    .articleTitle {
+      text-decoration: underline;
+    }
+  }
 }
 
 .articleInner {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-
-  * {
-    margin: 0;
-  }
 }
 
 .articleMetadata {
   display: flex;
   gap: 1em;
   align-items: center;
-  font-size: var(--fontsize-xsmall);
+  font-size: var(--fontsize-small);
   line-height: var(--fontsize-small);
 }
 
-.articleLink {
-  all: unset;
-  cursor: pointer;
-  text-underline-offset: 0.25em;
-
-  &:hover {
-    background-color: var(--background);
-    text-decoration: underline;
-  }
+.dateText {
+  color: #990f3d;
+  font-weight: bold;
 }
 
 .articleTitle {
-  font-size: var(--fontsize-h4);
+  text-underline-offset: 0.15em;
   font-weight: normal;
-  font-style: italic;
+  margin: 0.5em 0 0.75em 0;
 }
 
 .articleDescription {
-  font-size: var(--fontsize-small);
+  margin: 0;
+  font-size: var(--fontsize-normal);
+  color: var(--deemphasized-text);
 }

@@ -1,5 +1,10 @@
 import styles from "./article.module.css";
 import Link from "next/link";
+import { Fraunces } from "next/font/google";
+
+const fraunces = Fraunces({
+  style: "italic",
+});
 
 type ArticleProps = {
   slug: string;
@@ -20,21 +25,23 @@ export const Article = ({
   };
 
   return (
-    <div className={styles.articleOuter}>
+    <Link href={`/articles/${slug}`} className={styles.articleOuter}>
       <div>{/* Img placeholder */}</div>
       <div className={styles.articleInner}>
         <div className={styles.articleMetadata}>
-          <time dateTime="2025-01-01">Jan 1, 2025</time>
+          <time className={styles.dateText} dateTime="2025-01-01">
+            Jan 1, 2025
+          </time>
           <span aria-hidden="true">|</span>
           <span>{calculateReadTime(wordLength)}</span>
           <span aria-hidden="true">|</span>
           <span>Wes Heginbotham, CFA</span>
         </div>
-        <Link href={`/articles/${slug}`} className={styles.articleLink}>
-          <h3 className={styles.articleTitle}>{title}</h3>
-        </Link>
+        <h2 className={`${styles.articleTitle} ${fraunces.className}`}>
+          {title}
+        </h2>
         <p className={styles.articleDescription}>{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };

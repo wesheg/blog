@@ -4,9 +4,13 @@
   font-size: var(--fontsize-normal);
   text-decoration: none;
   font-weight: 500;
-  background-color: var(--background);
+  background-color: var(--button-background);
   border: 2px solid var(--foreground);
   box-shadow: 3px 3px var(--foreground);
+
+  &:hover {
+    background-color: var(--button-background-hover);
+  }
 }
 
 .pressed {

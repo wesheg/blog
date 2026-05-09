@@ -23,7 +23,7 @@ export default function Articles() {
             <Article
               slug=""
               title="A Very Interesting Article"
-              description="A very lengthy description of this article"
+              description="A very lengthy description of this article. Did you know that this article was so interesting? What an interesting article this is!"
               wordLength={500}
             />
           </li>
