@@ -2,9 +2,10 @@
   all: unset;
   border: 1px solid var(--foreground);
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 1em;
   padding: 1em;
   display: flex;
+  gap: 2em;
   transition: transform 0.1s ease-in-out;
   background-color: var(--button-background);
 

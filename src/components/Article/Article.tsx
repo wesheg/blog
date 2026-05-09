@@ -1,4 +1,5 @@
 import styles from "./article.module.css";
+import Image from "next/image";
 import Link from "next/link";
 import { Fraunces } from "next/font/google";
 
@@ -26,7 +27,20 @@ export const Article = ({
 
   return (
     <Link href={`/articles/${slug}`} className={styles.articleOuter}>
-      <div>{/* Img placeholder */}</div>
+      {/* <div>Img placeholder</div> */}
+      <Image
+        src="/social/linkedin.png"
+        alt="test"
+        width={100}
+        height={100}
+        style={{
+          width: "100%",
+          height: "100%",
+          flexBasis: "50%",
+          alignSelf: "center",
+        }}
+      />
+
       <div className={styles.articleInner}>
         <div className={styles.articleMetadata}>
           <time className={styles.dateText} dateTime="2025-01-01">
