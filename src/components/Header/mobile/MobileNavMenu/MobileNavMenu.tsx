@@ -24,9 +24,9 @@ export const MobileNavMenu = () => {
         home
       </Link>
       <Link
-        href="/"
+        href="/articles"
         className={`${styles.navItemContainer} ${styles.navLink}`}
-        onClick={() => stayHere("/")} // TODO add articles page
+        onClick={() => stayHere("/articles")} // TODO add articles page
       >
         articles
       </Link>

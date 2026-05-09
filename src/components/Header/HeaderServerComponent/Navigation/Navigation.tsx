@@ -10,7 +10,7 @@ export const Navigation = () => {
       <div className={styles.serverContainer}>
         <ul className={styles.navigationList}>
           <li className={styles.navigationOption}>
-            <Link href="/">articles</Link>
+            <Link href="/articles">articles</Link>
           </li>
           <li className={styles.navigationOption}>
             <Link href="/about-me">about me</Link>
