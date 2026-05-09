@@ -1,5 +1,5 @@
 import styles from "./articles.module.css";
-import { Header } from "@ui/components";
+import { Article, Header } from "@ui/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,6 +18,16 @@ export default function Articles() {
             A treasure trove of knowledge. You&apos;re welcome.
           </p>
         </div>
+        <ul>
+          <li>
+            <Article
+              slug=""
+              title="A Very Interesting Article"
+              description="A very lengthy description of this article"
+              wordLength={500}
+            />
+          </li>
+        </ul>
       </main>
     </>
   );

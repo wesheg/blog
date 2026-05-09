@@ -31,6 +31,7 @@
   --base-fontsize-large: 1.25rem;
   --base-fontsize-normal: 1.25rem;
   --base-fontsize-small: 1rem;
+  --base-fontsize-xsmall: 0.8rem;
 
   --font-scalar: calc(100vw / (var(--content-width) - var(--mobile-min-width)));
   --min-font-scalar: 0.6;
@@ -79,6 +80,11 @@
     calc(var(--min-font-scalar) * var(--base-fontsize-small)),
     calc(var(--font-scalar) * var(--base-fontsize-small)),
     var(--base-fontsize-small)
+  );
+  --fontsize-xsmall: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-xsmall)),
+    calc(var(--font-scalar) * var(--base-fontsize-xsmall)),
+    var(--base-fontsize-xsmall)
   );
 
   /** Modals **/

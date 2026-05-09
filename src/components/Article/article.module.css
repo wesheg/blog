@@ -1,0 +1,45 @@
+.articleOuter {
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+}
+
+.articleInner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  * {
+    margin: 0;
+  }
+}
+
+.articleMetadata {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  font-size: var(--fontsize-xsmall);
+  line-height: var(--fontsize-small);
+}
+
+.articleLink {
+  all: unset;
+  cursor: pointer;
+  text-underline-offset: 0.25em;
+
+  &:hover {
+    background-color: var(--background);
+    text-decoration: underline;
+  }
+}
+
+.articleTitle {
+  font-size: var(--fontsize-h4);
+  font-weight: normal;
+  font-style: italic;
+}
+
+.articleDescription {
+  font-size: var(--fontsize-small);
+}
