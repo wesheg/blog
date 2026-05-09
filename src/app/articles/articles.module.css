@@ -1,0 +1,22 @@
+.articlesMain {
+  max-width: var(--content-width);
+  margin: auto;
+}
+
+.titleContainer {
+  > h1,
+  p {
+    margin: 0;
+  }
+}
+
+.articlesSubtitle {
+  font-size: var(--fontsize-small);
+  font-style: italic;
+}
+
+@media screen and (max-width: 1000px) {
+  .titleContainer {
+    text-align: center;
+  }
+}
