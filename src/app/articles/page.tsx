@@ -18,7 +18,7 @@ export default function Articles() {
             A treasure trove of knowledge. You&apos;re welcome.
           </p>
         </div>
-        <ul>
+        <ul className={styles.articleList}>
           <li>
             <Article
               slug=""

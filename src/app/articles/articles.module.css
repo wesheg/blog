@@ -4,6 +4,8 @@
 }
 
 .titleContainer {
+  margin-bottom: 2em;
+
   > h1,
   p {
     margin: 0;
@@ -13,6 +15,11 @@
 .articlesSubtitle {
   font-size: var(--fontsize-small);
   font-style: italic;
+}
+
+.articleList {
+  padding: 0;
+  list-style: none;
 }
 
 @media screen and (max-width: 1000px) {
