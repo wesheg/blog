@@ -10,10 +10,10 @@ export const Navigation = () => {
       <div className={styles.serverContainer}>
         <ul className={styles.navigationList}>
           <li className={styles.navigationOption}>
-            <Link href="/about-me">about me</Link>
+            <Link href="/">articles</Link>
           </li>
           <li className={styles.navigationOption}>
-            <Link href="/">blog</Link>
+            <Link href="/about-me">about me</Link>
           </li>
         </ul>
         <div className={styles.socialContainer}>
