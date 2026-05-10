@@ -51,9 +51,9 @@ export const Article = ({
           <span aria-hidden="true">|</span>
           <span>Wes Heginbotham, CFA</span>
         </div>
-        <h2 className={`${styles.articleTitle} ${fraunces.className}`}>
+        <h3 className={`${styles.articleTitle} ${fraunces.className}`}>
           {title}
-        </h2>
+        </h3>
         <p className={styles.articleDescription}>{description}</p>
       </div>
     </Link>
