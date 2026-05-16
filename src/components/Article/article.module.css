@@ -24,6 +24,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: clip;
 }
 
 .articleImg {
@@ -31,10 +34,18 @@
   height: auto;
 }
 
+.articleImgDecorator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: var(--blog-pink);
+  width: 100%;
+}
+
 .articleInner {
   display: flex;
   flex-direction: column;
-  flex: 3;
 }
 
 .articleMetadata {
@@ -45,8 +56,8 @@
   font-size: var(--fontsize-small);
 }
 
-.dateText {
-  color: #990f3d;
+.articleDate {
+  color: var(--blog-red);
   font-weight: bold;
 }
 
@@ -59,4 +70,20 @@
 .articleDescription {
   margin: 0;
   color: var(--deemphasized-text);
+}
+
+@media screen and (max-width: 720px) {
+  .articleOuter {
+    flex-direction: column;
+  }
+
+  .articleImgContainer {
+    flex-basis: 200px;
+    max-height: 200px;
+  }
+
+  .articleImg {
+    height: 100%;
+    width: auto;
+  }
 }

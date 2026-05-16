@@ -31,15 +31,16 @@ export const Article = ({
         <Image
           src="/social/linkedin.png"
           alt="test"
-          width={100}
-          height={100}
+          width={580}
+          height={250}
           className={styles.articleImg}
         />
+        <span className={styles.articleImgDecorator} aria-hidden />
       </div>
 
       <div className={styles.articleInner}>
         <div className={styles.articleMetadata}>
-          <time className={styles.dateText} dateTime="2025-01-01">
+          <time className={styles.articleDate} dateTime="2025-01-01">
             Jan 1, 2025
           </time>
           <span aria-hidden="true">|</span>
