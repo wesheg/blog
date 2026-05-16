@@ -1,6 +1,5 @@
 .articleOuter {
   all: unset;
-  /* border: 1px solid var(--foreground); */
   cursor: pointer;
   border-radius: 1em;
   padding: 1em;
@@ -20,9 +19,22 @@
   }
 }
 
+.articleImgContainer {
+  flex: 0 0 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.articleImg {
+  width: 100%;
+  height: auto;
+}
+
 .articleInner {
   display: flex;
   flex-direction: column;
+  flex: 3;
 }
 
 .articleMetadata {

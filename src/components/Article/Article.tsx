@@ -27,19 +27,15 @@ export const Article = ({
 
   return (
     <Link href={`/articles/${slug}`} className={styles.articleOuter}>
-      {/* <div>Img placeholder</div> */}
-      <Image
-        src="/social/linkedin.png"
-        alt="test"
-        width={100}
-        height={100}
-        style={{
-          width: "100%",
-          height: "100%",
-          flexBasis: "50%",
-          alignSelf: "center",
-        }}
-      />
+      <div className={styles.articleImgContainer}>
+        <Image
+          src="/social/linkedin.png"
+          alt="test"
+          width={100}
+          height={100}
+          className={styles.articleImg}
+        />
+      </div>
 
       <div className={styles.articleInner}>
         <div className={styles.articleMetadata}>
