@@ -1,5 +1,6 @@
 .articleOuter {
   all: unset;
+  max-width: var(--content-width);
   cursor: pointer;
   border-radius: 1em;
   padding: 1em;
