@@ -14,6 +14,7 @@ export const Default: Story = {
   args: {
     slug: "/",
     title: "A Very Interesting Article",
+    date: "2026-05-31T00:00:00",
     description:
       "A lengthy description that describes this article. No more than 2-3 sentences.",
     wordLength: 500,

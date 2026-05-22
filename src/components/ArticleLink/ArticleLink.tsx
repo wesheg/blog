@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import styles from "./article.module.css";
 import Link from "next/link";
 import { Fraunces } from "next/font/google";
@@ -16,6 +17,7 @@ type ImgMetadata = {
 type ArticleLinkProps = {
   slug: string;
   title: string;
+  date: string;
   description: string;
   wordLength: number;
   featuredImg: ImgMetadata;
@@ -25,6 +27,7 @@ type ArticleLinkProps = {
 export const ArticleLink = ({
   slug,
   title,
+  date,
   description,
   wordLength,
   featuredImg,
@@ -35,6 +38,8 @@ export const ArticleLink = ({
     const mins = articleWordLength / averageWordsPerMin;
     return `${Math.max(1, Math.floor(mins)).toLocaleString("en-us")} min read`;
   };
+
+  const parsedDate = dayjs(date, "YYYY-MM-DDTHH:mm:ss");
 
   return (
     <Link href={`/articles/${slug}`} className={styles.articleOuter}>
@@ -55,8 +60,11 @@ export const ArticleLink = ({
 
       <div className={styles.articleInner}>
         <div className={styles.articleMetadata}>
-          <time className={styles.articleDate} dateTime="2025-01-01">
-            Jan 1, 2025
+          <time
+            className={styles.articleDate}
+            dateTime={parsedDate.format("YYYY-MM-DD")}
+          >
+            {parsedDate.format("MMM D, YYYY")}
           </time>
           <span aria-hidden="true">|</span>
           <span>{calculateReadTime(wordLength)}</span>
