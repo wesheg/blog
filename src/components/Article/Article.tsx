@@ -1,5 +1,4 @@
 import styles from "./article.module.css";
-import Image from "next/image";
 import Link from "next/link";
 import { Fraunces } from "next/font/google";
 
@@ -27,16 +26,23 @@ export const Article = ({
 
   return (
     <Link href={`/articles/${slug}`} className={styles.articleOuter}>
-      <div className={styles.articleImgContainer}>
-        <Image
-          src="/social/linkedin.png"
-          alt="test"
-          width={580}
-          height={250}
+      <picture className={styles.articleImgContainer}>
+        <source
+          media="(max-width: 1000px)"
+          srcSet="/test/mobile-copy-500.png 500w,
+                    /test/mobile-copy-1000.png 1000w,
+                    /test/mobile-copy-1500.png 1500w"
+        />
+        <img
+          alt=""
           className={styles.articleImg}
+          src="/test/desktop-copy-500.png"
+          srcSet="/test/desktop-copy-500.png 500w,
+                    /test/desktop-copy-1000.png 1000w,
+                    /test/desktop-copy-1500.png 1500w"
         />
         <span className={styles.articleImgDecorator} aria-hidden />
-      </div>
+      </picture>
 
       <div className={styles.articleInner}>
         <div className={styles.articleMetadata}>
