@@ -32,7 +32,8 @@
 
 .articleImg {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .articleImgDecorator {
@@ -84,11 +85,5 @@
   .articleImgContainer {
     flex-basis: 200px;
     max-height: 200px;
-  }
-
-  .articleImg {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
   }
 }

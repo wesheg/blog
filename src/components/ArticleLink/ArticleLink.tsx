@@ -21,7 +21,6 @@ type ArticleLinkProps = {
   excerpt: string;
   wordLength: number;
   featuredImg: ImgMetadata;
-  thumbnailImg: ImgMetadata;
 };
 
 export const ArticleLink = ({
@@ -31,7 +30,6 @@ export const ArticleLink = ({
   excerpt,
   wordLength,
   featuredImg,
-  thumbnailImg,
 }: ArticleLinkProps) => {
   const calculateReadTime = (articleWordLength: number): string => {
     const averageWordsPerMin = 200;
@@ -43,20 +41,15 @@ export const ArticleLink = ({
 
   return (
     <Link href={`/articles/${slug}`} className={styles.articleOuter}>
-      <picture className={styles.articleImgContainer}>
-        <source
-          media="(max-width: 1000px)"
-          src={featuredImg.src}
-          srcSet={featuredImg.srcSet}
-        />
+      <div className={styles.articleImgContainer}>
         <img
           alt=""
           className={styles.articleImg}
-          src={thumbnailImg.src}
-          srcSet={thumbnailImg.srcSet}
+          src={featuredImg.src}
+          srcSet={featuredImg.srcSet}
         />
         <span className={styles.articleImgDecorator} aria-hidden />
-      </picture>
+      </div>
 
       <div className={styles.articleInner}>
         <div className={styles.articleMetadata}>

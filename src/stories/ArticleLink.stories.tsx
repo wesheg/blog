@@ -25,12 +25,5 @@ export const Default: Story = {
                /assets/articleMobileTest-2000.png 2000w`,
       alt: "Featured Image",
     },
-    thumbnailImg: {
-      src: "/assets/articleDesktopTest-500.png",
-      srcSet: `/assets/articleDesktopTest-500.png 500w,
-               /assets/articleDesktopTest-1000.png 1000w,
-               /assets/articleDesktopTest-1500.png 1500w`,
-      alt: "Featured Image",
-    },
   },
 };
