@@ -21,7 +21,8 @@
     "paths": {
       "@ui/*": ["./src/*"],
       "@public/*": ["./public/*"]
-    }
+    },
+    "types": ["vite/client"]
   },
   "include": [
     "next-env.d.ts",

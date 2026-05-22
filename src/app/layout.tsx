@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
   variable: "--preferred-font",
+  subsets: ["latin"],
 });
 
 export default function RootLayout({

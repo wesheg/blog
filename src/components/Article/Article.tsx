@@ -4,14 +4,24 @@ import { Fraunces } from "next/font/google";
 
 const fraunces = Fraunces({
   style: "italic",
+  subsets: ["latin"],
 });
+
+type ImgSrcSet = {
+  small: string;
+  medium: string;
+  large: string;
+};
 
 type ArticleProps = {
   slug: string;
   title: string;
   description: string;
   wordLength: number;
+  // desktopImgs: ImgSrcSet;
+  // mobileImgs: ImgSrcSet;
 };
+
 export const Article = ({
   slug,
   title,
@@ -37,9 +47,9 @@ export const Article = ({
           alt=""
           className={styles.articleImg}
           src="/test/desktop-copy-500.png"
-          srcSet="/test/desktop-copy-500.png 500w,
-                    /test/desktop-copy-1000.png 1000w,
-                    /test/desktop-copy-1500.png 1500w"
+          srcSet="/test/desktop-copy-500.png 1x,
+                    /test/desktop-copy-1000.png 2x,
+                    /test/desktop-copy-1500.png 3x"
         />
         <span className={styles.articleImgDecorator} aria-hidden />
       </picture>
