@@ -1,5 +1,5 @@
 import styles from "./articles.module.css";
-import { Article, Header } from "@ui/components";
+import { ArticleLink, Header } from "@ui/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,12 +20,12 @@ export default function Articles() {
         </div>
         <ul className={styles.articleList}>
           <li>
-            <Article
+            {/* <ArticleLink
               slug=""
               title="A Very Interesting Article"
               description="A very lengthy description of this article. Did you know that this article was so interesting? What an interesting article this is!"
               wordLength={500}
-            />
+            /> */}
           </li>
         </ul>
       </main>

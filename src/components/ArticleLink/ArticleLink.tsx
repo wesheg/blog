@@ -7,31 +7,33 @@ const fraunces = Fraunces({
   subsets: ["latin"],
 });
 
-type ImgSrcSet = {
-  small: string;
-  medium: string;
-  large: string;
+type ImgMetadata = {
+  src: string;
+  srcSet: string;
+  alt: string;
 };
 
-type ArticleProps = {
+type ArticleLinkProps = {
   slug: string;
   title: string;
   description: string;
   wordLength: number;
-  // desktopImgs: ImgSrcSet;
-  // mobileImgs: ImgSrcSet;
+  featuredImg: ImgMetadata;
+  thumbnailImg: ImgMetadata;
 };
 
-export const Article = ({
+export const ArticleLink = ({
   slug,
   title,
   description,
   wordLength,
-}: ArticleProps) => {
+  featuredImg,
+  thumbnailImg,
+}: ArticleLinkProps) => {
   const calculateReadTime = (articleWordLength: number): string => {
     const averageWordsPerMin = 200;
     const mins = articleWordLength / averageWordsPerMin;
-    return `${Math.min(1, Math.floor(mins))} min read`;
+    return `${Math.max(1, Math.floor(mins)).toLocaleString("en-us")} min read`;
   };
 
   return (
@@ -39,17 +41,14 @@ export const Article = ({
       <picture className={styles.articleImgContainer}>
         <source
           media="(max-width: 1000px)"
-          srcSet="/test/mobile-copy-500.png 500w,
-                    /test/mobile-copy-1000.png 1000w,
-                    /test/mobile-copy-1500.png 1500w"
+          src={featuredImg.src}
+          srcSet={featuredImg.srcSet}
         />
         <img
           alt=""
           className={styles.articleImg}
-          src="/test/desktop-copy-500.png"
-          srcSet="/test/desktop-copy-500.png 1x,
-                    /test/desktop-copy-1000.png 2x,
-                    /test/desktop-copy-1500.png 3x"
+          src={thumbnailImg.src}
+          srcSet={thumbnailImg.srcSet}
         />
         <span className={styles.articleImgDecorator} aria-hidden />
       </picture>
