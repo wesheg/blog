@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import styles from "./article.module.css";
+import styles from "./articleLink.module.css";
 import Link from "next/link";
 import { Fraunces } from "next/font/google";
 
@@ -18,7 +18,7 @@ type ArticleLinkProps = {
   slug: string;
   title: string;
   date: string;
-  description: string;
+  excerpt: string;
   wordLength: number;
   featuredImg: ImgMetadata;
   thumbnailImg: ImgMetadata;
@@ -28,7 +28,7 @@ export const ArticleLink = ({
   slug,
   title,
   date,
-  description,
+  excerpt,
   wordLength,
   featuredImg,
   thumbnailImg,
@@ -74,7 +74,10 @@ export const ArticleLink = ({
         <h3 className={`${styles.articleTitle} ${fraunces.className}`}>
           {title}
         </h3>
-        <p className={styles.articleDescription}>{description}</p>
+        <div
+          className={styles.articleExcerpt}
+          dangerouslySetInnerHTML={{ __html: excerpt }}
+        />
       </div>
     </Link>
   );

@@ -15,8 +15,8 @@ export const Default: Story = {
     slug: "/",
     title: "A Very Interesting Article",
     date: "2026-05-31T00:00:00",
-    description:
-      "A lengthy description that describes this article. No more than 2-3 sentences.",
+    excerpt:
+      "<p>A lengthy description that describes this article. No more than 2-3 sentences.</p>\n",
     wordLength: 500,
     featuredImg: {
       src: "/assets/articleMobileTest-1000.png",
