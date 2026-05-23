@@ -1,5 +1,6 @@
 import styles from "./articles.module.css";
 import { ArticleLink, Header } from "@ui/components";
+import { getPostsQuery, type GetPostsResponseType } from "./utils/graphql";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,7 +8,17 @@ export const metadata: Metadata = {
   description: "All blog articles",
 };
 
-export default function Articles() {
+export default async function Articles() {
+  const data = await fetch("https://cms.wesheg.dev/graphql", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query: getPostsQuery }),
+  });
+  const posts: GetPostsResponseType = await data.json();
+  console.log(posts);
+
   return (
     <>
       <Header />
@@ -19,22 +30,24 @@ export default function Articles() {
           </p>
         </div>
         <ul className={styles.articleList}>
-          <li>
-            <ArticleLink
-              slug=""
-              title="A Very Interesting Article"
-              excerpt="A very lengthy description of this article. Did you know that this article was so interesting? What an interesting article this is!"
-              wordLength={500}
-              date="2025-01-01T00:00:00"
-              featuredImg={{
-                src: "/test/mobile-copy-500.png",
-                srcSet: `/test/mobile-copy-500.png 500w,
-                         /test/mobile-copy-1000.png 1000w,
-                         /test/mobile-copy-1500.png 1500w`,
-                alt: "Featured Img",
-              }}
-            />
-          </li>
+          {posts.data.posts.nodes.map(
+            ({ date, title, excerpt, featuredImage }, idx) => (
+              <li key={idx}>
+                <ArticleLink
+                  slug=""
+                  title={title}
+                  excerpt={excerpt}
+                  wordLength={500}
+                  date={date}
+                  featuredImg={{
+                    src: featuredImage.node.mediaItemUrl,
+                    srcSet: featuredImage.node.srcSet,
+                    alt: "",
+                  }}
+                />
+              </li>
+            ),
+          )}
         </ul>
       </main>
     </>
