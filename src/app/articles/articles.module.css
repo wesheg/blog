@@ -17,11 +17,6 @@
   font-style: italic;
 }
 
-.articleList {
-  padding: 0;
-  list-style: none;
-}
-
 @media screen and (max-width: 1000px) {
   .titleContainer {
     text-align: center;

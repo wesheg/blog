@@ -1,6 +1,7 @@
 import styles from "./articles.module.css";
-import { ArticleLink, Header } from "@ui/components";
-import { getPostsQuery, type GetPostsResponseType } from "./utils/graphql";
+import ArticleList from "./ArticleList/ArticleList";
+import { Header } from "@ui/components";
+import { Suspense } from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,17 +9,7 @@ export const metadata: Metadata = {
   description: "All blog articles",
 };
 
-export default async function Articles() {
-  const data = await fetch("https://cms.wesheg.dev/graphql", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query: getPostsQuery }),
-  });
-  const posts: GetPostsResponseType = await data.json();
-  console.log(posts);
-
+export default function Articles() {
   return (
     <>
       <Header />
@@ -29,26 +20,9 @@ export default async function Articles() {
             A treasure trove of knowledge. You&apos;re welcome.
           </p>
         </div>
-        <ul className={styles.articleList}>
-          {posts.data.posts.nodes.map(
-            ({ date, title, excerpt, featuredImage }, idx) => (
-              <li key={idx}>
-                <ArticleLink
-                  slug=""
-                  title={title}
-                  excerpt={excerpt}
-                  wordLength={500}
-                  date={date}
-                  featuredImg={{
-                    src: featuredImage.node.mediaItemUrl,
-                    srcSet: featuredImage.node.srcSet,
-                    alt: "",
-                  }}
-                />
-              </li>
-            ),
-          )}
-        </ul>
+        <Suspense fallback={<div>HELLO</div>}>
+          <ArticleList />
+        </Suspense>
       </main>
     </>
   );

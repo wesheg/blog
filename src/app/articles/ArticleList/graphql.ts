@@ -1,19 +1,19 @@
 export const getPostsQuery = `
-    query GetPosts {
-        posts {
-            nodes {
-                date
-                title
-                excerpt
-                featuredImage {
-                    node {
-                        srcSet 
-                        mediaItemUrl
-                    } 
-                }
-            } 
-        } 
-    }
+  query GetPosts {
+    posts {
+      nodes {
+        date 
+        title
+        excerpt
+        featuredImage {
+          node {
+            srcSet 
+            mediaItemUrl
+          } 
+        }
+      } 
+    } 
+  }
 `;
 
 export type GetPostsResponseType = {
