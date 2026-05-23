@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import dayjs from "dayjs";
 import styles from "./articleLink.module.css";
-import Link from "next/link";
 import { Fraunces } from "next/font/google";
 
 const fraunces = Fraunces({
@@ -8,19 +9,17 @@ const fraunces = Fraunces({
   subsets: ["latin"],
 });
 
-type ImgMetadata = {
-  src: string;
-  srcSet: string;
-  alt: string;
-};
-
 type ArticleLinkProps = {
   slug: string;
   title: string;
   date: string;
   excerpt: string;
   wordLength: number;
-  featuredImg: ImgMetadata;
+  featuredImg: {
+    src: string;
+    srcSet: string;
+    alt: string;
+  };
 };
 
 export const ArticleLink = ({
