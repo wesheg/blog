@@ -41,13 +41,15 @@ export const ArticleLink = ({
   return (
     <Link href={`/articles/${slug}`} className={styles.articleOuter}>
       <div className={styles.articleImgContainer}>
-        <img
-          alt=""
-          className={styles.articleImg}
-          src={featuredImg.src}
-          srcSet={featuredImg.srcSet}
-        />
-        <span className={styles.articleImgDecorator} aria-hidden />
+        <div className={styles.articleImgContainerInner}>
+          <img
+            alt=""
+            className={styles.articleImg}
+            src={featuredImg.src}
+            srcSet={featuredImg.srcSet}
+          />
+          <span className={styles.articleImgDecorator} aria-hidden />
+        </div>
       </div>
 
       <div className={styles.articleInner}>
