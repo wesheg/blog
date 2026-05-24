@@ -1,9 +1,12 @@
 import styles from "./articleList.module.css";
 import { ArticleLink } from "@ui/components";
+import { cacheLife } from "next/cache";
 import { fetchFromCms } from "@ui/utils";
 import { getPostsQuery, type GetPostsResponseType } from "./graphql";
 
 export default async function ArticleList() {
+  "use cache";
+  cacheLife("content");
   const queryResults = await fetchFromCms<GetPostsResponseType>(getPostsQuery);
 
   return (
