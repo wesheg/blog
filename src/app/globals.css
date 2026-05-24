@@ -140,10 +140,13 @@ main {
   margin: auto;
 }
 
+ul {
+  list-style-type: disc;
+}
+
 p,
 li {
   font-size: var(--fontsize-normal);
-  line-height: 1.75em;
 }
 
 li {
