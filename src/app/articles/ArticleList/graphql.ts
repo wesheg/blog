@@ -5,6 +5,7 @@ export const getPostsQuery = `
         date 
         title
         excerpt
+        wordCount
         featuredImage {
           node {
             srcSet 
@@ -23,6 +24,7 @@ export type GetPostsResponseType = {
         date: string;
         title: string;
         excerpt: string;
+        wordCount: number;
         featuredImage: {
           node: {
             srcSet: string;

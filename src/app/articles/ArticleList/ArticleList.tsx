@@ -12,14 +12,14 @@ export default async function ArticleList() {
   return (
     <ul className={styles.articleList}>
       {queryResults.data.posts.nodes.map(
-        ({ date, title, excerpt, featuredImage }, idx) => (
+        ({ date, title, excerpt, wordCount, featuredImage }, idx) => (
           <li key={idx}>
             <ArticleLink
               slug=""
               date={date}
               title={title}
               excerpt={excerpt}
-              wordLength={500}
+              wordLength={wordCount}
               featuredImg={{
                 src: featuredImage.node.mediaItemUrl,
                 srcSet: featuredImage.node.srcSet,
