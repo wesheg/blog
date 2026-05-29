@@ -25,6 +25,13 @@ type PersonAnimationName =
 /** Start and end frames of the lottie file animation */
 type AnimationSegment = [number, number];
 
+enum LoopState {
+  STARTING,
+  RUNNING,
+  STOPPING,
+  STOPPED,
+}
+
 /**
  * Hook for synchronizing animations between code blobs on the screen
  * and the character sitting at the desk.
@@ -41,7 +48,8 @@ export const usePuppetMaster = (
   const [codeScreen, setCodeScreen] = useState<CodeScreen>();
   const mousePosition = useRef<"up" | "down">("up");
   const firstRender = useRef(true);
-  const started = useRef(false);
+  const loopState = useRef(LoopState.STOPPED);
+  const inFlight = useRef<Promise<keyof typeof movements>>(null);
 
   /** First Render Setup */
   useEffect(() => {
@@ -308,20 +316,72 @@ export const usePuppetMaster = (
    */
   const start = useCallback(async () => {
     if (!codeScreen) return;
-    if (started.current) return;
-    started.current = true;
+    // if (loopState.current != LoopState.) return;
+    // if (inFlight.current != null) await inFlight.current;
+    switch (loopState.current) {
+      case LoopState.STARTING:
+      case LoopState.RUNNING:
+        return;
+      case LoopState.STOPPING:
+        loopState.current = LoopState.STARTING;
+        console.log("starting");
+        // if (inFlight.current != null) await inFlight.current;
+        break;
+      case LoopState.STOPPED:
+        loopState.current = LoopState.RUNNING;
+        console.log("running");
+        break;
+    }
 
     /** recursive function to chain random animations together, playing one after another */
     const loopAnimation = async (lastMovement?: keyof typeof movements) => {
-      const nextMovement = await randomizer(lastMovement);
-      await loopAnimation(nextMovement);
+      switch (loopState.current) {
+        case LoopState.STOPPED: {
+          return;
+        }
+        case LoopState.STOPPING: {
+          if (inFlight.current != null) await inFlight.current;
+          loopState.current = LoopState.STOPPED;
+          console.log("stopped");
+          return;
+        }
+        case LoopState.STARTING: {
+          // const nextMovement = inFlight.current != null ? await inFlight.current : undefined;
+          loopState.current = LoopState.RUNNING;
+          // await loopAnimation(nextMovement);
+          console.log("exiting");
+          return;
+        }
+        case LoopState.RUNNING: {
+          if (inFlight.current != null) await inFlight.current;
+          const nextMovementPromise = randomizer(lastMovement);
+          inFlight.current = nextMovementPromise;
+          console.log("looping");
+          const nextMovement = await nextMovementPromise;
+          await loopAnimation(nextMovement);
+        }
+      }
     };
 
     loopAnimation();
   }, [codeScreen, randomizer]);
 
+  const stop = useCallback(async () => {
+    loopState.current = LoopState.STOPPING;
+    console.log("stopping...");
+    if (inFlight.current == null) {
+      loopState.current = LoopState.STOPPED;
+      console.log("stopped bc no inFlight");
+    }
+    // await inFlight.current;
+    // loopState.current = LoopState.STOPPED;
+    // console.log("stopped after wait")
+    // }
+  }, []);
+
   /** Hook values */
   return {
     start,
+    stop,
   };
 };
