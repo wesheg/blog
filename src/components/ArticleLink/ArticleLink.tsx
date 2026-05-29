@@ -43,7 +43,7 @@ export const ArticleLink = ({
       <div className={styles.articleImgContainer}>
         <div className={styles.articleImgContainerInner}>
           <img
-            alt=""
+            alt={featuredImg.alt}
             className={styles.articleImg}
             src={featuredImg.src}
             srcSet={featuredImg.srcSet}

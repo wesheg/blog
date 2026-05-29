@@ -23,7 +23,7 @@ export default async function ArticleList() {
               featuredImg={{
                 src: featuredImage.node.mediaItemUrl,
                 srcSet: featuredImage.node.srcSet,
-                alt: "",
+                alt: `Thumbnail for article titled "${title}"`,
               }}
             />
           </li>

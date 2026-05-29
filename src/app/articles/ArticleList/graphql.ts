@@ -8,7 +8,7 @@ export const getPostsQuery = `
         wordCount
         featuredImage {
           node {
-            srcSet 
+            srcSet
             mediaItemUrl
           } 
         }
