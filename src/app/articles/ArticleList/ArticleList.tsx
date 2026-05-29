@@ -12,10 +12,10 @@ export default async function ArticleList() {
   return (
     <ul className={styles.articleList}>
       {queryResults.data.posts.nodes.map(
-        ({ date, title, excerpt, wordCount, featuredImage }, idx) => (
+        ({ date, excerpt, slug, title, wordCount, featuredImage }, idx) => (
           <li key={idx}>
             <ArticleLink
-              slug=""
+              slug={slug}
               date={date}
               title={title}
               excerpt={excerpt}

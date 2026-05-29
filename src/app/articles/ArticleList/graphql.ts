@@ -3,8 +3,9 @@ export const getPostsQuery = `
     posts {
       nodes {
         date 
-        title
         excerpt
+        slug
+        title
         wordCount
         featuredImage {
           node {
@@ -22,8 +23,9 @@ export type GetPostsResponseType = {
     posts: {
       nodes: {
         date: string;
-        title: string;
         excerpt: string;
+        slug: string;
+        title: string;
         wordCount: number;
         featuredImage: {
           node: {
