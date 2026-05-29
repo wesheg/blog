@@ -316,50 +316,36 @@ export const usePuppetMaster = (
    */
   const start = useCallback(async () => {
     if (!codeScreen) return;
-    // if (loopState.current != LoopState.) return;
-    // if (inFlight.current != null) await inFlight.current;
     switch (loopState.current) {
       case LoopState.STARTING:
       case LoopState.RUNNING:
         return;
       case LoopState.STOPPING:
         loopState.current = LoopState.STARTING;
-        console.log("starting");
-        // if (inFlight.current != null) await inFlight.current;
         break;
       case LoopState.STOPPED:
         loopState.current = LoopState.RUNNING;
-        console.log("running");
         break;
     }
 
     /** recursive function to chain random animations together, playing one after another */
     const loopAnimation = async (lastMovement?: keyof typeof movements) => {
       switch (loopState.current) {
-        case LoopState.STOPPED: {
+        case LoopState.STOPPED:
           return;
-        }
-        case LoopState.STOPPING: {
+        case LoopState.STOPPING:
           if (inFlight.current != null) await inFlight.current;
           loopState.current = LoopState.STOPPED;
-          console.log("stopped");
           return;
-        }
-        case LoopState.STARTING: {
-          // const nextMovement = inFlight.current != null ? await inFlight.current : undefined;
+        case LoopState.STARTING:
           loopState.current = LoopState.RUNNING;
-          // await loopAnimation(nextMovement);
-          console.log("exiting");
           return;
-        }
-        case LoopState.RUNNING: {
+        case LoopState.RUNNING:
           if (inFlight.current != null) await inFlight.current;
           const nextMovementPromise = randomizer(lastMovement);
           inFlight.current = nextMovementPromise;
-          console.log("looping");
           const nextMovement = await nextMovementPromise;
           await loopAnimation(nextMovement);
-        }
       }
     };
 
@@ -367,16 +353,11 @@ export const usePuppetMaster = (
   }, [codeScreen, randomizer]);
 
   const stop = useCallback(async () => {
-    loopState.current = LoopState.STOPPING;
-    console.log("stopping...");
     if (inFlight.current == null) {
       loopState.current = LoopState.STOPPED;
-      console.log("stopped bc no inFlight");
+    } else {
+      loopState.current = LoopState.STOPPING;
     }
-    // await inFlight.current;
-    // loopState.current = LoopState.STOPPED;
-    // console.log("stopped after wait")
-    // }
   }, []);
 
   /** Hook values */
