@@ -172,18 +172,17 @@ figcaption {
   font-style: italic;
 }
 
-.small-text {
-  font-size: var(--fontsize-small);
-}
-
-.large-text {
-  font-size: var(--fontsize-large);
-}
-
 .modal-overlay {
   background-color: var(--background);
   position: fixed;
   inset: 0;
   z-index: var(--modal-overlay-z-index);
   overflow-y: auto;
+}
+
+.articleTitle {
+  font-family: var(--article-title-font);
+  text-underline-offset: 0.15em;
+  font-weight: normal;
+  margin: 0.5em 0 0.75em 0;
 }

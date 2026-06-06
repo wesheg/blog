@@ -16,7 +16,7 @@ export const BlogArticle = ({ title, featuredImg }: BlogArticleProps) => {
         srcSet={featuredImg.srcSet}
         className={styles.featuredImg}
       />
-      <h1 className={styles.articleTitle}>{title}</h1>
+      <h1 className="articleTitle">{title}</h1>
       <div className={styles.content}></div>
     </div>
   );

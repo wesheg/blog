@@ -1,10 +1,16 @@
 import type { Preview } from "@storybook/nextjs-vite";
 // @ts-expect-error: allow side-effect import of global CSS without type declarations
 import "../src/app/globals.css";
-import { Roboto } from "next/font/google";
+import { Fraunces, Roboto } from "next/font/google";
 
 const roboto = Roboto({
   variable: "--preferred-font",
+  subsets: ["latin"],
+});
+
+const fraunces = Fraunces({
+  variable: "--article-title-font",
+  style: "italic",
   subsets: ["latin"],
 });
 
@@ -28,7 +34,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <div
-        className={roboto.variable}
+        className={`${roboto.variable} ${fraunces.variable}`}
         style={{
           fontFamily: "var(--preferred-font), Arial, Helvetica, sans-serif",
         }}

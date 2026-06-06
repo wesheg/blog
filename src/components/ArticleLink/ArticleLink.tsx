@@ -2,13 +2,7 @@
 import Link from "next/link";
 import dayjs from "dayjs";
 import styles from "./articleLink.module.css";
-import { Fraunces } from "next/font/google";
 import type { FeaturedImg } from "@ui/components";
-
-const fraunces = Fraunces({
-  style: "italic",
-  subsets: ["latin"],
-});
 
 type ArticleLinkProps = {
   slug: string;
@@ -62,9 +56,7 @@ export const ArticleLink = ({
           <span aria-hidden="true">|</span>
           <span>Wes Heginbotham, CFA</span>
         </div>
-        <h3 className={`${styles.articleTitle} ${fraunces.className}`}>
-          {title}
-        </h3>
+        <h3 className="articleTitle">{title}</h3>
         <div
           className={styles.articleExcerpt}
           dangerouslySetInnerHTML={{ __html: excerpt }}
