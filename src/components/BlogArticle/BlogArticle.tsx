@@ -1,5 +1,23 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "./blogArticle.module.css";
+import type { FeaturedImg } from "@ui/components";
 
-export const BlogArticle = () => {
-  return <h1>Hello World</h1>;
+type BlogArticleProps = {
+  title: string;
+  featuredImg: FeaturedImg;
+};
+
+export const BlogArticle = ({ title, featuredImg }: BlogArticleProps) => {
+  return (
+    <div className={styles.blogArticleOuter}>
+      <img
+        alt={featuredImg.alt}
+        src={featuredImg.src}
+        srcSet={featuredImg.srcSet}
+        className={styles.featuredImg}
+      />
+      <h1 className={styles.articleTitle}>{title}</h1>
+      <div className={styles.content}></div>
+    </div>
+  );
 };
