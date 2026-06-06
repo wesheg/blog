@@ -3,6 +3,7 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import styles from "./articleLink.module.css";
 import { Fraunces } from "next/font/google";
+import type { FeaturedImg } from "@ui/components";
 
 const fraunces = Fraunces({
   style: "italic",
@@ -15,11 +16,7 @@ type ArticleLinkProps = {
   date: string;
   excerpt: string;
   wordLength: number;
-  featuredImg: {
-    src: string;
-    srcSet: string;
-    alt: string;
-  };
+  featuredImg: FeaturedImg;
 };
 
 export const ArticleLink = ({
