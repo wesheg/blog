@@ -15,6 +15,13 @@ export const BlogArticle = ({
 }: BlogArticleProps) => {
   return (
     <article className={styles.blogArticleOuter}>
+      <div className={styles.articleMetadata}>
+        <div className={styles.dateAndReadTime}>
+          <time className={styles.articleDate}>May 6, 2026</time>
+          <span aria-hidden="true">|</span>
+          <span>11 min read</span>
+        </div>
+      </div>
       <h1 className="articleTitle" style={{ margin: "0.25em 0 0 0" }}>
         {title}
       </h1>
@@ -31,14 +38,9 @@ export const BlogArticle = ({
         />
         <div className={styles.featuredImgDecorator} />
       </div>
-      <div className={styles.articleMetadata}>
-        <div className={styles.dateAndReadTime}>
-          <time className={styles.articleDate}>May 6, 2026</time>
-          <span aria-hidden="true">|</span>
-          <span>11 min read</span>
-        </div>
+      <p>
         <strong>Wes Heginbotham, CFA</strong>
-      </div>
+      </p>
       <div className={styles.contentOuter}>
         <hr style={{ margin: "1em 0 2em 0" }} />
         <div className={styles.wpContent}>

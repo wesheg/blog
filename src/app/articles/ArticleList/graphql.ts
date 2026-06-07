@@ -18,7 +18,7 @@ export const getPostsQuery = `
   }
 `;
 
-export type GetPostsResponseType = {
+export type GetPostsResponse = {
   data: {
     posts: {
       nodes: {
