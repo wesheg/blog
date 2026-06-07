@@ -14,7 +14,7 @@ const FrontPageHeadlines = () => {
       <h2>Hi, I&apos;m Wes</h2>
       <p>I&apos;m a software engineer & investment analyst</p>
       <p>Welcome to my website!</p>
-      <LinkAsButton href="/" label="Read the Blog" />
+      <LinkAsButton href="/articles" label="Read the Blog" />
     </div>
   );
 };
