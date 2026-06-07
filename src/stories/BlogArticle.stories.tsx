@@ -12,7 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    title: "Hello World",
+    title: "How I Built This Blog",
     excerpt: "<p>This is an example of an article excerpt.</p>",
     featuredImg: {
       src: "/assets/articleMobileTest-1000.png",

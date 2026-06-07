@@ -9,7 +9,7 @@
   max-width: var(--content-width);
 }
 
-.contentInner {
+.wpContent {
   font-size: var(--fontsize-normal);
 }
 
@@ -36,8 +36,29 @@
   width: 100%;
 }
 
+.articleMetadata {
+  margin: 1em 0;
+  font-size: var(--fontsize-small);
+}
+
+.dateAndReadTime {
+  display: flex;
+  margin: 1em 0;
+  gap: 1em;
+}
+
+.articleDate {
+  color: var(--blog-red);
+  font-weight: bold;
+}
+
 .articleExcerpt {
   color: var(--deemphasized-text);
+  margin: 0.5em 0 1em 0;
+
+  p {
+    margin: 0;
+  }
 
   li {
     margin: 0.5em;
