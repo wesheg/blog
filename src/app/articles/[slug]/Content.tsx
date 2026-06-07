@@ -18,6 +18,7 @@ export default async function Content({ params }: ContentProps) {
     <BlogArticle
       title={queryResults.data.postBy.title}
       excerpt={queryResults.data.postBy.excerpt}
+      content={queryResults.data.postBy.content}
       featuredImg={{
         src: queryResults.data.postBy.featuredImage.node.mediaItemUrl,
         srcSet: queryResults.data.postBy.featuredImage.node.srcSet,

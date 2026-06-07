@@ -5,12 +5,14 @@ import type { FeaturedImg } from "@ui/components";
 type BlogArticleProps = {
   title: string;
   excerpt: string;
+  content: string;
   featuredImg: FeaturedImg;
 };
 
 export const BlogArticle = ({
   title,
   excerpt,
+  content,
   featuredImg,
 }: BlogArticleProps) => {
   return (
@@ -43,9 +45,10 @@ export const BlogArticle = ({
       </p>
       <div className={styles.contentOuter}>
         <hr style={{ margin: "1em 0 2em 0" }} />
-        <div className={styles.wpContent}>
-          Lots of content here. BIg juicy content
-        </div>
+        <div
+          className={styles.wpContent}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </div>
     </article>
   );
