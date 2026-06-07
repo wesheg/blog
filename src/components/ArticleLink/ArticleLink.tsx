@@ -56,7 +56,9 @@ export const ArticleLink = ({
           <span aria-hidden="true">|</span>
           <span>Wes Heginbotham, CFA</span>
         </div>
-        <h3 className="articleTitle">{title}</h3>
+        <h3 className="articleTitle" style={{ margin: "0.5em 0 0.75em 0" }}>
+          {title}
+        </h3>
         <div
           className={styles.articleExcerpt}
           dangerouslySetInnerHTML={{ __html: excerpt }}
