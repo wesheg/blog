@@ -144,10 +144,6 @@ li {
   line-height: 1.75em;
 }
 
-li {
-  margin: 1em 0;
-}
-
 a {
   color: var(--foreground);
   text-underline-offset: 0.125em;
