@@ -185,3 +185,14 @@ figcaption {
   text-underline-offset: 0.15em;
   font-weight: normal;
 }
+
+/** WordPress Blocks **/
+figure.wp-block-image {
+  margin-left: 0;
+  margin-right: 0;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
