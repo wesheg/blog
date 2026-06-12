@@ -34,7 +34,7 @@
   --base-fontsize-small: 1rem;
 
   --font-scalar: calc(100vw / (var(--content-width) - var(--mobile-min-width)));
-  --min-font-scalar: 0.6;
+  --min-font-scalar: 0.8;
 
   --fontsize-h1: clamp(
     calc(var(--min-font-scalar) * var(--base-fontsize-h1)),
@@ -72,9 +72,16 @@
     var(--base-fontsize-large)
   );
 
-  /** Do not shrink smaller fonts **/
-  --fontsize-normal: var(--base-fontsize-normal);
-  --fontsize-small: var(--base-fontsize-small);
+  --fontsize-normal: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-normal)),
+    calc(var(--font-scalar) * var(--base-fontsize-normal)),
+    var(--base-fontsize-normal)
+  );
+  --fontsize-small: clamp(
+    calc(var(--min-font-scalar) * var(--base-fontsize-small)),
+    calc(var(--font-scalar) * var(--base-fontsize-small)),
+    var(--base-fontsize-small)
+  );
 
   /** Modals **/
   --modal-overlay-z-index: 998;
