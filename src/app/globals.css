@@ -71,13 +71,11 @@
     calc(var(--font-scalar) * var(--base-fontsize-large)),
     var(--base-fontsize-large)
   );
-
   --fontsize-normal: clamp(
     calc(var(--min-font-scalar) * var(--base-fontsize-normal)),
     calc(var(--font-scalar) * var(--base-fontsize-normal)),
     var(--base-fontsize-normal)
   );
-
   --fontsize-small: clamp(
     calc(var(--min-font-scalar) * var(--base-fontsize-small)),
     calc(var(--font-scalar) * var(--base-fontsize-small)),
