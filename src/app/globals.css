@@ -186,3 +186,7 @@ figure.wp-block-image {
     height: auto;
   }
 }
+
+.wp-block-heading {
+  margin-block-end: 0.5em;
+}
