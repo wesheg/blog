@@ -35,7 +35,6 @@
 
   --font-scalar: calc(100vw / (var(--content-width) - var(--mobile-min-width)));
   --min-font-scalar: 0.8;
-  --min-small-font-scalar: 0.9;
 
   --fontsize-h1: clamp(
     calc(var(--min-font-scalar) * var(--base-fontsize-h1)),
