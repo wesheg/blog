@@ -14,16 +14,20 @@ export default async function Content({ params }: ContentProps) {
   const queryResults = await fetchFromCms<GetPostResponse>(
     buildPostQuery(slug),
   );
+  const { date, excerpt, title, wordCount, content, featuredImage } =
+    queryResults.data.postBy;
+
   return (
     <BlogArticle
-      title={queryResults.data.postBy.title}
-      excerpt={queryResults.data.postBy.excerpt}
-      content={queryResults.data.postBy.content}
-      wordCount={queryResults.data.postBy.wordCount}
+      date={date}
+      wordCount={wordCount}
+      title={title}
+      excerpt={excerpt}
+      content={content}
       featuredImg={{
-        src: queryResults.data.postBy.featuredImage.node.mediaItemUrl,
-        srcSet: queryResults.data.postBy.featuredImage.node.srcSet,
-        alt: queryResults.data.postBy.featuredImage.node.altText,
+        src: featuredImage.node.mediaItemUrl,
+        srcSet: featuredImage.node.srcSet,
+        alt: featuredImage.node.altText,
       }}
     />
   );

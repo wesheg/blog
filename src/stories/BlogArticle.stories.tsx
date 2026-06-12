@@ -12,6 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    date: "2026-01-01T10:00:00",
     title: "How I Built This Blog",
     excerpt: "<p>This is an example of an article excerpt.</p>",
     content: "<p>Content Here</p>",

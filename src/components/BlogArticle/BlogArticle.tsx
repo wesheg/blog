@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "./blogArticle.module.css";
+import { ArticleDate, type FeaturedImg } from "@ui/components";
 import { getReadTime } from "@ui/utils";
-import type { FeaturedImg } from "@ui/components";
 
 type BlogArticleProps = {
+  date: string;
   excerpt: string;
   title: string;
   wordCount: number;
@@ -12,6 +13,7 @@ type BlogArticleProps = {
 };
 
 export const BlogArticle = ({
+  date,
   excerpt,
   title,
   wordCount,
@@ -22,7 +24,7 @@ export const BlogArticle = ({
     <article className={styles.blogArticleOuter}>
       <div className={styles.articleMetadata}>
         <div className={styles.dateAndReadTime}>
-          <time className={styles.articleDate}>May 6, 2026</time>
+          <ArticleDate dateString={date} />
           <span aria-hidden="true">|</span>
           <span>{getReadTime(wordCount)}</span>
         </div>

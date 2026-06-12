@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import dayjs from "dayjs";
 import styles from "./articleLink.module.css";
+import { ArticleDate, type FeaturedImg } from "@ui/components";
 import { getReadTime } from "@ui/utils";
-import type { FeaturedImg } from "@ui/components";
 
 type ArticleLinkProps = {
   slug: string;
@@ -22,8 +21,6 @@ export const ArticleLink = ({
   wordLength,
   featuredImg,
 }: ArticleLinkProps) => {
-  const parsedDate = dayjs(date, "YYYY-MM-DDTHH:mm:ss");
-
   return (
     <Link href={`/articles/${slug}`} className={styles.articleOuter}>
       <div className={styles.articleImgContainer}>
@@ -40,12 +37,7 @@ export const ArticleLink = ({
 
       <div className={styles.articleInner}>
         <div className={styles.articleMetadata}>
-          <time
-            className={styles.articleDate}
-            dateTime={parsedDate.format("YYYY-MM-DD")}
-          >
-            {parsedDate.format("MMM D, YYYY")}
-          </time>
+          <ArticleDate dateString={date} />
           <span aria-hidden="true">|</span>
           <span>{getReadTime(wordLength)}</span>
           <span aria-hidden="true">|</span>
