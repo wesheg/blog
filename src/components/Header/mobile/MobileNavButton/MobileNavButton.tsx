@@ -25,6 +25,20 @@ export const MobileNavButton = () => {
     }, 0);
   }, [mobileNavOpen]);
 
+  /** Cleanup CSS classes before next button render */
+  useEffect(() => {
+    const topLineCopy = topLine.current;
+    const middleLineCopy = middleLine.current;
+    const bottomLineCopy = bottomLine.current;
+    return () => {
+      setTimeout(() => {
+        topLineCopy?.classList.remove(styles.topLineOpen);
+        middleLineCopy?.classList.remove(styles.middleLineOpen);
+        bottomLineCopy?.classList.remove(styles.bottomLineOpen);
+      }, 0);
+    };
+  }, []);
+
   return (
     <div
       className={styles.navButtonOuter}

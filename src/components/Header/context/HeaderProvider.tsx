@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 type HeaderProviderValues = {
   mobileNavOpen: boolean;
@@ -18,6 +18,12 @@ export const HeaderProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  useEffect(() => {
+    return () => {
+      setMobileNavOpen(false);
+    };
+  }, []);
 
   return (
     <HeaderContext.Provider
