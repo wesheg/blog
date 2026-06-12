@@ -2,6 +2,7 @@
 import Link from "next/link";
 import dayjs from "dayjs";
 import styles from "./articleLink.module.css";
+import { getReadTime } from "@ui/utils";
 import type { FeaturedImg } from "@ui/components";
 
 type ArticleLinkProps = {
@@ -21,12 +22,6 @@ export const ArticleLink = ({
   wordLength,
   featuredImg,
 }: ArticleLinkProps) => {
-  const calculateReadTime = (articleWordLength: number): string => {
-    const averageWordsPerMin = 200;
-    const mins = articleWordLength / averageWordsPerMin;
-    return `${Math.max(1, Math.floor(mins)).toLocaleString("en-us")} min read`;
-  };
-
   const parsedDate = dayjs(date, "YYYY-MM-DDTHH:mm:ss");
 
   return (
@@ -52,7 +47,7 @@ export const ArticleLink = ({
             {parsedDate.format("MMM D, YYYY")}
           </time>
           <span aria-hidden="true">|</span>
-          <span>{calculateReadTime(wordLength)}</span>
+          <span>{getReadTime(wordLength)}</span>
           <span aria-hidden="true">|</span>
           <span>Wes Heginbotham, CFA</span>
         </div>
