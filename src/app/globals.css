@@ -71,16 +71,10 @@
     calc(var(--font-scalar) * var(--base-fontsize-large)),
     var(--base-fontsize-large)
   );
-  --fontsize-normal: clamp(
-    calc(var(--min-font-scalar) * var(--base-fontsize-normal)),
-    calc(var(--font-scalar) * var(--base-fontsize-normal)),
-    var(--base-fontsize-normal)
-  );
-  --fontsize-small: clamp(
-    calc(var(--min-font-scalar) * var(--base-fontsize-small)),
-    calc(var(--font-scalar) * var(--base-fontsize-small)),
-    var(--base-fontsize-small)
-  );
+
+  /** Do not shrink smaller fonts **/
+  --fontsize-normal: var(--base-fontsize-normal);
+  --fontsize-small: var(--base-fontsize-small);
 
   /** Modals **/
   --modal-overlay-z-index: 998;
