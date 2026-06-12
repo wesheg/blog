@@ -3,6 +3,7 @@
 import { HeaderProvider } from "./context";
 import { HeaderClientWrapper } from "./HeaderClientWrapper/HeaderClientWrapper";
 import { HeaderServerComponent } from "./HeaderServerComponent";
+import { Suspense } from "react";
 
 type ClientHeaderWrapperProps = {
   /** For SEO. If true, will wrap the site title in <h1> tag.
@@ -12,11 +13,13 @@ type ClientHeaderWrapperProps = {
 };
 
 export const Header = ({ useH1 }: ClientHeaderWrapperProps) => {
+  const serverComponent = <HeaderServerComponent useH1={useH1} />;
+
   return (
     <HeaderProvider>
-      <HeaderClientWrapper>
-        <HeaderServerComponent useH1={useH1} />
-      </HeaderClientWrapper>
+      <Suspense fallback={serverComponent}>
+        <HeaderClientWrapper>{serverComponent}</HeaderClientWrapper>
+      </Suspense>
     </HeaderProvider>
   );
 };
