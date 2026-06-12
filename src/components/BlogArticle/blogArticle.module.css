@@ -4,15 +4,6 @@
   flex-direction: column;
 }
 
-.contentOuter {
-  margin: auto;
-  max-width: var(--content-width);
-}
-
-.wpContent {
-  font-size: var(--fontsize-normal);
-}
-
 .featuredImgContainer {
   position: relative;
   width: 100%;
@@ -47,11 +38,6 @@
   gap: 1em;
 }
 
-.articleDate {
-  color: var(--blog-red);
-  font-weight: bold;
-}
-
 .articleExcerpt {
   color: var(--deemphasized-text);
   margin: 0.5em 0 1em 0;
@@ -61,7 +47,7 @@
   }
 
   li {
-    margin: 0.5em;
+    margin: 0.25em;
     line-height: 1.25em;
   }
 }

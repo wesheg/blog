@@ -4,14 +4,23 @@ import { ArticleDate, type FeaturedImg } from "@ui/components";
 import { getReadTime } from "@ui/utils";
 
 type BlogArticleProps = {
+  /** Publication date in the format "YYYY-MM-DDTHH:mm:ss" */
   date: string;
+  /** HTML for a short description of the article's content */
   excerpt: string;
+  /** Title of the blog article */
   title: string;
+  /** Number of words in the article */
   wordCount: number;
+  /** HTML for the blog article's content */
   content: string;
+  /** Metadata for the article's banner image */
   featuredImg: FeaturedImg;
 };
 
+/**
+ * Component rendering content for a single WordPress post.
+ */
 export const BlogArticle = ({
   date,
   excerpt,
@@ -48,13 +57,11 @@ export const BlogArticle = ({
       <p>
         <strong>Wes Heginbotham, CFA</strong>
       </p>
-      <div className={styles.contentOuter}>
-        <hr style={{ margin: "1em 0 2em 0" }} />
-        <div
-          className={styles.wpContent}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-      </div>
+      <hr style={{ margin: "1em 0 2em 0" }} />
+      <div
+        className={styles.wpContent}
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
     </article>
   );
 };

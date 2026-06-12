@@ -17,7 +17,7 @@ export const Default: Story = {
     date: "2026-05-31T00:00:00",
     excerpt:
       "<p>A lengthy description that describes this article. No more than 2-3 sentences.</p>\n",
-    wordLength: 500,
+    wordCount: 500,
     featuredImg: {
       src: "/assets/articleMobileTest-1000.png",
       srcSet: `/assets/articleMobileTest-1000.png 1000w,

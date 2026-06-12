@@ -4,6 +4,11 @@ import { cacheLife } from "next/cache";
 import { fetchFromCms } from "@ui/utils";
 import { getPostsQuery, type GetPostsResponse } from "./graphql";
 
+/**
+ * Fetch a list of all posts from WordPress.
+ * Wrap this component in `<Suspense />` and provide a fallback while awaiting
+ * the query.
+ */
 export default async function ArticleList() {
   "use cache";
   cacheLife("serverContent");
@@ -19,7 +24,7 @@ export default async function ArticleList() {
               date={date}
               title={title}
               excerpt={excerpt}
-              wordLength={wordCount}
+              wordCount={wordCount}
               featuredImg={{
                 src: featuredImage.node.mediaItemUrl,
                 srcSet: featuredImage.node.srcSet,

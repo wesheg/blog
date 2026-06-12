@@ -65,11 +65,6 @@
   font-size: var(--fontsize-small);
 }
 
-.articleDate {
-  color: var(--blog-red);
-  font-weight: bold;
-}
-
 .articleExcerpt {
   margin: 0;
   color: var(--deemphasized-text);
@@ -78,7 +73,7 @@
   }
 
   li {
-    margin: 0.5em;
+    margin: 0.25em;
     line-height: 1.25em;
   }
 }
