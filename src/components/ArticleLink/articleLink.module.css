@@ -43,6 +43,12 @@
   object-fit: cover;
 }
 
+.articleTitle {
+  margin: 0.5em 0 0.75em 0;
+  text-underline-offset: 0.15em;
+  font-weight: normal;
+}
+
 .articleImgDecorator {
   position: absolute;
   top: 0;

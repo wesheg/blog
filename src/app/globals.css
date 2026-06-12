@@ -176,12 +176,6 @@ figcaption {
   overflow-y: auto;
 }
 
-.articleTitle {
-  font-family: var(--article-title-font);
-  text-underline-offset: 0.15em;
-  font-weight: normal;
-}
-
 /** WordPress Blocks **/
 figure.wp-block-image {
   margin-left: 0;

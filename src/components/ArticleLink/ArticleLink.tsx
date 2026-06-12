@@ -2,7 +2,7 @@
 import Link from "next/link";
 import styles from "./articleLink.module.css";
 import { ArticleDate, type FeaturedImg } from "@ui/components";
-import { getReadTime } from "@ui/utils";
+import { frauncesFont, getReadTime } from "@ui/utils";
 
 type ArticleLinkProps = {
   /** URL slug for the article: `/articles/[slug]`
@@ -54,7 +54,7 @@ export const ArticleLink = ({
           <span aria-hidden="true">|</span>
           <span>Wes Heginbotham, CFA</span>
         </div>
-        <h3 className="articleTitle" style={{ margin: "0.5em 0 0.75em 0" }}>
+        <h3 className={`${frauncesFont.className} ${styles.articleTitle}`}>
           {title}
         </h3>
         <div

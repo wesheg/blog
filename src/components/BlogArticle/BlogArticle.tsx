@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "./blogArticle.module.css";
 import { ArticleDate, type FeaturedImg } from "@ui/components";
-import { getReadTime } from "@ui/utils";
+import { frauncesFont, getReadTime } from "@ui/utils";
 
 type BlogArticleProps = {
   /** Publication date in the format "YYYY-MM-DDTHH:mm:ss" */
@@ -38,7 +38,7 @@ export const BlogArticle = ({
           <span>{getReadTime(wordCount)}</span>
         </div>
       </div>
-      <h1 className="articleTitle" style={{ margin: "0.25em 0 0 0" }}>
+      <h1 className={`${frauncesFont.className} ${styles.articleTitle}`}>
         {title}
       </h1>
       <div

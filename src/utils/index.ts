@@ -1,3 +1,3 @@
 export { pressDown, popUp } from "./buttonUtils";
 export { fetchFromCms } from "./cms";
-export { getReadTime } from "./articleUtils";
+export { frauncesFont, getReadTime } from "./articleUtils";
