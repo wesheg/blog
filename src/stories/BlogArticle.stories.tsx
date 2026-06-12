@@ -15,6 +15,7 @@ export const Default: Story = {
     title: "How I Built This Blog",
     excerpt: "<p>This is an example of an article excerpt.</p>",
     content: "<p>Content Here</p>",
+    wordCount: 800,
     featuredImg: {
       src: "/assets/articleMobileTest-1000.png",
       srcSet: `/assets/articleMobileTest-1000.png 1000w,

@@ -1,17 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "./blogArticle.module.css";
+import { getReadTime } from "@ui/utils";
 import type { FeaturedImg } from "@ui/components";
 
 type BlogArticleProps = {
-  title: string;
   excerpt: string;
+  title: string;
+  wordCount: number;
   content: string;
   featuredImg: FeaturedImg;
 };
 
 export const BlogArticle = ({
-  title,
   excerpt,
+  title,
+  wordCount,
   content,
   featuredImg,
 }: BlogArticleProps) => {
@@ -21,7 +24,7 @@ export const BlogArticle = ({
         <div className={styles.dateAndReadTime}>
           <time className={styles.articleDate}>May 6, 2026</time>
           <span aria-hidden="true">|</span>
-          <span>11 min read</span>
+          <span>{getReadTime(wordCount)}</span>
         </div>
       </div>
       <h1 className="articleTitle" style={{ margin: "0.25em 0 0 0" }}>

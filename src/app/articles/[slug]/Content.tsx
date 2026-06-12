@@ -19,6 +19,7 @@ export default async function Content({ params }: ContentProps) {
       title={queryResults.data.postBy.title}
       excerpt={queryResults.data.postBy.excerpt}
       content={queryResults.data.postBy.content}
+      wordCount={queryResults.data.postBy.wordCount}
       featuredImg={{
         src: queryResults.data.postBy.featuredImage.node.mediaItemUrl,
         srcSet: queryResults.data.postBy.featuredImage.node.srcSet,
