@@ -33,7 +33,11 @@ export const ArticleLink = ({
   featuredImg,
 }: ArticleLinkProps) => {
   return (
-    <Link href={`/articles/${slug}`} className={styles.articleOuter}>
+    <Link
+      href={`/articles/${slug}`}
+      className={styles.articleOuter}
+      prefetch={true}
+    >
       <div className={styles.articleImgContainer}>
         <div className={styles.articleImgContainerInner}>
           <img
