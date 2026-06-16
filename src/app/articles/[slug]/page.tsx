@@ -11,7 +11,7 @@ export default function ArticlePage({
     <>
       <Header />
       <main>
-        <Suspense fallback={<div>HELLO</div>}>
+        <Suspense fallback={<p>Loading...</p>}>
           <Content params={params} />
         </Suspense>
       </main>

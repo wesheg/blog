@@ -20,7 +20,7 @@ export default function Articles() {
             A treasure trove of knowledge. You&apos;re welcome.
           </p>
         </div>
-        <Suspense fallback={<div>HELLO</div>}>
+        <Suspense fallback={<p>Loading...</p>}>
           <ArticleList />
         </Suspense>
       </main>
