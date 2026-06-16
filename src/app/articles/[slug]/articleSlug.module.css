@@ -1,0 +1,9 @@
+.articleFooter {
+  border-top: 1px solid var(--deemphasized-text);
+  padding: 10px;
+}
+
+.articleFooterInner {
+  max-width: var(--content-width);
+  margin: auto;
+}

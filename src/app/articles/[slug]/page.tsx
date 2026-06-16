@@ -1,4 +1,5 @@
 import Content from "./Content";
+import styles from "./articleSlug.module.css";
 import { Header } from "@ui/components";
 import { Suspense } from "react";
 
@@ -15,6 +16,11 @@ export default function ArticlePage({
           <Content params={params} />
         </Suspense>
       </main>
+      <footer className={styles.articleFooter}>
+        <div className={styles.articleFooterInner}>
+          &copy; 2026 Wes Heginbotham
+        </div>
+      </footer>
     </>
   );
 }
