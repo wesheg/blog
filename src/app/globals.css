@@ -89,7 +89,6 @@
 }
 
 body {
-  /* margin: auto; */
   margin: 0;
   color: var(--foreground);
   background: var(--background);
@@ -130,7 +129,7 @@ h6 {
 
 main {
   max-width: var(--desktop-width);
-  padding: 0 clamp(5px, calc(var(--font-scalar) * 15px), 15px);
+  padding: 0 clamp(5px, calc(var(--font-scalar) * 20px), 20px);
   margin: auto;
 }
 
@@ -142,6 +141,10 @@ p,
 li {
   font-size: var(--fontsize-normal);
   line-height: 1.75em;
+}
+
+p {
+  margin-block-end: 2em;
 }
 
 a {

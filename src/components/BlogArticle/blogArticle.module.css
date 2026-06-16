@@ -57,11 +57,3 @@
     line-height: 1.25em;
   }
 }
-
-.wpContent {
-  p,
-  li {
-    /** Do not shrink text fonts **/
-    font-size: var(--base-fontsize-normal);
-  }
-}
