@@ -17,6 +17,10 @@ export function buildPostQuery(slug: string): string {
     }`;
 }
 
+export function buildMetadataQuery(slug: string): string {
+  return `query GetMetadata { postBy(slug: "${slug}") { title } }`;
+}
+
 export type GetPostResponse = {
   data: {
     postBy: {
@@ -32,6 +36,14 @@ export type GetPostResponse = {
           mediaItemUrl: string;
         };
       };
+    };
+  };
+};
+
+export type GetMetadataResponse = {
+  data: {
+    postBy: {
+      title: string;
     };
   };
 };
