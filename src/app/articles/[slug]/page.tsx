@@ -14,16 +14,24 @@ export default function ArticlePage({ params }: ArticleParams) {
   return (
     <>
       <Header />
-      <main>
-        <Suspense fallback={<p>Loading...</p>}>
-          <Content params={params} />
-        </Suspense>
-      </main>
-      <footer className={styles.articleFooter}>
-        <div className={styles.articleFooterInner}>
-          &copy; 2026 Wes Heginbotham
-        </div>
-      </footer>
+      <Suspense
+        fallback={
+          <main>
+            <p>Loading...</p>
+          </main>
+        }
+      >
+        <>
+          <main>
+            <Content params={params} />
+          </main>
+          <footer className={styles.articleFooter}>
+            <div className={styles.articleFooterInner}>
+              &copy; 2026 Wes Heginbotham
+            </div>
+          </footer>
+        </>
+      </Suspense>
     </>
   );
 }
