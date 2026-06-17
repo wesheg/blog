@@ -51,8 +51,6 @@ export const ArticleLink = ({
           <ArticleDate dateString={date} />
           <span aria-hidden="true">|</span>
           <span>{getReadTime(wordCount)}</span>
-          <span aria-hidden="true">|</span>
-          <span>Wes Heginbotham, CFA</span>
         </div>
         <h3 className={`${frauncesFont.className} ${styles.articleTitle}`}>
           {title}
