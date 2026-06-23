@@ -21,6 +21,16 @@ export function buildMetadataQuery(slug: string): string {
   return `query GetMetadata { postBy(slug: "${slug}") { title } }`;
 }
 
+export const getSlugsQuery = `
+  query GetPosts {
+    posts {
+      nodes {
+        slug
+      } 
+    } 
+  }
+`;
+
 export type GetPostResponse = {
   data: {
     postBy: {
@@ -44,6 +54,14 @@ export type GetMetadataResponse = {
   data: {
     postBy: {
       title: string;
+    };
+  };
+};
+
+export type GetSlugsResponse = {
+  data: {
+    posts: {
+      nodes: { slug: string }[];
     };
   };
 };

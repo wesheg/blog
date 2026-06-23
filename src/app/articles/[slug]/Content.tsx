@@ -1,6 +1,5 @@
 import { BlogArticle } from "@ui/components";
 import { buildPostQuery, type GetPostResponse } from "./graphql";
-import { cacheLife } from "next/cache";
 import { fetchFromCms } from "@ui/utils";
 
 type ContentProps = {
@@ -8,9 +7,6 @@ type ContentProps = {
 };
 
 export default async function Content({ params }: ContentProps) {
-  "use cache";
-  cacheLife("days");
-
   const { slug } = await params;
   const queryResults = await fetchFromCms<GetPostResponse>(
     buildPostQuery(slug),

@@ -2,7 +2,13 @@ import Content from "./Content";
 import styles from "./articleSlug.module.css";
 import { Header } from "@ui/components";
 import { Suspense } from "react";
-import { buildMetadataQuery, type GetMetadataResponse } from "./graphql";
+import {
+  buildMetadataQuery,
+  getSlugsQuery,
+  GetSlugsResponse,
+  type GetMetadataResponse,
+} from "./graphql";
+import { cacheLife } from "next/cache";
 import { fetchFromCms } from "@ui/utils";
 import type { Metadata } from "next";
 
@@ -10,7 +16,10 @@ type ArticleParams = {
   params: Promise<{ slug: string }>;
 };
 
-export default function ArticlePage({ params }: ArticleParams) {
+export default async function ArticlePage({ params }: ArticleParams) {
+  "use cache";
+  cacheLife("days");
+
   return (
     <>
       <Header />
@@ -42,6 +51,7 @@ export default function ArticlePage({ params }: ArticleParams) {
 export async function generateMetadata({
   params,
 }: ArticleParams): Promise<Metadata> {
+  "use cache";
   const { slug } = await params;
   const queryResults = await fetchFromCms<GetMetadataResponse>(
     buildMetadataQuery(slug),
@@ -50,4 +60,12 @@ export async function generateMetadata({
   return {
     title: `${title} | Wes Heginbotham, CFA`,
   };
+}
+
+/**
+ * Generate routes at build time instead of per-request
+ */
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  const slugs = await fetchFromCms<GetSlugsResponse>(getSlugsQuery);
+  return slugs.data.posts.nodes.map(({ slug }) => ({ slug }));
 }
