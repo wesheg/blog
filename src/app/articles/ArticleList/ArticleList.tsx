@@ -11,7 +11,8 @@ import { getPostsQuery, type GetPostsResponse } from "./graphql";
  */
 export default async function ArticleList() {
   "use cache";
-  cacheLife("serverContent");
+  cacheLife("hours");
+
   const queryResults = await fetchFromCms<GetPostsResponse>(getPostsQuery);
 
   return (

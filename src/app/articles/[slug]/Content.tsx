@@ -9,7 +9,8 @@ type ContentProps = {
 
 export default async function Content({ params }: ContentProps) {
   "use cache";
-  cacheLife("serverContent");
+  cacheLife("days");
+
   const { slug } = await params;
   const queryResults = await fetchFromCms<GetPostResponse>(
     buildPostQuery(slug),
