@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "./blogArticle.module.css";
+import { ArticleClientWrapper } from "./ArticleClientWrapper/ArticleClientWrapper";
 import { ArticleDate, type FeaturedImg } from "@ui/components";
 import { frauncesFont, getReadTime } from "@ui/utils";
 
@@ -30,38 +31,40 @@ export const BlogArticle = ({
   featuredImg,
 }: BlogArticleProps) => {
   return (
-    <article className={styles.blogArticleOuter}>
-      <div className={styles.articleMetadata}>
-        <div className={styles.dateAndReadTime}>
-          <ArticleDate dateString={date} />
-          <span aria-hidden="true">|</span>
-          <span>{getReadTime(wordCount)}</span>
+    <ArticleClientWrapper>
+      <article className={styles.blogArticleOuter}>
+        <div className={styles.articleMetadata}>
+          <div className={styles.dateAndReadTime}>
+            <ArticleDate dateString={date} />
+            <span aria-hidden="true">|</span>
+            <span>{getReadTime(wordCount)}</span>
+          </div>
         </div>
-      </div>
-      <h1 className={`${frauncesFont.className} ${styles.articleTitle}`}>
-        {title}
-      </h1>
-      <div
-        className={styles.articleExcerpt}
-        dangerouslySetInnerHTML={{ __html: excerpt }}
-      />
-      <div className={styles.featuredImgContainer}>
-        <img
-          alt={featuredImg.alt}
-          src={featuredImg.src}
-          srcSet={featuredImg.srcSet}
-          className={styles.featuredImg}
+        <h1 className={`${frauncesFont.className} ${styles.articleTitle}`}>
+          {title}
+        </h1>
+        <div
+          className={styles.articleExcerpt}
+          dangerouslySetInnerHTML={{ __html: excerpt }}
         />
-        <div className={styles.featuredImgDecorator} />
-      </div>
-      <p>
-        <strong>Wes Heginbotham, CFA</strong>
-      </p>
-      <hr style={{ margin: "1em 0 2em 0" }} />
-      <div
-        className={styles.wpContent}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </article>
+        <div className={styles.featuredImgContainer}>
+          <img
+            alt={featuredImg.alt}
+            src={featuredImg.src}
+            srcSet={featuredImg.srcSet}
+            className={styles.featuredImg}
+          />
+          <div className={styles.featuredImgDecorator} />
+        </div>
+        <p>
+          <strong>Wes Heginbotham, CFA</strong>
+        </p>
+        <hr style={{ margin: "1em 0 2em 0" }} />
+        <div
+          className={styles.wpContent}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      </article>
+    </ArticleClientWrapper>
   );
 };

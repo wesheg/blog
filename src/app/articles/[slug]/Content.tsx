@@ -14,13 +14,17 @@ export default async function Content({ params }: ContentProps) {
   const { date, excerpt, title, wordCount, content, featuredImage } =
     queryResults.data.postBy;
 
+  // DELETE ME
+  const content2 = `${content}<div class="wp-react-root" data-react-node="front-page-animation"></div>`;
+
   return (
     <BlogArticle
       date={date}
       wordCount={wordCount}
       title={title}
       excerpt={excerpt}
-      content={content}
+      // CHANGE ME BACK TO CONTENT
+      content={content2}
       featuredImg={{
         src: featuredImage.node.mediaItemUrl,
         srcSet: featuredImage.node.srcSet,
