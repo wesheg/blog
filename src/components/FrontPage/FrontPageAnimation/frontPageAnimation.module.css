@@ -1,11 +1,31 @@
 .frontPageOuter {
+  --desktop-outer-height: 70vh;
+  --desktop-max-height: none;
+
+  --mobile-outer-height: 60vh;
+  --mobile-max-height: 400px;
+
   display: flex;
-  height: 70vh;
+  height: var(--desktop-outer-height);
+  max-height: var(--desktop-max-height);
+
+  &.embedded {
+    justify-content: center;
+    height: var(--mobile-outer-height);
+    max-height: var(--mobile-max-height);
+  }
 }
 
 .frontPageInner {
+  --desktop-fp-inner-flex-shrink: 0.67;
+  --mobile-fp-inner-flex-shrink: 1;
+
   position: relative;
-  flex-shrink: 0.67;
+  flex-shrink: var(--desktop-fp-inner-flex-shrink);
+
+  &.embedded {
+    flex-shrink: var(--mobile-fp-inner-flex-shrink);
+  }
 }
 
 .frontPageBackground {
@@ -14,11 +34,26 @@
 }
 
 .lottieContainer {
+  --desktop-lottie-height: 58%;
+  --desktop-lottie-width: 35%;
+  --desktop-lottie-left: 3%;
+
+  --mobile-lottie-height: 95%;
+  --mobile-lottie-width: 75%;
+  --mobile-lottie-left: 18%;
+
   position: absolute;
-  width: 35%;
-  height: 58%;
   bottom: 3%;
-  left: 7%;
+
+  height: var(--desktop-lottie-height);
+  width: var(--desktop-lottie-width);
+  left: var(--desktop-lottie-left);
+
+  &.embedded {
+    height: var(--mobile-lottie-height);
+    width: var(--mobile-lottie-width);
+    left: var(--mobile-lottie-left);
+  }
 }
 
 .chairContainer {
@@ -30,11 +65,29 @@
 }
 
 .screenCanvas {
+  --desktop-screen-width: 25%;
+  --desktop-screen-height: 25%;
+  --desktop-screen-bottom: 38%;
+  --desktop-screen-left: 14%;
+
+  --mobile-screen-width: 50%;
+  --mobile-screen-height: 30%;
+  --mobile-screen-bottom: 58%;
+  --mobile-screen-left: 28%;
+
   position: absolute;
-  width: 25%;
-  height: 25%;
-  bottom: 38%;
-  left: 14%;
+
+  width: var(--desktop-screen-width);
+  height: var(--desktop-screen-height);
+  bottom: var(--desktop-screen-bottom);
+  left: var(--desktop-screen-left);
+
+  &.embedded {
+    width: var(--mobile-screen-width);
+    height: var(--mobile-screen-height);
+    bottom: var(--mobile-screen-bottom);
+    left: var(--mobile-screen-left);
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -44,24 +97,19 @@
   }
 
   .frontPageInner {
-    flex-shrink: 1;
-  }
-
-  .frontPageImg {
-    width: 100%;
-    height: unset;
+    flex-shrink: var(--mobile-fp-inner-flex-shrink);
   }
 
   .lottieContainer {
-    height: 95%;
-    width: 75%;
-    left: 18%;
+    height: var(--mobile-lottie-height);
+    width: var(--mobile-lottie-width);
+    left: var(--mobile-lottie-left);
   }
 
   .screenCanvas {
-    width: 50%;
-    height: 30%;
-    bottom: 58%;
-    left: 28%;
+    width: var(--mobile-screen-width);
+    height: var(--mobile-screen-height);
+    bottom: var(--mobile-screen-bottom);
+    left: var(--mobile-screen-left);
   }
 }

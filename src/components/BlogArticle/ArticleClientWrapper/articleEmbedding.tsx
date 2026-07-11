@@ -3,7 +3,7 @@ import { createRoot, type Root } from "react-dom/client";
 import type { JSX } from "react";
 
 const embeddingMap: Record<string, () => JSX.Element> = {
-  "front-page-animation": () => <FrontPageAnimation />,
+  "front-page-animation": () => <FrontPageAnimation articleEmbed />,
 };
 
 export function embedReactNodesInArticle(): Root[] {

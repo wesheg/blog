@@ -11,7 +11,13 @@ import { ScreenCanvas } from "./ScreenCanvas";
 import { usePuppetMaster } from "./usePuppetMaster";
 import styles from "./frontPageAnimation.module.css";
 
-export const FrontPageAnimation = () => {
+type FrontPageAnimationProps = {
+  articleEmbed?: boolean;
+};
+
+export const FrontPageAnimation = ({
+  articleEmbed = false,
+}: FrontPageAnimationProps) => {
   const lottieRef = useRef<LottieRef>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const staticRef = useRef<HTMLImageElement>(null);
@@ -34,6 +40,7 @@ export const FrontPageAnimation = () => {
 
   const resizeApp = useCallback(() => {
     if (!staticRef.current) return;
+    if (articleEmbed) return;
     const newWidth = window.innerWidth;
     const oldWidth = widthRef.current;
     const desktopToMobile =
@@ -47,7 +54,7 @@ export const FrontPageAnimation = () => {
     if (mobileToDesktop) {
       staticRef.current.src = staticLayerDesktop.src;
     }
-  }, []);
+  }, [articleEmbed]);
 
   useEffect(() => {
     window.addEventListener("resize", resizeApp);
@@ -57,24 +64,33 @@ export const FrontPageAnimation = () => {
   }, [resizeApp]);
 
   return (
-    <div className={styles.frontPageOuter}>
-      <div className={styles.frontPageInner}>
+    <div
+      className={`${styles.frontPageOuter} ${articleEmbed ? styles.embedded : ""}`}
+    >
+      <div
+        className={`${styles.frontPageInner} ${articleEmbed ? styles.embedded : ""}`}
+      >
         <img
           alt=""
           ref={staticRef}
           className={styles.frontPageBackground}
           src={
-            window.innerWidth <= imageBreakPoint
+            articleEmbed
               ? staticLayerMobile.src
-              : staticLayerDesktop.src
+              : window.innerWidth <= imageBreakPoint
+                ? staticLayerMobile.src
+                : staticLayerDesktop.src
           }
         />
         <ScreenCanvas
           ref={canvasRef}
           scale={scale}
-          className={styles.screenCanvas}
+          className={`${styles.screenCanvas} ${articleEmbed ? styles.embedded : ""}`}
         />
-        <div ref={lottieContainerRef} className={styles.lottieContainer}>
+        <div
+          ref={lottieContainerRef}
+          className={`${styles.lottieContainer} ${articleEmbed ? styles.embedded : ""}`}
+        >
           <PersonCanvas ref={lottieRef} />
           <div className={styles.chairContainer}>
             <svg
