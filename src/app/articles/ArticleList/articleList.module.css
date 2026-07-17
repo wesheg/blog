@@ -2,3 +2,7 @@
   padding: 0;
   list-style: none;
 }
+
+.articleLi {
+  margin: 2em 0;
+}
