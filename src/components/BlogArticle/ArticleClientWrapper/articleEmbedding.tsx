@@ -2,10 +2,17 @@ import { FrontPageAnimation } from "@ui/components";
 import { createRoot, type Root } from "react-dom/client";
 import type { JSX } from "react";
 
+/**
+ * Mapping of the ".wp-react-root" HTML data attribute to a hydration callback
+ */
 const embeddingMap: Record<string, () => JSX.Element> = {
   "front-page-animation": () => <FrontPageAnimation articleEmbed />,
 };
 
+/**
+ * Find and hydrate all blog article React roots.
+ * Return a list of the roots for reference
+ */
 export function embedReactNodesInArticle(): Root[] {
   const rootInstances: Root[] = [];
   const domTargets = document.querySelectorAll<HTMLElement>(".wp-react-root");

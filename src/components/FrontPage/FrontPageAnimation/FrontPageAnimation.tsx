@@ -12,6 +12,8 @@ import { usePuppetMaster } from "./usePuppetMaster";
 import styles from "./frontPageAnimation.module.css";
 
 type FrontPageAnimationProps = {
+  /** True if the component is embedded in the content of a blog article,
+   * and not on the home page. Defaults to false */
   articleEmbed?: boolean;
 };
 
