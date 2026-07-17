@@ -17,7 +17,7 @@ export const ArticleDate = ({ dateString }: ArticleDateProps) => {
       dateTime={parsedDate.format("YYYY-MM-DD")}
       className={styles.articleDate}
     >
-      {parsedDate.format("MMM D, YYYY")}
+      {parsedDate.format("MMMM D, YYYY")}
     </time>
   );
 };
