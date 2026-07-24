@@ -144,7 +144,8 @@ li {
 }
 
 p {
-  margin-block-end: 2em;
+  margin-block-start: 0;
+  margin-block-end: 1em;
 }
 
 a {
@@ -160,7 +161,7 @@ a {
 }
 
 figure > img {
-  border: 1px solid var(--foreground);
+  border: 2px solid var(--foreground);
   border-radius: 1em;
   margin-bottom: 2px; /* extra space between img and figcaption */
 }
@@ -183,6 +184,7 @@ figcaption {
 figure.wp-block-image {
   margin-left: 0;
   margin-right: 0;
+  justify-self: center;
 
   img {
     max-width: 100%;
