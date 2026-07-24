@@ -160,7 +160,8 @@ a {
   }
 }
 
-figure > img {
+figure > img,
+.fig-image > * {
   border: 2px solid var(--foreground);
   border-radius: 1em;
   margin-bottom: 2px; /* extra space between img and figcaption */
