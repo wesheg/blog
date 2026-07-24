@@ -6,3 +6,6 @@ export { FrontPageAnimation } from "./FrontPage/FrontPageAnimation/FrontPageAnim
 export { Header } from "./Header/Header";
 export { LinkAsButton } from "./LinkAsButton/LinkAsButton";
 export * from "./types";
+
+/** AI */
+export { AiGenerated } from "./FrontPage/FrontPageAnimation/ai-generated";
