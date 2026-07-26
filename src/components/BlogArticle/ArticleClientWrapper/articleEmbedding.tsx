@@ -9,6 +9,7 @@ import type { JSX } from "react";
 const embeddingMap: Record<string, () => JSX.Element> = {
   "front-page-animation": () => <FrontPageAnimation articleEmbed />,
   "front-page-animation-ai-fable5": () => <AiGenerated.Fable5 forceMobile />,
+  "front-page-animation-ai-gpt56": () => <AiGenerated.Gpt56 forceSmallScreen />,
 };
 
 /**
