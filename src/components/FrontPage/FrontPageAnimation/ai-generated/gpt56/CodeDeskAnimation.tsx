@@ -11,8 +11,8 @@ const CodeDeskScene = dynamic<CodeDeskSceneProps>(() => import("./CodeDeskScene"
 export type CodeDeskAnimationProps = CodeDeskSceneProps;
 
 /**
- * Client-only boundary for embedding the animation in another Next.js tree.
- * The animated scene itself is never emitted by the server.
+ * Client boundary for embedding the animation in a server-rendered Next.js
+ * tree or mounting it into a server-generated React root.
  */
 export default function CodeDeskAnimation(props: CodeDeskAnimationProps) {
   return <CodeDeskScene {...props} />;

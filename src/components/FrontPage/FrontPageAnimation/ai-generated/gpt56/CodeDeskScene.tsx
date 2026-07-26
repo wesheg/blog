@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element -- Sprite dimensions and layering are controlled by the animation CSS. */
+
 import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
 
@@ -21,7 +23,6 @@ import rightShoe from "./static/right_shoe.png";
 import upperLeftArm from "./static/upper-left-arm.png";
 import upperRightArm from "./static/upper_right_arm.png";
 
-import "./code-colors.css";
 import styles from "./CodeDeskAnimation.module.css";
 
 type CodeColor = "green" | "yellow" | "pink" | "purple" | "blue";
@@ -604,7 +605,7 @@ export default function CodeDeskScene({
 
   return (
     <section
-      className={`component-root ${styles.componentRoot}`}
+      className={styles.componentRoot}
       aria-label="An animated developer writing code at a desk"
       role="img"
     >
