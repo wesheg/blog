@@ -144,7 +144,8 @@ li {
 }
 
 p {
-  margin-block-end: 2em;
+  margin-block-start: 0;
+  margin-block-end: 1em;
 }
 
 a {
