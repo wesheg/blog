@@ -8,18 +8,10 @@
 figure.wp-block-image {
   margin-left: 0;
   margin-right: 0;
-  display: grid;
-  grid-template-columns: min-content;
-  grid-template-rows: auto auto;
   justify-self: center;
 
   img {
-    /**
-     * Use the image's "height" attribute or set the
-     * height in the WordPress block editor to adjust
-     * image size
-     */
-    width: auto;
-    max-width: var(--content-width);
+    height: auto;
+    max-width: 100%;
   }
 }
