@@ -179,3 +179,8 @@ figcaption {
   z-index: var(--modal-overlay-z-index);
   overflow-y: auto;
 }
+
+th,
+td {
+  font-size: var(--fontsize-normal);
+}
