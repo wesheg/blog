@@ -134,7 +134,7 @@ const actionLabels: Record<Segment, string> = {
 export type CodeDeskSceneProps = {
   /**
    * Uses the mobile scene composition even when the viewport is 1,000px or wider.
-   * The scene holds a 400px minimum width in this mode, overflowing containers
+   * The scene targets 400px wide in this mode and scales down with containers
    * narrower than that.
    */
   forceSmallScreen?: boolean;

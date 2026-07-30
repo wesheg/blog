@@ -12,9 +12,11 @@
 }
 
 /* When the mobile layout is forced rather than viewport-driven, the container
-   may be narrower than the layout is meant for, so hold a 400px floor. */
-.forced {
-  min-width: 400px;
+   may be narrower than the layout is meant for. Target 400px and only scale
+   down when the container cannot fit it. */
+.root.forced {
+  width: 400px;
+  max-width: 100%;
 }
 
 .svg {

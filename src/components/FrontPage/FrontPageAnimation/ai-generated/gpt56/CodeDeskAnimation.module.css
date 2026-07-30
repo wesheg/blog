@@ -624,14 +624,15 @@
 }
 
 /* When the small-screen composition is forced rather than viewport-driven, the
-   container may be narrower than the layout is meant for, so hold a 400px
-   floor instead of letting the sprites shrink with it. */
+   container may be narrower than the layout is meant for. Target 400px and
+   only scale down when the container cannot fit it. */
 .forcedRoot {
-  min-width: 400px;
+  width: 100%;
 }
 
 .scene.forceSmallScreen {
-  min-width: 400px;
+  width: 400px;
+  max-width: 100%;
   aspect-ratio: 442 / 417;
 }
 

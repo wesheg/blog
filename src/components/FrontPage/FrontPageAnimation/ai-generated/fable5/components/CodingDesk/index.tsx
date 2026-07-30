@@ -37,8 +37,8 @@ function Part({ p, href, size }: { p: Placement; href: string; size: [number, nu
 
 export interface CodingDeskProps {
   /** Always render the small-screen (mobile) styling, regardless of the
-   *  actual viewport width. The scene holds a 400px minimum width in this
-   *  mode, overflowing containers narrower than that. */
+   *  actual viewport width. The scene targets 400px wide in this mode and
+   *  scales down with containers narrower than that. */
   forceMobile?: boolean;
 }
 
