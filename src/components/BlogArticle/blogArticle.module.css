@@ -7,15 +7,13 @@
 .featuredImgContainer {
   position: relative;
   width: 100%;
-  height: 320px;
   border-radius: 20px;
   overflow: clip;
 }
 
 .featuredImg {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .featuredImgDecorator {
