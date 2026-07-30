@@ -92,11 +92,17 @@
   }
 
   .articleImgContainer {
-    flex-basis: 200px;
+    flex-basis: 0;
   }
 
   .articleImgContainerInner {
     max-width: unset;
-    max-height: 200px;
+    max-height: unset;
+    width: 100%;
+  }
+
+  .articleImg {
+    width: 100%;
+    height: auto;
   }
 }
