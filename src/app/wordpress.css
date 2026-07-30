@@ -1,0 +1,17 @@
+/**** WordPress Blocks ****/
+
+.wp-block-heading {
+  margin-block-start: 1em;
+  margin-block-end: 0.25em;
+}
+
+figure.wp-block-image {
+  margin-left: 0;
+  margin-right: 0;
+  justify-self: center;
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}

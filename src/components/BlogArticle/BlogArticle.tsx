@@ -56,7 +56,7 @@ export const BlogArticle = ({
           />
           <div className={styles.featuredImgDecorator} />
         </div>
-        <p>
+        <p className={styles.authorName}>
           <strong>Wes Heginbotham, CFA</strong>
         </p>
         <hr style={{ margin: "1em 0 2em 0" }} />

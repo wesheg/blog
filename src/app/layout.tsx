@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./wordpress.css";
 import { Fraunces, Roboto } from "next/font/google";
 
 const roboto = Roboto({

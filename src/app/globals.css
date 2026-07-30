@@ -181,18 +181,7 @@ figcaption {
   overflow-y: auto;
 }
 
-/** WordPress Blocks **/
-figure.wp-block-image {
-  margin-left: 0;
-  margin-right: 0;
-  justify-self: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-.wp-block-heading {
-  margin-block-end: 0.5em;
+th,
+td {
+  font-size: var(--fontsize-normal);
 }

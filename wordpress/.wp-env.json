@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/wp-env.json",
-  "core": "WordPress/WordPress#6.9.4",
+  "core": "WordPress/WordPress#7.0.2",
   "plugins": [
     "./plugins",
     "https://downloads.wordpress.org/plugin/wp-graphql.2.17.0.zip"

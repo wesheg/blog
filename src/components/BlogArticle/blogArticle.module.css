@@ -7,15 +7,13 @@
 .featuredImgContainer {
   position: relative;
   width: 100%;
-  height: 320px;
   border-radius: 20px;
   overflow: clip;
 }
 
 .featuredImg {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .featuredImgDecorator {
@@ -50,10 +48,21 @@
 
   p {
     margin: 0;
+    line-height: 1.25em;
   }
 
   li {
     margin: 0.25em;
     line-height: 1.25em;
   }
+
+  ul {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+}
+
+.authorName {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
