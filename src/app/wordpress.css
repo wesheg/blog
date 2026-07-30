@@ -15,3 +15,10 @@ figure.wp-block-image {
     max-width: 100%;
   }
 }
+
+.wp-block-kevinbatdorf-code-block-pro {
+  pre {
+    padding: 20px;
+    border-radius: 20px;
+  }
+}
