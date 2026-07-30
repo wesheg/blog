@@ -10,7 +10,7 @@ figure.wp-block-image {
   margin-right: 0;
   justify-self: center;
 
-  img {
+  img:not(.wp-react-root *) {
     height: auto;
     max-width: 100%;
   }
