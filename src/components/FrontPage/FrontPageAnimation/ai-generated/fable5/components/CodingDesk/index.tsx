@@ -37,7 +37,8 @@ function Part({ p, href, size }: { p: Placement; href: string; size: [number, nu
 
 export interface CodingDeskProps {
   /** Always render the small-screen (mobile) styling, regardless of the
-   *  actual viewport width. */
+   *  actual viewport width. The scene holds a 400px minimum width in this
+   *  mode, overflowing containers narrower than that. */
   forceMobile?: boolean;
 }
 
@@ -57,6 +58,7 @@ export default function CodingDesk({ forceMobile = false }: CodingDeskProps) {
   }, []);
 
   const mode = forceMobile ? "mobile" : viewportMode;
+  const forcedClass = forceMobile ? styles.forced : "";
 
   useEffect(() => {
     const forced = new URLSearchParams(window.location.search).get("seg");
@@ -89,7 +91,8 @@ export default function CodingDesk({ forceMobile = false }: CodingDeskProps) {
     }
   }, [mode]);
 
-  if (!mode || !snap) return <div className={`component-root ${styles.root}`} aria-hidden />;
+  if (!mode || !snap)
+    return <div className={`component-root ${styles.root} ${forcedClass}`} aria-hidden />;
 
   const L = LAYOUTS[mode];
   layoutRef.current = L;
@@ -127,7 +130,7 @@ export default function CodingDesk({ forceMobile = false }: CodingDeskProps) {
   const off = "translate(-9999 -9999)";
 
   return (
-    <div className={`component-root ${styles.root} ${styles[mode]}`}>
+    <div className={`component-root ${styles.root} ${styles[mode]} ${forcedClass}`}>
       <svg
         className={styles.svg}
         viewBox={`0 0 ${L.w} ${L.h}`}

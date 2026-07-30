@@ -134,6 +134,8 @@ const actionLabels: Record<Segment, string> = {
 export type CodeDeskSceneProps = {
   /**
    * Uses the mobile scene composition even when the viewport is 1,000px or wider.
+   * The scene holds a 400px minimum width in this mode, overflowing containers
+   * narrower than that.
    */
   forceSmallScreen?: boolean;
 };
@@ -605,7 +607,7 @@ export default function CodeDeskScene({
 
   return (
     <section
-      className={styles.componentRoot}
+      className={`${styles.componentRoot} ${forceSmallScreen ? styles.forcedRoot : ""}`}
       aria-label="An animated developer writing code at a desk"
       role="img"
     >

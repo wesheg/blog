@@ -11,6 +11,12 @@
   max-width: 400px;
 }
 
+/* When the mobile layout is forced rather than viewport-driven, the container
+   may be narrower than the layout is meant for, so hold a 400px floor. */
+.forced {
+  min-width: 400px;
+}
+
 .svg {
   display: block;
   width: 100%;
