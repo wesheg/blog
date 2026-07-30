@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, type FC, type ReactNode } from "react";
-import { embedReactNodesInArticle } from "./articleEmbedding";
+import {
+  embedReactNodesInArticle,
+  unmountArticleReactNodes,
+} from "./articleEmbedding";
 
 /**
  * Wraps the raw content of a blog article and hydrates it with any relevant
@@ -13,7 +16,7 @@ export const ArticleClientWrapper: FC<{ children: ReactNode }> = ({
   useEffect(() => {
     const roots = embedReactNodesInArticle();
     return () => {
-      roots.forEach((r) => r.unmount());
+      unmountArticleReactNodes(roots);
     };
   }, []);
   return <>{children}</>;
